@@ -4,9 +4,7 @@ const AudioPlayer = () => {
 
     return(
         <>
-            <AudioPlayer>
-                <article>'Audio Player'</article>
-            </AudioPlayer>
+            'sounds and noises and sounds and noises'
         </>
     )
 }
