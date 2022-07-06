@@ -3,17 +3,20 @@
 }
 
 body {
-    /* background-color: #010f1c; */
-    background-image: url('/src/static/breathe/water.jpg');
-    background-size: cover;
+   
+    background: url('/src/static/breathe/calm-water.jpg');
+    background-size:cover;
     background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
     color: #fff;
     min-height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+    margin: 8em;
+    
 }
 
 /* styling */
@@ -26,12 +29,8 @@ body {
     width:300px;
     margin:auto;
     position:relative;
-} 
-
-.circle-container{
     animation: breathe 18400ms infinite;
-}
-
+} 
 
 .gradient-circle{
     background: conic-gradient(
@@ -55,14 +54,14 @@ body {
 }
 
 .circle {
-    background-color: #010f1c;
+    /* background-color: #010f1c; */
+    background: linear-gradient(pink, #7B9E89  );
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
     border-radius: 50%;
-    
 }
 
 .pointer-container{
@@ -74,9 +73,6 @@ body {
     animation:rotate 18400ms linear forwards infinite ;
     transform-origin: bottom center;
 }
-
-
-/* 17400ms */
 
 .pointer{
     background-color: #fff;
