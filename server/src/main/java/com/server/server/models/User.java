@@ -15,11 +15,8 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
-   @Column(name = "firstName")
-    private String firstName;
-
-   @Column(name = "lastName")
-    private String lastName;
+   @Column(name = "name")
+    private String name;
 
    @Column(name = "email")
     private String email;
@@ -28,9 +25,8 @@ public class User {
    @JsonIgnoreProperties({"user"})
    private List<JournalEntry> journalEntries;
 
-    public User(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String name, String email) {
+        this.name = name;
         this.email = email;
         this.journalEntries = new ArrayList<>();
     }
@@ -46,20 +42,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -77,4 +65,12 @@ public class User {
     public void setJournalEntries(List<JournalEntry> journalEntries) {
         this.journalEntries = journalEntries;
     }
+
+//    public void addJournalEntry(JournalEntry newEntry) {
+//        this.journalEntries.add(newEntry);
+//    }
+//
+//    public int getLengthOfJournalList() {
+//       return this.journalEntries.size();
+//    }
 }
