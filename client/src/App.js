@@ -2,7 +2,7 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
-import Breathe from './components/Breathe';
+import Breathe from './components/Breathe/Breathe';
 
 
 function App() {
