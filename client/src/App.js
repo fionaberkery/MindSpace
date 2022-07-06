@@ -2,6 +2,7 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
+import AudioPlayer from './containers/AudioPlayer';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
         </Route>
 
         <Route path="/listen">
-          {/* sounds component */}
+          <AudioPlayer/>
         </Route>
 
       </Switch>
