@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import audioData from '../../data/audio_data/AudioData';
+import audioData from '../../data/audio_data/audioJson';
 // import rain from '../../data/audio_data/RainTest.mp3'
 
 import AudioListItem from './AudioListItem';
 
-const AudioList = () => {
+const AudioList = ({onAudioClick}) => {
 
-    const audioList = audioData.map((audioData, index) => {
-        return  <AudioListItem audio={audioData} key={audioData.id} index={index}/>})
+    const audioList = audioData.map((audio) => {
+        return  <AudioListItem audio={audio} key={audio.id} onAudioClick={onAudioClick}/>})
 
 
     return(

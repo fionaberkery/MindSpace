@@ -1,12 +1,16 @@
 import React from "react";
 
-const AudioListItem = (audioData) => {
+const AudioListItem = ({audio, onAudioClick}) => {
 
-    console.log(audioData)
+
+    const handleAudioClick = () => {
+        onAudioClick(audio)
+    }
+
     return(
         <>
             <h3>AudioListItem</h3>
-            <li> {audioData.audio.name}</li>
+            <li onClick={handleAudioClick}> {audio.name}</li>
         </> 
     )   
 }
