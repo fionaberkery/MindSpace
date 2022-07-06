@@ -19,7 +19,7 @@ function App() {
         </Route>
 
         <Route path="/breathe">
-          <Breathe/>
+          <Breathe></Breathe>
         </Route>
 
         <Route path="/colour">
