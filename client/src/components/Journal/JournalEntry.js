@@ -1,20 +1,18 @@
 import React from "react";
 
-const JournalEntry = ({journalEntry, onJournalEntryClick}) => {
+const JournalEntry = ({journalEntry}) => {
 
-    const handleClick = () => {
-        onJournalEntryClick(selectedEntry)
-    }
-
+ 
     return(
 
         <>
 
         <div>
 
-            <p onClick={handleClick}> 
+            <p> 
                 {journalEntry.textInput} <br/>
                 {journalEntry.date}
+                
             </p>
         
         </div>
