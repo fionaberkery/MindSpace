@@ -21,7 +21,7 @@ const MandalaImage1 = () => {
                 <div id="current-colour" style={{ background: currentColour }} />
             </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42000 42000">
+            <svg id="mandala-1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42000 42000">
                 <rect fill="white" width="42000" height="42000"/>
                 <g id="Layer_x0020_1">
                     <metadata id="CorelCorpID_0Corel-Layer"/>
