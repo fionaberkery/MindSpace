@@ -15,12 +15,12 @@ const AudioPlayer = () => {
     //     setAudioData(audioJson)
     // }
 
-    // const getAudioData = () => {
-    //     fetch('src/data/audio_data/audioJson.js')
-    //     .then(res => res.json())
-    //     .then(audioData => setAudioData(audioData))
-    //     .catch(err => console.error);
-    // }
+    const getAudioData = () => {
+        fetch('src/data/audio_data/audioJson.js')
+        .then(res => res.json())
+        .then(audioData => setAudioData(audioData))
+        .catch(err => console.error);
+    }
 
     // const getAudio=()=>{
     //     fetch('.AudioData.json',
