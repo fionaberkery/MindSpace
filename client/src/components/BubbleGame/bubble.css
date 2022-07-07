@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+
+html {
+  box-sizing: border-box;
+  font-family: "Luckiest Guy", cursive;
+  position: fixed;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.score {
+  z-index: 90;
+  display: block;
+  position: relative;
+  background: #ea3b3b;
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: -2px 3px 0 #bb1616;
+}
+
+.bubble {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  transition: all ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
+  background-image: url("/src/images/bubble.png")
+    no-repeat 50% / contain;
+}
+
+.bubble.popped {
+  animation: popped 0.3s ease-out both;
+  animation-duration: 0.3s !important;
+}
+
+.bubble.animating {
+  animation: float 12s linear infinite both;
+}
+
+.stage {
+  overflow: hidden;
+  background: #1c92d2;
+  background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+}
+
+button {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  color: #fff;
+  border: 0;
+  font-size: 50px;
+  color: white;
+  background: #ea3b3b;
+  padding: 0.5em;
+  border: 1px solid #ea3b3b;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: -10px 10px 0 #bb1616;
+  transition: all 0.3s ease-in-out;
+  line-height: 1;
+  text-shadow: -5px 5px 0 #bb1616;
+}
+
+@keyframes popped {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000%);
+  }
+}
+
+@keyframes messageDisplay {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: -2px 4px 0 #fff;
+  color: yellow;
+  font-size: 200px;
+  z-index: -1;
+}
+.message.animated {
+  z-index: 99;
+  animation: messageDisplay 1s ease;
+}

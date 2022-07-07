@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 
 import Breathe from './components/Breathe/Breathe';
+import BubbleGame from './components/BubbleGame/BubbleGame';
 
 
 
@@ -37,7 +38,8 @@ function App() {
           {/* sounds component */}
         </Route>
 
-        <Route path="/game">
+        <Route path="/bubblegame">
+          <BubbleGame />
           {/* sounds component */}
         </Route>
 
