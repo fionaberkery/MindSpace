@@ -16,4 +16,3 @@ const AudioControls = ({selected}) => {
 }
 
 export default AudioControls
-
