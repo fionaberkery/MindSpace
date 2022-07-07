@@ -2,6 +2,7 @@ import React from "react";
 
 const AudioListItem = ({audio, onAudioClick}) => {
 
+    console.log(audio)
 
     const handleAudioClick = () => {
         onAudioClick(audio)

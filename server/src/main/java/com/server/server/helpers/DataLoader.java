@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 
-@Component // comment this out if you don't want dataloader to run with server run
+//@Component // comment this out if you don't want dataloader to run with server run
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -90,8 +90,10 @@ public class DataLoader implements ApplicationRunner {
         JournalEntry entry10 = new JournalEntry("11-12-21", "feeling unsure", user10);
         journalEntryRepository.save(entry10);
 
-        Audio audio1 = new Audio("Rain Sounds 1", "/audiofiles/RainTest.mp3");
+        Audio audio1 = new Audio("Rain Sounds 1", "RainTest.mp3");
         audioRepository.save(audio1);
+        Audio audio2 = new Audio("Rain Sounds 2", "507902__inuetc__heavy-rain-sound-inu-etc.mp3");
+        audioRepository.save(audio2);
 
     }
 }

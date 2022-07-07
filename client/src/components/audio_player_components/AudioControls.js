@@ -1,15 +1,19 @@
 import React from "react";
 // import selectAudio from '../../data/audio_data/AudioData';
-import rain from '../../data/audio_data/RainTest.mp3'
 
 const AudioControls = ({selected}) => {
+    
+    const SERVER_ADDRESS= "http://localhost:8080/audiofiles/";
+
+    console.log(selected)
+
 
     return(
         <>
             <div>
                 <h3>Audio Controls</h3>
-                <li>{selected.file_path}</li>
-                <audio src={rain} controls autoPlay loop></audio>
+                <li>{selected.name}</li>
+                <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio>
             </div>
         </>
     )
