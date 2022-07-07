@@ -44,6 +44,8 @@ const Breathe = () => {
     return(
         <>
 
+        <div className="breathe-container">
+
         <div className="circle-container">
 
             <div className="circle">{currentWord}</div>
@@ -53,6 +55,8 @@ const Breathe = () => {
                 </div>
                 
             <div className="gradient-circle"></div>
+
+        </div>
 
         </div>
         
