@@ -41,7 +41,7 @@ const UserProfileContainer = ({currentUser, setCurrentUser, savedUsers, setCurre
 
                 {usersList}
             </select>
-                    <input type="text"/><br></br><br></br>
+                    <br></br><br></br>
                     <b><label> Password </label></b><br></br>            
                     <input type="text"/><br></br><br></br>                    
                 </form>

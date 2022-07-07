@@ -17,7 +17,8 @@ const NewEntry = () => {
 
         <h2> this is a new entry </h2>
 
-        <form onSubmit={handleSubmit}>   
+        <form onSubmit={handleSubmit}>
+        {/*  textarea     */}
         <input type="text" onChange={handleItemInput} />   
         <input type="submit" value="Save New Item" />       
         </form>
