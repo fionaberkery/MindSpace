@@ -38,7 +38,7 @@ function App() {
         </Route>
 
         <Route path="/game">
-          {/* sounds component */}
+npm           {/* sounds component */}
         </Route>
 
       </Switch>
