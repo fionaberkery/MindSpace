@@ -20,8 +20,8 @@ const Palette = ({ setCurrentColour }) => {
             <div id="colour-box--inner" onClick={changeColourPicker}>
                 <input id="colour-input" type="color" name="head" />
             </div>
-            {colours.map(colour => {
-                return <div onClick={changeColour} id="colour-box--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>
+            {colours.map((colour, index) => {
+                return <div onClick={changeColour} key={index} id="colour-box--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>
             })}
         </div>)
 }
