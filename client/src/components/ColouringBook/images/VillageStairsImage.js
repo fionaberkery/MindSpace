@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Palette from './Palette';
-import "./colouring.css";
+import Palette from '../Palette';
+import "../../../static/colouring/colouring.css";
 
 const VillageStairsImage = () => {
 
