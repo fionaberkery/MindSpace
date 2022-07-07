@@ -3,7 +3,8 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
 import AudioPlayer from './containers/AudioPlayer';
-
+import ColouringBookContainer from './containers/ColouringBookContainer';
+import Breathe from './components/Breathe/Breathe';
 
 function App() {
   return (
@@ -19,11 +20,11 @@ function App() {
         </Route>
 
         <Route path="/breathe">
-          {/* breathing component */}
+          <Breathe></Breathe>
         </Route>
 
         <Route path="/colour">
-          {/* colouring component */}
+          <ColouringBookContainer />
         </Route>
 
         <Route path="/journal">
@@ -32,6 +33,10 @@ function App() {
 
         <Route path="/listen">
           <AudioPlayer/>
+        </Route>
+
+        <Route path="/game">
+npm           {/* sounds component */}
         </Route>
 
       </Switch>
