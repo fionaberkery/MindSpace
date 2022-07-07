@@ -2,7 +2,9 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
-import Home from './components/Home/Home';
+
+import Breathe from './components/Breathe/Breathe';
+
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
         </Route>
 
         <Route path="/breathe">
-          {/* breathing component */}
+          <Breathe></Breathe>
         </Route>
 
         <Route path="/colour">
