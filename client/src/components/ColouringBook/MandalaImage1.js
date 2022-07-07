@@ -4,7 +4,7 @@ import "./colouring.css";
 
 const MandalaImage1 = () => {
 
-    const [fillColours, setFillColours] = useState(Array(1990).fill("white"));
+    const [fillColours, setFillColours] = useState(Array(130).fill("white"));
     const [currentColour, setCurrentColour] = useState("white");
 
     const paintColour = (event) => {
@@ -22,7 +22,7 @@ const MandalaImage1 = () => {
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42000 42000">
-                <rect className='fil0' onClick={paintColour} width="42000" height="42000"/>
+                <rect fill="white" width="42000" height="42000"/>
                 <g id="Layer_x0020_1">
                     <metadata id="CorelCorpID_0Corel-Layer"/>
                     <path id="path6" className="fil1" d="M19167 6805c-74,-233 -235,-457 -459,-564 -172,-23 -386,-61 -523,76 -207,222 -231,555 -158,837 120,461 455,817 748,1176 146,-95 158,-277 206,-427 93,-359 219,-723 186,-1098z" />
@@ -125,7 +125,7 @@ const MandalaImage1 = () => {
                     <path id="73" fill={fillColours[73]} onClick={paintColour} d="M23806 21233c-308,-41 -615,-85 -926,-107 -23,84 -47,167 -73,250 282,122 574,212 868,297 72,-137 99,-291 131,-440z"/>
                     <path id="74" fill={fillColours[74]} onClick={paintColour} d="M34592 21984c-43,-146 -80,-295 -142,-435 -236,-24 -460,119 -664,229 -662,401 -911,1315 -620,2019 113,327 366,564 598,807 165,-155 418,-265 484,-493 -233,-184 -476,-387 -570,-681 -88,-319 -74,-693 142,-960 183,-259 482,-388 772,-486z"/>
                     <path id="75" fill={fillColours[75]} onClick={paintColour} d="M23603 21867c-291,-112 -601,-168 -887,-294 -33,70 -67,141 -101,212 267,163 529,338 817,463 56,-128 113,-255 171,-381z"/>
-                    <path id="76" fill={fillColours[761]} onClick={paintColour} d="M18329 21884c-222,82 -453,148 -650,283 63,83 125,165 188,247 207,-85 410,-182 611,-282 -48,-84 -97,-166 -149,-248z"/>
+                    <path id="76" fill={fillColours[76]} onClick={paintColour} d="M18329 21884c-222,82 -453,148 -650,283 63,83 125,165 188,247 207,-85 410,-182 611,-282 -48,-84 -97,-166 -149,-248z"/>
                     <path id="77" fill={fillColours[77]} onClick={paintColour} d="M29323 22172c-76,-77 -184,-109 -278,-158 -124,70 -300,98 -364,241 -155,285 350,581 536,326 75,-114 195,-271 106,-409z"/>
                     <path id="78" fill={fillColours[78]} onClick={paintColour} d="M34635 22225c-318,28 -639,235 -727,554 -101,266 -49,564 72,815 86,163 264,237 413,330 370,-490 255,-1131 242,-1699z"/>
                     <path id="79" fill={fillColours[79]} onClick={paintColour} d="M22844 22977c-111,-299 -363,-537 -622,-715 -113,358 178,665 266,997 117,-96 247,-177 356,-282z"/>
