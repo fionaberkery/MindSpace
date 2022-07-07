@@ -1,11 +1,11 @@
 import React from 'react';
-import Mandala from '../components/ColouringBook/Mandala';
+import MandalaImage1 from '../components/ColouringBook/MandalaImage1';
 
 const ColouringBookContainer = () => {
     return (
         <div>
             <h2>Colour Away</h2>
-            <Mandala />
+            <MandalaImage1 />
         </div>
     )
 }

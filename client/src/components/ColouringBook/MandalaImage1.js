@@ -2,7 +2,7 @@ import Palette from './Palette';
 import React, {useState} from 'react';
 import "./colouring.css";
 
-const Mandala = () => {
+const MandalaImage1 = () => {
 
     const [fillColours, setFillColours] = useState(Array(1990).fill("white"));
     const [currentColour, setCurrentColour] = useState("white");
@@ -201,7 +201,7 @@ const Mandala = () => {
     )
 }
 
-export default Mandala;
+export default MandalaImage1;
 
 
 
