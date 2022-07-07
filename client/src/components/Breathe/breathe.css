@@ -95,11 +95,10 @@ body {
 @keyframes breathe {
     0% {
       transform: scale(.5)
-      
+
     }
     25% {
       transform: scale(1),
-
     }
     50%{
       transform: scale(1)
@@ -111,3 +110,5 @@ body {
       transform: scale(.5)
     }
 }
+
+/* three classes for breathing in out and hold */
