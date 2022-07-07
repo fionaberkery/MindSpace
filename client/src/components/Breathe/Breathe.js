@@ -5,52 +5,50 @@ import './breathe.css'
 
 const Breathe = () => {
 
-    const wordsList = ["Breathe In", "Hold", "Breathe Out"]
+   
 
-    const [currentWord, setCurrentWord]= useState(wordsList[0])
+    const [currentWord, setCurrentWord]= useState("Breathe In")
 
-
-    // const wordAnimation = () => {
-        
-    // }
-
-    // const [word, setWord]= useState("Breathe In")
-
-    // const totalTime = 18400
-    // const breatheTime = (totalTime/5) * 2
-    // const holdTime = totalTime/5
-
-    // useEffect(() => {
-    //     return console.log("Word is changing")
-    //   }, [word]);
+  
 
 
+    const totalTime = 18400
+    const breatheTime = (totalTime/5) * 2
+    const holdTime = totalTime/5
 
-    //     const wordAnimation = () => {
+    useEffect(() => {
+        return console.log("Word is changing", 4000)
+      }, [currentWord]);
 
-    //     setTimeout(()=>{
-    //         setWord("Hold")
+        const wordAnimation = () => {
 
-    //         setTimeout(()=>{
-    //             setWord("Breathe Out")
-    //         }, holdTime)
-    //     }, breatheTime)
+        setTimeout(()=>{
 
-    // }
+            
+            setCurrentWord("Hold",)
 
-    // setInterval(wordAnimation, totalTime)
+            setTimeout(()=>{
+                setCurrentWord("Breathe Out")
+            }, holdTime)
+        }, breatheTime)
+    }
+
+    setInterval(wordAnimation, totalTime)
 
 
     return(
         <>
-
+    
         <div className="breathe-container">
-
+        
         <div className="circle-container">
+        
+            <div className="circle"> 
+            <div className="word">{currentWord}</div>
+            </div>
 
-            <div className="circle">{currentWord}</div>
-            
                 <div className="pointer-container">
+               
                     <div className="pointer"></div>
                 </div>
                 
