@@ -1,11 +1,11 @@
 
 import './App.css';
+import './components/NavBar/navBar.css'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import ColouringBookContainer from './containers/ColouringBookContainer';
-
 import Breathe from './components/Breathe/Breathe';
-
+import JournalContainer from './containers/JournalContainer';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         </Route>
 
         <Route path="/journal">
-          {/* journal component */}
+          <JournalContainer></JournalContainer>
         </Route>
 
         <Route path="/listen">
