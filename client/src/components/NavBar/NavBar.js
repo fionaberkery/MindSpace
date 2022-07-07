@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom"
 import React from "react"
-import Header from "../Header/Header"
 
-const NavBar = ({setCurrentUserJournalEntries, setCurrentUser, currentUser, savedUsers}) => {
+
+const NavBar = () => {
     return(
         <>
         <nav className="navBar">
@@ -13,8 +13,8 @@ const NavBar = ({setCurrentUserJournalEntries, setCurrentUser, currentUser, save
             <Link to="/journal"> Journal </Link> 
             <Link to="/listen"> Listen </Link> 
             <Link to="/game"> Game </Link> 
+            <Link to="/login"> View Your Profile </Link>
 
-            <Header setCurrentUserJournalEntries={setCurrentUserJournalEntries} currentUser={currentUser} savedUsers={savedUsers} setCurrentUser={setCurrentUser} />
 
         </nav>
         </>

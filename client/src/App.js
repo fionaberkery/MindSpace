@@ -8,8 +8,11 @@ import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import JournalContainer from './containers/JournalContainer';
 import JournalList from './components/Journal/JournalList';
+import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/Journal/NewEntry';
 import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
+import ProfilePage from './components/UserProfile/ProfilePage';
+
 
 
 function App() {
@@ -35,7 +38,7 @@ function App() {
     <>
       
       <Router>
-      <NavBar setCurrentUserJournalEntries={setCurrentUserJournalEntries} savedUsers={savedUsers} currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      <NavBar/>
       <Switch> 
 
         <Route exact path="/">
@@ -72,6 +75,14 @@ npm           {/* sounds component */}
 
         <Route path="/create">
           <NewEntry></NewEntry>
+        </Route>
+
+        <Route path="/login">
+          <UserProfileContainer setCurrentUserJournalEntries={setCurrentUserJournalEntries} currentUser={currentUser} savedUsers={savedUsers} setCurrentUser={setCurrentUser} />
+        </Route>
+
+        <Route path="/profile">
+          <ProfilePage/>
         </Route>
 
       </Switch>
