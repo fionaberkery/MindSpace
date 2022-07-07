@@ -7,7 +7,7 @@ import AudioControls from "../components/audio_player_components/AudioControls";
 
 
 const AudioPlayer = () => {
-    // const [audioData, setAudioData] = useState([])
+    const [audioData, setAudioData] = useState([])
     const [selected, setSelected] = useState(null)
     
 
@@ -16,7 +16,7 @@ const AudioPlayer = () => {
     // }
 
     const getAudioData = () => {
-        fetch('src/data/audio_data/audioJson.js')
+        fetch('http://localhost:8080/audio/')
         .then(res => res.json())
         .then(audioData => setAudioData(audioData))
         .catch(err => console.error);
@@ -41,9 +41,9 @@ const AudioPlayer = () => {
     //         });
     //     }
 
-    // useEffect(()=>{
-    //     getAudioData()
-    // },[])
+    useEffect(()=>{
+        getAudioData()
+    },[])
 
     const onAudioClick = (audio) => {
         setSelected(audio)
