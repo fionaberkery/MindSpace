@@ -36,6 +36,10 @@ function App() {
           {/* sounds component */}
         </Route>
 
+        <Route path="/game">
+          {/* sounds component */}
+        </Route>
+
       </Switch>
       </Router>
 
