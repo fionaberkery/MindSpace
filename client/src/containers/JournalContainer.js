@@ -13,9 +13,9 @@ const JournalContainer = () => {
     const[newEntry, setNewEntry] = useState("")
     const[selectedJournalEntry, setSelectedJournalEntry] = useState(null)
 
-    onJournalEntryClick = (selectedEntry) => {
-        setSelectedJournalEntry(selectedEntry)
-    }
+    // onJournalEntryClick = (selectedEntry) => {
+    //     setSelectedJournalEntry(selectedEntry)
+    // }
 
 
     return (
@@ -23,7 +23,7 @@ const JournalContainer = () => {
         <>
             <h2> Journal </h2>
 
-            <JournalList journalEntries={journalEntries} newEntry={newEntry} onJournalEntryClick={onJournalEntryClick} selectedJournalEntry={selectedJournalEntry} ></JournalList>
+            <JournalList journalEntries={journalEntries} ></JournalList>
 
 
         </>
