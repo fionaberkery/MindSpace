@@ -2,17 +2,15 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
+import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
-
 import Breathe from './components/Breathe/Breathe';
-
-
 
 function App() {
   return (
 
     <>
-      
+    
       <Router>
       <NavBar/>
       <Switch> 
@@ -34,7 +32,7 @@ function App() {
         </Route>
 
         <Route path="/listen">
-          {/* sounds component */}
+          <AudioPlayer/>
         </Route>
 
         <Route path="/game">
