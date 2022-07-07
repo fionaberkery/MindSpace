@@ -2,6 +2,7 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
+import ColouringBookContainer from './containers/ColouringBookContainer';
 
 import Breathe from './components/Breathe/Breathe';
 
@@ -25,7 +26,7 @@ function App() {
         </Route>
 
         <Route path="/colour">
-          {/* colouring component */}
+          <ColouringBookContainer />
         </Route>
 
         <Route path="/journal">
