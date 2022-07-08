@@ -3,7 +3,7 @@
 }
 
 .breathe-container {
-    background: url('/src/static/breathe/calm-water.jpg');
+    /* background: url('/src/static/breathe/calm-water.jpg'); */
     background-size:contain;
     background-attachment: fixed;
     background-repeat:no-repeat;
@@ -81,7 +81,7 @@
     /* animation: pointercolour 18400ms infinite;  */
 }
 
-.word{
+.word-container{
     display:flex;
     justify-content: center;
     align-self: flex-end;
@@ -91,7 +91,13 @@
     width: 100%;
     top: 0;
     z-index: -1;
+}
 
+.word {
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    font-size: 20px;
 }
 
 /* animations */
