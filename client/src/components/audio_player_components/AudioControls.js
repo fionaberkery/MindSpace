@@ -4,9 +4,6 @@ const AudioControls = ({selected}) => {
     
     const SERVER_ADDRESS= "http://localhost:8080/audiofiles/";
 
-    console.log(selected)
-
-
     return(
         <>
             <div>

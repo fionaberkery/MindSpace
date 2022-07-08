@@ -32,10 +32,8 @@ function App() {
 
   return (
 
- 
-
     <>
-    
+
       <Router>
       <NavBar/>
       <Switch> 
