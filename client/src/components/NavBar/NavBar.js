@@ -13,6 +13,7 @@ const NavBar = () => {
             <Link to="/journal"> Journal </Link> 
             <Link to="/listen"> Listen </Link> 
             <Link to="/game"> Game </Link> 
+            <Link to="/pop"> Pop </Link> 
             <Link to="/login"> View Your Profile </Link>
 
 

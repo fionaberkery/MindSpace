@@ -13,6 +13,7 @@ import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/Journal/NewEntry';
 import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
 import ProfilePage from './components/UserProfile/ProfilePage';
+import GameContainer from './containers/GameContainer';
 
 function App() {
 
@@ -90,6 +91,10 @@ npm           {/* sounds component */}
 
         <Route path="/profile">
           <ProfilePage currentUserJournalEntries={currentUserJournalEntries} currentUser={currentUser} />
+        </Route>
+
+        <Route path="/pop">
+          <GameContainer/>
         </Route>
 
       </Switch>
