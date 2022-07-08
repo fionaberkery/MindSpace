@@ -11,10 +11,9 @@ const AudioList = ({audioData, onAudioClick}) => {
         onAudioClick={onAudioClick}/>
         })
 
-
     return(
         <>
-            <h2>AudioList</h2>
+            <h3>AudioList</h3>
             {audioList}
         </>
     )
