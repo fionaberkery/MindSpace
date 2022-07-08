@@ -66,6 +66,10 @@ public class User {
         this.journalEntries = journalEntries;
     }
 
+    public void addJournalEntry(JournalEntry newEntry) {
+        this.journalEntries.add(newEntry);
+    }
+
 //    public void addJournalEntry(JournalEntry newEntry) {
 //        this.journalEntries.add(newEntry);
 //    }
