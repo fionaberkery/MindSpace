@@ -1,10 +1,49 @@
-svg {
-    fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;
+/* svg {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:1.5;
     min-width: 550px;
     line-height: 5em;
     stroke-width:3.55px;
     stroke:black;
     shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd
+} */
+
+#mandala-1 {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:1.5;
+    min-width: 550px;
+    line-height: 5em;
+    stroke-width:3.55px;
+    stroke:black;
+    shape-rendering:geometricPrecision; 
+    text-rendering:geometricPrecision; 
+    image-rendering:optimizeQuality; 
+    fill-rule:evenodd; 
+    clip-rule:evenodd
+}
+
+#village-stairs {
+    /* stroke-miterlimit:5; */
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:1.5;
+    min-width: 550px;
+    line-height: 5em;
+    stroke-width:0.5px;
+    stroke:black;
+    shape-rendering:geometricPrecision; 
+    text-rendering:geometricPrecision; 
+    image-rendering:optimizeQuality; 
+    fill-rule:evenodd; 
+    clip-rule:evenodd
 }
 
 .fil1 {

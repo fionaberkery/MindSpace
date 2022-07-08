@@ -4,6 +4,8 @@ import './components/NavBar/navBar.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar';
+import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import JournalContainer from './containers/JournalContainer';
@@ -12,8 +14,6 @@ import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/Journal/NewEntry';
 import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
 import ProfilePage from './components/UserProfile/ProfilePage';
-
-
 
 function App() {
 
@@ -36,7 +36,7 @@ function App() {
  
 
     <>
-      
+    
       <Router>
       <NavBar/>
       <Switch> 
@@ -58,7 +58,7 @@ function App() {
         </Route>
 
         <Route path="/listen">
-          {/* sounds component */}
+          <AudioPlayer/>
         </Route>
 
         <Route path="/game">
