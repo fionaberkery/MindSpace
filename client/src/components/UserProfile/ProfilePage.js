@@ -2,17 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const ProfilePage = ({currentUserJournalEntries}) => {
+const ProfilePage = ({currentUserJournalEntries, currentUser}) => {
 
-    console.log(currentUserJournalEntries)
+    console.log(currentUser.journalEntries[0].date)
 
     return (
 
         <>
         <h2>profile page</h2> 
 
-        {currentUserJournalEntries.date}
-        {currentUserJournalEntries.textInput}
+            {currentUser.journalEntries[0].date}
+        {/* {currentUser.journalEntries} */}
+        {/* {currentUser.journalEntries.textInput} */}
 
 
         </>

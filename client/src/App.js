@@ -89,7 +89,7 @@ npm           {/* sounds component */}
         </Route>
 
         <Route path="/profile">
-          <ProfilePage currentUserJournalEntries={currentUserJournalEntries} />
+          <ProfilePage currentUserJournalEntries={currentUserJournalEntries} currentUser={currentUser} />
         </Route>
 
       </Switch>
