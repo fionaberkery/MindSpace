@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Palette from '../Palette';
 import "../../../static/colouring/colouring.css";
 
-const MandalaImage2 = () => {
+const MandalaImage2 = ({handleImageSelection}) => {
 
     const [fillColours, setFillColours] = useState(Array(242).fill("white"));
     const [currentColour, setCurrentColour] = useState("white");
@@ -15,7 +15,10 @@ const MandalaImage2 = () => {
     }
 
     return (
-        <div>
+        <div className='colouring-page'>
+            <aside>
+				<p onClick={()=>{handleImageSelection('default')}}>Click here to go back to selection menu.</p>
+			</aside>
 
             <Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 			<div id="box-current-colour">
