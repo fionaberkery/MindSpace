@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+
 
 html {
   box-sizing: border-box;
-  font-family: "Luckiest Guy", cursive;
   position: fixed;
   overflow: hidden;
 }
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 4px white;
 }
 
 *,
@@ -22,11 +21,13 @@ html {
   z-index: 90;
   display: block;
   position: relative;
-  background: #ea3b3b;
+  /* background: #ea3b3b; */
   padding: 10px;
-  font-size: 24px;
-  color: #fff;
-  text-shadow: -2px 3px 0 #bb1616;
+  font-size: 34px;
+  padding: 0.5em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(40, 40, 40);
+  /* text-shadow: -2px 3px 0 #bb1616; */
 }
 
 .bubble {
@@ -39,6 +40,7 @@ html {
   width: 20vw;
   height: 20vh;
   background-image: url("/src/images/bubble.png")
+  /* background-image: url("https://uploads.codesandbox.io/uploads/user/e75d21d3-e2a7-4d7a-bd14-09ebe09ee6b0/YLcO-water-bubble.png") */
     no-repeat 50% / contain;
 }
 
@@ -53,33 +55,38 @@ html {
 
 .stage {
   overflow: hidden;
-  background: #1c92d2;
-  background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+  transform: scale(1);
+  background: url('/src/images/jeffrey-workman-YvkH8R1zoQM-unsplash.jpg') no-repeat 50% / contain;
+  max-width:70%;
+  /* max-height:80%; */
+  
 
   position: relative;
-  width: 100vw;
-  height: 200vh;
+  width: 90vw;
+  height: 60vh;
+  
 }
 
 button {
+  opacity: 0.8;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: inherit;
-  color: #fff;
+  color: grey;
   border: 0;
   font-size: 50px;
   color: white;
-  background: #ea3b3b;
+  background: #3b95ea;
   padding: 0.5em;
-  border: 1px solid #ea3b3b;
+  border: 1px solid #3b52ea;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: -10px 10px 0 #bb1616;
+  /* box-shadow: -10px 10px 0 #031d90; */
   transition: all 0.3s ease-in-out;
   line-height: 1;
-  text-shadow: -5px 5px 0 #bb1616;
+  /* text-shadow: -5px 5px 0 #1621bb; */
 }
 
 @keyframes popped {

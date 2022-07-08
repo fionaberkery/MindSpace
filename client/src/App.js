@@ -6,6 +6,7 @@ import ColouringBookContainer from './containers/ColouringBookContainer';
 
 import Breathe from './components/Breathe/Breathe';
 import BubbleGame from './components/BubbleGame/BubbleGame';
+// import Sudoku from './components/SudokuGame/Game';
 
 
 
@@ -38,7 +39,7 @@ function App() {
           {/* sounds component */}
         </Route>
 
-        <Route path="/bubblegame">
+        <Route path="/game">
           <BubbleGame />
           {/* sounds component */}
         </Route>

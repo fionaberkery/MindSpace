@@ -61,5 +61,4 @@ function solve(grid){
         return true;
     }
     solve(board)
-   console.log(board)
-
+    console.log(board);
