@@ -1,5 +1,5 @@
 import React from "react";
-import "./colouring.css";
+import "../../static/colouring/colouring.css";
 
 const Palette = ({ setCurrentColour }) => {
 
