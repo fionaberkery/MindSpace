@@ -38,12 +38,27 @@ const UserProfileContainer = ({user, setUser, savedUsers, setCurrentUserJournalE
                 
                 
                 <select onChange={handleChange}>
-                    <option > Select Previous User </option>
+                    <option > Select User </option>
                     {usersList}
                 </select>
+                <br/><br/>
+                <b><label> Password </label></b><br></br>            
+                    <input type="text"/><br></br><br></br> 
+                 <a href="" id="forgot-password"> Forgot password </a> 
 
-                <Link to="/profile">Login</Link> 
+                 <br/><br/>
 
+            <button> <Link to="/profile"> Login  </Link> </button><br></br>
+            <hr></hr>
+
+            
+                <h2> create new profile </h2><br></br>
+                <label> Name </label><br></br>
+                <input type="text"/><br></br><br></br>
+                    <label> Email </label><br></br>
+                    <input type="text"/><br></br><br></br>
+                    <button > Create new profile </button>
+                
             
         </>
     )
@@ -52,10 +67,9 @@ const UserProfileContainer = ({user, setUser, savedUsers, setCurrentUserJournalE
 export default UserProfileContainer
 
  {/* <br></br><br></br>
-                    <b><label> Password </label></b><br></br>            
-                    <input type="text"/><br></br><br></br>                     */}
+                                       */}
 
-                          {/* <a href="" id="forgot-password"> Forgot password </a>< */}
+                         
                
                         //   <input onChange={handleNameInput} type="text" value={user}/> 
               

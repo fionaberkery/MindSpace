@@ -15,7 +15,7 @@ const ProfilePage = ({currentUserJournalEntries, currentUser}) => {
     return (
 
         <>
-        <h2>profile page</h2> 
+        <h2> Welcome back {currentUser.name} </h2> 
             <p>
 
             
