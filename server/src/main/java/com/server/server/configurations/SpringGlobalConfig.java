@@ -1,11 +1,11 @@
-package com.server.server.configs;
+package com.server.server.configurations;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Component
-public class Configurations implements WebMvcConfigurer {
+@Configuration
+public class SpringGlobalConfig implements WebMvcConfigurer {
 
     private static final String CORS_BASE_PATTERN = "/**";
     private static final String ALLOWED_ORIGINS = "*";
