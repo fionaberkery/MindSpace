@@ -1,13 +1,39 @@
 
 import './App.css';
+import './components/NavBar/navBar.css'
+import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import NavBar from './components/NavBar/NavBar';
 import NavBar from './components/NavBar';
 import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
+import JournalContainer from './containers/JournalContainer';
+import JournalList from './components/Journal/JournalList';
+import UserProfileContainer from './containers/UserProfileContainer';
+import NewEntry from './components/Journal/NewEntry';
+import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
+import ProfilePage from './components/UserProfile/ProfilePage';
 
 function App() {
+
+  const [savedUsers, setSavedUsers] = useState([])
+  const [savedJournalEntries, setSavedJournalEntries] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
+  const [currentUserJournalEntries, setCurrentUserJournalEntries] = useState([])
+
+  useEffect(() => {
+    UserService.getUsers()
+    .then(users => setSavedUsers(users))
+    JournalEntryService.getJournalEntries()
+    .then(journalEntries => setSavedJournalEntries(journalEntries))
+}, [])
+
+ 
+
   return (
+
+ 
 
     <>
     
@@ -28,7 +54,7 @@ function App() {
         </Route>
 
         <Route path="/journal">
-          {/* journal component */}
+          <JournalContainer currentUserJournalEntries={currentUserJournalEntries} setCurrentUserJournalEntries={setCurrentUserJournalEntries} savedUsers={savedUsers} savedJournalEntries={savedJournalEntries} ></JournalContainer>
         </Route>
 
         <Route path="/listen">
@@ -37,6 +63,26 @@ function App() {
 
         <Route path="/game">
 npm           {/* sounds component */}
+        </Route>
+
+        <Route path="/journalEntries">
+          <JournalList 
+          setCurrentUserJournalEntries={setCurrentUserJournalEntries} 
+          currentUserJournalEntries={currentUserJournalEntries} 
+          savedUsers={savedUsers} 
+          savedJournalEntries={savedJournalEntries}/>
+        </Route>
+
+        <Route path="/create">
+          <NewEntry></NewEntry>
+        </Route>
+
+        <Route path="/login">
+          <UserProfileContainer setCurrentUserJournalEntries={setCurrentUserJournalEntries} currentUser={currentUser} savedUsers={savedUsers} setCurrentUser={setCurrentUser} />
+        </Route>
+
+        <Route path="/profile">
+          <ProfilePage/>
         </Route>
 
       </Switch>
