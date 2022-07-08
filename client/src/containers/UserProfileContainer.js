@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { UserJournalEntriesService } from "../services/Services";
 
-const UserProfileContainer = ({currentUser, setCurrentUser, savedUsers, setCurrentUserJournalEntries
+const UserProfileContainer = ({user, setUser, savedUsers, setCurrentUserJournalEntries, setCurrentUser
 }) => {
 
     const usersList = savedUsers.map((user, index) =>{
@@ -9,55 +10,52 @@ const UserProfileContainer = ({currentUser, setCurrentUser, savedUsers, setCurre
 
     })
 
-        const handleChange = function(event){
-            const chosenUser = savedUsers[event.target.value]
-            onUserSelected(chosenUser)
+        const handleClick = (event) => {
+            
+
         }
-    
-        const onUserSelected = function(user){
-            setCurrentUser(user)
-            setCurrentUserJournalEntries(user.journalEntries)
-        }
+
+
+    const handleNameInput = (event) => {
+    setUser(event.target.value.id)
+    }
+
+    const handleChange = function(event){
+        const chosenUser = savedUsers[event.target.value]
+        onUserSelected(chosenUser)
+    }
+
+    const onUserSelected = function(user){
+        setCurrentUser(user)
+        setCurrentUserJournalEntries(user.journalEntries)
+    }
 
     return (
 
         <>
+            
+            <p> Welcome back, login below </p>
+                
+                
+                <select onChange={handleChange}>
+                    <option > Select Previous User </option>
+                    {usersList}
+                </select>
 
-
+                <Link to="/profile">Login</Link> 
 
             
-
-            <div id="check-out-page">
-    
-            
-
-            <div id="sign-in-form">
-           
-                <p> Welcome back, login below </p>
-                <form>
-                    <b><label> Username </label></b><br></br>
-                    <select defaultValue="" onChange={handleChange}>
-                <option> Select Previous User </option>
-
-                {usersList}
-            </select>
-                    <br></br><br></br>
-                    <b><label> Password </label></b><br></br>            
-                    <input type="text"/><br></br><br></br>                    
-                </form>
-                <a href="" id="forgot-password"> Forgot password </a><br></br><br></br>
-                <button><Link to="/profile" > Log in </Link></button>
-            </div>
-         
-
-
-            </div>
-        
-
-            
-
         </>
     )
 }
 
 export default UserProfileContainer
+
+ {/* <br></br><br></br>
+                    <b><label> Password </label></b><br></br>            
+                    <input type="text"/><br></br><br></br>                     */}
+
+                          {/* <a href="" id="forgot-password"> Forgot password </a>< */}
+               
+                        //   <input onChange={handleNameInput} type="text" value={user}/> 
+              

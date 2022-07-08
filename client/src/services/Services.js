@@ -14,6 +14,20 @@ export const JournalEntryService =  {
     }
 }
 
+export const UserJournalEntriesService = {
+    getJournalEntriesById(id) {
+        return fetch(`${baseURL}/journals/user?userid=${id}`)
+        .then(res => res.json())
+    }
+}
+
+// export const UserJournalEntriesService = {
+//     getJournalEntriesByUserName(name) {
+//         return fetch(`${baseURL}/journals/user?userid=${name}`)
+//         .then(res => res.json())
+//     }
+// }
+
 export const PostJournalEntry = (payload) => {
     const url = `${baseURL}/journals`
     return fetch(url, {

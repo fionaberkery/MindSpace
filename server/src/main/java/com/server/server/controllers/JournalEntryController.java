@@ -54,4 +54,20 @@ public class JournalEntryController {
         }
     }
 
+//    // find all journal entries by user id
+//    @GetMapping(value = "/journals/user")
+//    public ResponseEntity<List<JournalEntry>> findEntriesByUserId(
+//            @RequestParam(name = "userid") Long id)
+//    {
+//        return new ResponseEntity<>(journalEntryRepository.findByUser_Id(id), HttpStatus.OK);
+//    }
+
+    // find all journal entries by user name
+    @GetMapping(value = "/journals/user")
+    public ResponseEntity<List<JournalEntry>> findEntriesByUserName(
+            @RequestParam(name = "name") String name)
+    {
+        return new ResponseEntity<>(journalEntryRepository.findByUser_Name(name), HttpStatus.OK);
+    }
+
 }

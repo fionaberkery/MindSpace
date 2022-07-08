@@ -4,7 +4,6 @@ import './components/NavBar/navBar.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-import NavBar from './components/NavBar';
 import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
@@ -21,6 +20,7 @@ function App() {
   const [savedJournalEntries, setSavedJournalEntries] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserJournalEntries, setCurrentUserJournalEntries] = useState([])
+  const [user, setUser] = useState("")
 
   useEffect(() => {
     UserService.getUsers()
@@ -78,11 +78,18 @@ npm           {/* sounds component */}
         </Route>
 
         <Route path="/login">
-          <UserProfileContainer setCurrentUserJournalEntries={setCurrentUserJournalEntries} currentUser={currentUser} savedUsers={savedUsers} setCurrentUser={setCurrentUser} />
+          <UserProfileContainer 
+          user={user} 
+          setUser={setUser} 
+          setCurrentUserJournalEntries={setCurrentUserJournalEntries} 
+          currentUserJournalEntries={currentUserJournalEntries} 
+          currentUser={currentUser} 
+          savedUsers={savedUsers} 
+          setCurrentUser={setCurrentUser} />
         </Route>
 
         <Route path="/profile">
-          <ProfilePage/>
+          <ProfilePage currentUserJournalEntries={currentUserJournalEntries} />
         </Route>
 
       </Switch>
