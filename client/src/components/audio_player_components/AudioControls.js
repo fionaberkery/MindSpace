@@ -1,5 +1,4 @@
 import React from "react";
-// import selectAudio from '../../data/audio_data/AudioData';
 
 const AudioControls = ({selected}) => {
     

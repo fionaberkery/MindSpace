@@ -24,10 +24,10 @@ export const PostJournalEntry = (payload) => {
     .then(res => res.json())
 }
 
-// export const AudioService =  {
-//     getAudios() {
-//         return fetch(`${baseURL}/audio`)
-//         .then(res => res.json());
-//     }
-// }
+export const AudioService =  {
+    getAudios() {
+        return fetch(`${baseURL}/audio`)
+        .then(res => res.json());
+    }
+}
 

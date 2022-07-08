@@ -6,7 +6,11 @@ const AudioList = ({audioData, onAudioClick}) => {
 
     console.log(audioData)
     const audioList = audioData.map((audio) => {
-        return  <AudioListItem audio={audio} key={audio.id} onAudioClick={onAudioClick}/>})
+        return  <AudioListItem 
+        audio={audio} 
+        key={audio.id} 
+        onAudioClick={onAudioClick}/>
+        })
 
 
     return(
