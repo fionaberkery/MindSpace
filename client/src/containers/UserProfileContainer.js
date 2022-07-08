@@ -1,75 +1,49 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { UserJournalEntriesService } from "../services/Services";
 
-const UserProfileContainer = ({user, setUser, savedUsers, setCurrentUserJournalEntries, setCurrentUser
-}) => {
+const UserProfileContainer = ({onUserSelected, savedUsers}) => {
 
     const usersList = savedUsers.map((user, index) =>{
         return<option value={index} key={index} > {user.name} </option> 
-
     })
-
-        const handleClick = (event) => {
-            
-
-        }
-
-
-    const handleNameInput = (event) => {
-    setUser(event.target.value.id)
-    }
 
     const handleChange = function(event){
         const chosenUser = savedUsers[event.target.value]
         onUserSelected(chosenUser)
     }
 
-    const onUserSelected = function(user){
-        setCurrentUser(user)
-        setCurrentUserJournalEntries(user.journalEntries)
-    }
-
     return (
 
         <>
             
-            <p> Welcome back, login below </p>
-                
+            <h2> Login to open your journal </h2>
                 
                 <select onChange={handleChange}>
-                    <option > Select User </option>
+                    <option> Select User </option>
                     {usersList}
                 </select>
-                <br/><br/>
-                <b><label> Password </label></b><br></br>            
-                    <input type="text"/><br></br><br></br> 
-                 <a href="" id="forgot-password"> Forgot password </a> 
-
-                 <br/><br/>
-
-            <button> <Link to="/profile"> Login  </Link> </button><br></br>
-            <hr></hr>
-
-            
-                <h2> create new profile </h2><br></br>
-                <label> Name </label><br></br>
-                <input type="text"/><br></br><br></br>
-                    <label> Email </label><br></br>
-                    <input type="text"/><br></br><br></br>
-                    <button > Create new profile </button>
+                        
+                <input type="text" placeholder="password"/>
                 
+                <a href="" id="forgot-password"> Forgot password </a> 
+
+                <button> 
+                    <Link to="/profile">Login</Link> 
+                </button>
+                
+                <hr></hr>
             
+                <h2> Want to start a new journal? </h2>
+                <button> <Link to="/newprofile">Create new profile here</Link> </button>
+
+                <hr></hr>
+
+                <h3> Journal without logging in </h3>
+
+                <button><Link to="/create"> Create new journal entry </Link></button>
+
         </>
     )
 }
 
 export default UserProfileContainer
-
- {/* <br></br><br></br>
-                                       */}
-
-                         
-               
-                        //   <input onChange={handleNameInput} type="text" value={user}/> 
-              

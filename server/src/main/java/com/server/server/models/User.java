@@ -21,17 +21,29 @@ public class User {
    @Column(name = "email")
     private String email;
 
+   @Column(name = "password")
+   private String password;
+
    @OneToMany(mappedBy = "user")
    @JsonIgnoreProperties({"user"})
    private List<JournalEntry> journalEntries;
 
-    public User(String name, String email) {
+    public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
+        this.password = password;
         this.journalEntries = new ArrayList<>();
     }
 
     public User() {
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Long getId() {

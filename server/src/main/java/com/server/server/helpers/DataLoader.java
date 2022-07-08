@@ -30,19 +30,19 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        User user1 = new User("Liam", "liam@mail.com");
+        User user1 = new User("Liam", "liam@mail.com", "V23%$ger!");
         userRepository.save(user1);
 
-        User user2 = new User("Louis", "louis@mail.com");
+        User user2 = new User("Louis", "louis@mail.com","A5£%rgGF6");
         userRepository.save(user2);
 
-        User user3 = new User("Niall", "niall@mail.com");
+        User user3 = new User("Niall", "niall@mail.com", "N8!dg@!4Gs");
         userRepository.save(user3);
 
-        User user4 = new User("Zayn", "zayn@mail.com");
+        User user4 = new User("Zayn", "zayn@mail.com", "bG**123!@");
         userRepository.save(user4);
 
-        User user5 = new User("Harry", "harry@mail.com");
+        User user5 = new User("Harry", "harry@mail.com", "1bEW2@3*!");
         userRepository.save(user5);
 
         JournalEntry entry1 = new JournalEntry("22-03-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
