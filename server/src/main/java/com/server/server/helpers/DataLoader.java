@@ -1,7 +1,9 @@
 package com.server.server.helpers;
 
+import com.server.server.models.Audio;
 import com.server.server.models.JournalEntry;
 import com.server.server.models.User;
+import com.server.server.repositories.AudioRepository;
 import com.server.server.repositories.JournalEntryRepository;
 import com.server.server.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     JournalEntryRepository journalEntryRepository;
+    @Autowired
+    AudioRepository audioRepository;
 
     public DataLoader() {
     }
@@ -86,8 +90,10 @@ public class DataLoader implements ApplicationRunner {
         JournalEntry entry10 = new JournalEntry("11-12-21", "feeling unsure", user10);
         journalEntryRepository.save(entry10);
 
-
-
+        Audio audio1 = new Audio("Rain Sounds 1", "RainTest.mp3");
+        audioRepository.save(audio1);
+        Audio audio2 = new Audio("Rain Sounds 2", "507902__inuetc__heavy-rain-sound-inu-etc.mp3");
+        audioRepository.save(audio2);
 
     }
 }
