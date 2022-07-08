@@ -10,8 +10,10 @@ const ProfilePage = ({currentUserJournalEntries, currentUser}) => {
 
         <>
         <h2>profile page</h2> 
-
-            {currentUser.journalEntries[0].date}
+            <p>
+            {currentUser.journalEntries[0].date} <br></br>
+            {currentUser.journalEntries[0].textInput}
+            </p>
         {/* {currentUser.journalEntries} */}
         {/* {currentUser.journalEntries.textInput} */}
 
