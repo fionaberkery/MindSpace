@@ -1,6 +1,6 @@
-import Palette from './Palette';
+import Palette from '../Palette';
 import React, {useState} from 'react';
-import "./colouring.css";
+import "../../../static/colouring/colouring.css";
 
 const MandalaImage1 = () => {
 
