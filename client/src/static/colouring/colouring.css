@@ -1,6 +1,7 @@
 /************ All styling for the Colour section as follows ************/
 .colouring-page {
     display: flex;
+    align-items: center;
 }
 
 .colouring-svg {
@@ -18,18 +19,18 @@
 }
 
 #mandala-1 {
-    min-width: 550px;
+    max-width: 95vw;
     stroke-width:3.55px;
     
 }
 
 #mandala-2 {
-    /* min-width: 550px; */
     max-width: 95vw;
     stroke-width:3.55px;
 }
 
 #village-stairs {
+    max-width: 95vw;
     stroke-width:0.5px;
 }
 
@@ -41,7 +42,7 @@
     fill: white;
 }
 
-#box-current-color {
+#current-colour--box {
     display: flex;
     float: right;
     padding-top: 20px;
@@ -58,7 +59,7 @@
     display: inline-block;
 }
 
-#colour-box {
+#colour-palette {
     display: flex;
     float: right;
     margin-left: auto;
@@ -71,7 +72,7 @@
     width: 200px;
 }
 
-#colour-box--inner {
+#colour-palette--inner {
     width: 90px;
     text-align: center;
     margin-top: auto;
@@ -83,7 +84,6 @@
 }
 
 #colour-input {
-
     height: 40px;
     width: 80px;
     border-radius: 10px;
