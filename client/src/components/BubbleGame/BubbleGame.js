@@ -13,7 +13,7 @@ const BubbleGame =() =>{
     )
 }
 
-const rootElement = document.getElementById("root");
-const root = ReactDOMClient.createRoot(rootElement);
-root.render(<BubbleGame />)
+// const rootElement = document.getElementById("root");
+// const root = ReactDOMClient.createRoot(rootElement);
+// root.render(<BubbleGame />)
 export default BubbleGame;

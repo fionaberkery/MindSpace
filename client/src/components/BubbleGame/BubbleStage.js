@@ -4,7 +4,7 @@ import './bubble.css'
 
 
 const BubbleStage = () => {
-    const [bubbleCount, setBubbleCount] = useState(50);
+    const [bubbleCount, setBubbleCount] = useState(10);
     const [bubblesPopped, setBubblesPopped] = useState(0);
     const [ready, setReady] = useState(false);
     // const [randomPosition, setRandomPosition] = useState(null) 
@@ -16,57 +16,57 @@ const BubbleStage = () => {
   //   setBubblesPopped() >1
   // }
 
-
   const init = ()=> {
-    const bubbles = document.querySelectorAll(".bubble");
-    for (let i = 0; i < bubbles.length; i++) {
-      animateBubble(bubbles, i);
-    }
+    console.log("init");
+    const bubbles = renderBubbles();
+    bubbles.forEach((bubble, index) => {
+      console.log(bubble);
+      animateBubble(bubble, index);
+    })
   }
 
-  const isReady=() =>{
-    setReady({
-      ready: true
-    });
-    init()
-    ;
+  const isReady= () =>{
+    console.log("ready");
+    init();
+    setReady(true);
   }
 
   const renderBubbles=()=> {
-    return [...Array(bubbleCount)].map((x, i) => (
-      <BubblePop key={i} pop={popBubble} />
-    ));
+    const arr = [...Array(bubbleCount)].map((x, i) => (
+      x = <BubblePop key={i} pop={popBubble} />
+      ));
+    return [...arr];
   }
 
- const getRandomPosition = () => {
-    // const x = document.body.offsetHeight - element.clientHeight;
-    // const y = document.body.offsetWidth - element.clientWidth;
-    const x = .1;
-    const y = .2;
+  const getRandomPosition = () => {
+    console.log("random position");
+    // const x = document.body.offsetHeight - Element.clientHeight;
+    // const y = document.body.offsetWidth - Element.clientWidth;
+    const x = 10;
+    const y = 10;
     const randomX = Math.floor(Math.random() * x);
     const randomY = Math.floor(Math.random() * y);
     return [randomX, randomY];
   }
 
-  const animateBubble=(bubbles, i)=> {
-    const bubble = bubbles[i];
-    const xy = getRandomPosition(bubble);
-  
-
-    Object.assign(bubble.style, {
+  const animateBubble =(bubble, index)=> {
+    console.log("animatin bubbles");
+    const xy = getRandomPosition();
+    console.log(xy);
+    const styles = {
       top: xy[0] + "px",
       left: xy[1] + "px",
-      zIndex: i,
+      zIndex: index,
       animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
-    });
-
+    }
+    console.log(styles);
+    Object.assign(bubble, styles); // breaks here, throws Uncaught TypeError: Cannot add property top, object is non-extensible
     bubble.classList.add("animating");
   }
 
-
-
   const popBubble =(e)=> {
     e.preventDefault();
+    console.log("poppin");
     const bubble = e.target;
     const audio = document.getElementById("pop");
     bubble.classList.remove("animating");
@@ -77,7 +77,6 @@ const BubbleStage = () => {
       bubble.style.display = "none";
     }, 500);
   }
-
 
 return (
   <div className="stage" id="stage">
