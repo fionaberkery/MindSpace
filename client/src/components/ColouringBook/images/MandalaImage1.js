@@ -22,8 +22,8 @@ const MandalaImage1 = ({handleImageSelection}) => {
                 <div id="current-colour" style={{ background: currentColour }} />
             </div>
 
-            <svg id="mandala-1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 1000 45000 48000">
-                <rect id="white-background-box" fill="white" width="4200" height="4200"/>
+            <svg id="mandala-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 1000 45000 48000">
+                {/* <rect id="white-background-box" fill="white" width="4200" height="4200"/> */}
                 <g id="Layer_x0020_1">
                     <metadata id="CorelCorpID_0Corel-Layer"/>
                     <path id="path6" className="fil1" d="M19167 6805c-74,-233 -235,-457 -459,-564 -172,-23 -386,-61 -523,76 -207,222 -231,555 -158,837 120,461 455,817 748,1176 146,-95 158,-277 206,-427 93,-359 219,-723 186,-1098z" />

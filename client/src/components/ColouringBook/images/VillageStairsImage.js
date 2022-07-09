@@ -22,7 +22,7 @@ const VillageStairsImage = ({handleImageSelection}) => {
 				<div id="current-colour" style={{ background: currentColour }} />
 			</div>
 
-			<svg id="village-stairs" dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 574 574">
+			<svg id="village-stairs" dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
 				<g id="black-outline">
 					<rect width="574" height="574"/>
 				</g>

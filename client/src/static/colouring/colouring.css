@@ -1,7 +1,11 @@
 /************ All styling for the Colour section as follows ************/
 .colouring-page {
-    display: flex;
-    align-items: center;
+    /* flex or grid to make everything appear nicely aligned */
+    color:#121212;
+}
+
+path {
+    transition: fill 0.5s;
 }
 
 .colouring-svg {
@@ -87,4 +91,10 @@
     height: 40px;
     width: 80px;
     border-radius: 10px;
+}
+
+.select-btn {
+    padding: 0.5em;
+    border: #121212 solid 2px;
+    border-radius: 5px;
 }

@@ -24,7 +24,7 @@ const MandalaImage2 = ({handleImageSelection}) => {
 			</div>
         
             <svg id="mandala-2" xmlns="http://www.w3.org/2000/svg" width="574" height="574" version="1.1" viewBox="0 0 42000 42000">
-                <rect  className="fil0" width="42000" height="42000"/>
+                {/* <rect  className="fil0" width="4200" height="4200"/> */}
                     <g id="Layer_x0020_1">
                         <metadata id="CorelCorpID_0Corel-Layer"/>
                     <g>
