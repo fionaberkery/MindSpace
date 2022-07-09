@@ -15,4 +15,6 @@ public interface JournalEntryRepository extends JpaRepository<JournalEntry, Long
     List<JournalEntry> findByUser_Name(String name);
 
 
+
+
 }
