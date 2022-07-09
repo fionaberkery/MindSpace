@@ -14,16 +14,18 @@ const ProfilePage = ({currentUserJournalEntries, currentUser}) => {
     return (
 
         <>
-            <h2> {currentUser.name}'s Profile </h2> 
+            <h2>  Profile </h2> 
 
             <button> Edit Profile </button>
+
+            <button> <Link to="/home"> Log out </Link> </button>
 
             <button> <Link to="/create"> New journal entry </Link></button>
 
                 <p>
                     {textInputs}
                 </p>
-                
+                    
         </>
     )
 }

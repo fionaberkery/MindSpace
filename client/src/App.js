@@ -25,7 +25,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [])
+  }, [savedUsers, savedJournalEntries])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -79,7 +79,9 @@ function App() {
           </Route>
 
           <Route path="/create">
-            <NewEntry addNewJournalEntry={addNewJournalEntry} />
+            <NewEntry 
+            addNewJournalEntry={addNewJournalEntry}
+            currentUser={currentUser} />
           </Route>
 
           <Route path="/journal">

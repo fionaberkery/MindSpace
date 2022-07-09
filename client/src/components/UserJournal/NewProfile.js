@@ -6,7 +6,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [buttonText, setButtonText] = useState("Save")
+    const [buttonTextProfile, setButtonTextProfile] = useState("Save")
     const [componentToShow, setComponentToShow] = useState(false)
 
     const handleNameChange = (event) => {
@@ -18,7 +18,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
     }
 
     const handlePasswordChange = (event) => {
-        setEmail(event.target.value)
+        setPassword(event.target.value)
     }
     
     const handleSubmit = (event) => {
@@ -34,7 +34,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
         setPassword("")
         event.target.reset()
         onUserSelected(newUser)
-        setButtonText("New Profile Successfully Created!")
+        setButtonTextProfile("New Profile Successfully Created!")
         setComponentToShow(true)
     }
 
@@ -51,10 +51,10 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
 
                     <input type="text" placeholder="Create password" onChange={handlePasswordChange} required />
 
-                    <input type="submit" value={buttonText}/>
+                    <input type="submit" value={buttonTextProfile}/>
                 </form>
 
-                {componentToShow ? <button> <Link to="/login"> Return to log in</Link> </button> : null}
+                {componentToShow ? <button> <Link to="/journal"> Return to log in</Link> </button> : null}
 
         </>
     )

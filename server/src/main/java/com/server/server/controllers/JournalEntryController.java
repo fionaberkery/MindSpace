@@ -27,12 +27,16 @@ public class JournalEntryController {
         return new ResponseEntity<>(journalEntryRepository.findById(id), HttpStatus.OK);
     }
 
-    // create new journal entry
     @PostMapping(value = "/journal")
-    public ResponseEntity<JournalEntry> postJournalEntry(@RequestBody JournalEntry journalEntry){
-        journalEntryRepository.save(journalEntry);
-        return new ResponseEntity<>(journalEntry, HttpStatus.CREATED);
+    public JournalEntry newEntry(@RequestBody JournalEntry newJournalEntry){
+        return journalEntryRepository.save(newJournalEntry);
     }
+
+//    // create new journal entry
+//    @PostMapping(value = "/journal")
+//    public JournalEntry journalEntry newJournalEntry(@RequestBody JournalEntry newJournalEntry){
+//        return journalEntryRepository.save(newJournalEntry);
+//    }
 
     // edit journal entry
     @PutMapping(value = "/journal")
