@@ -1,60 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
-const UserProfileContainer = ({currentUser, setCurrentUser, savedUsers, setCurrentUserJournalEntries
-}) => {
+const UserProfileContainer = ({onUserSelected, savedUsers}) => {
 
     const usersList = savedUsers.map((user, index) =>{
         return<option value={index} key={index} > {user.name} </option> 
-
     })
 
-        const handleChange = function(event){
-            const chosenUser = savedUsers[event.target.value]
-            onUserSelected(chosenUser)
-        }
-    
-        const onUserSelected = function(user){
-            setCurrentUser(user)
-            setCurrentUserJournalEntries(user.journalEntries)
-        }
+    const handleChange = function(event){
+        const chosenUser = savedUsers[event.target.value]
+        onUserSelected(chosenUser)
+    }
 
     return (
 
         <>
-
-
-
             
+            <h2> Login to open your journal </h2>
+                
+                <select onChange={handleChange}>
+                    <option> Select User </option>
+                    {usersList}
+                </select>
+                        
+                <input type="text" placeholder="password"/>
+                
+                <a href="" id="forgot-password"> Forgot password </a> 
 
-            <div id="check-out-page">
-    
+                <button> 
+                    <Link to="/profile">Login</Link> 
+                </button>
+                
+                <hr></hr>
             
+                <h2> Want to start a new journal? </h2>
+                <button> <Link to="/newprofile">Create new profile here</Link> </button>
 
-            <div id="sign-in-form">
-           
-                <p> Welcome back, login below </p>
-                <form>
-                    <b><label> Username </label></b><br></br>
-                    <select defaultValue="" onChange={handleChange}>
-                <option> Select Previous User </option>
+                <hr></hr>
 
-                {usersList}
-            </select>
-                    <br></br><br></br>
-                    <b><label> Password </label></b><br></br>            
-                    <input type="text"/><br></br><br></br>                    
-                </form>
-                <a href="" id="forgot-password"> Forgot password </a><br></br><br></br>
-                <button><Link to="/profile" > Log in </Link></button>
-            </div>
-         
+                <h3> Journal without logging in </h3>
 
-
-            </div>
-        
-
-            
+                <button><Link to="/create"> Create new journal entry </Link></button>
 
         </>
     )
