@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import ControlButtons from "./AudioButtons"
 
 const AudioControls = ({selected, audioData}) => {
     const [audioIndex, setAudioIndex] = useState(0)
@@ -13,6 +14,12 @@ const AudioControls = ({selected, audioData}) => {
                 <h3>Audio Controls</h3>
                 <li>{selected.name}</li>
                 {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
+                <ControlButtons
+                    isPlaying={isPlaying}
+                    // onPreviousClick={previousAudio}
+                    // onNextClick={nextAudio}
+                    onPlayPauseClick={setIsPlaying}
+                />
             </div>
         </>
     )
