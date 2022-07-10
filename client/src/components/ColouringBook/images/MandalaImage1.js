@@ -15,7 +15,6 @@ const MandalaImage1 = ({handleImageSelection}) => {
 
     return (
         <div className='colouring-page'>
-            <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleImageSelection('default')}}>Back to image selection</button>
 
             <Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
             <div id="current-colour--box">
@@ -198,6 +197,9 @@ const MandalaImage1 = ({handleImageSelection}) => {
                     <path id="129" fill={fillColours[129]} onClick={paintColour} onTouchStart={paintColour} d="M22555 34758c-63,-246 -247,-429 -403,-619 -246,306 -430,720 -319,1114 47,314 524,460 713,187 151,-208 67,-460 9,-682z"/>
                 </g>
             </svg>
+            
+            <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleImageSelection('default')}}>Back to image selection</button>
+
         </div>
     )
 }

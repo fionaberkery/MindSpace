@@ -15,7 +15,6 @@ const VillageStairsImage = ({handleImageSelection}) => {
 
     return (
 		<div className='colouring-page'>
-			<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleImageSelection('default')}}>Back to image selection</button>
 
 			<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 			<div id="current-colour--box">
@@ -786,6 +785,8 @@ const VillageStairsImage = ({handleImageSelection}) => {
 				</g>
 			</svg>
 
+			<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleImageSelection('default')}}>Back to image selection</button>
+			
 		</div>
 	)
 }

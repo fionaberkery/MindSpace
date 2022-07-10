@@ -8,7 +8,6 @@ const Palette = ({ setCurrentColour }) => {
     ];
 
     const changeColour = (event) => {
-        console.log(event.target.value)
         if(event.target.value !== undefined) {
             return setCurrentColour(event.target.value);
         }
@@ -18,7 +17,7 @@ const Palette = ({ setCurrentColour }) => {
     return (
         <div id="colour-palette">
             <div id="colour-palette--inner" onClick={changeColour} onTouchStart={changeColour}>
-                <input id="colour-input" type="color" name="head" onChange={changeColour}/>
+                <input id="custom-colour-input" type="color" name="head" onChange={changeColour}/>
             </div>
             {colours.map((colour, index) => {
                 return <div onClick={changeColour} onTouchStart={changeColour} key={index} id="colour-palette--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>

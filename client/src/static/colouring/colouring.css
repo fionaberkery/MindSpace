@@ -1,16 +1,4 @@
 /************ All styling for the Colour section as follows ************/
-.colouring-page {
-    /* flex or grid to make everything appear nicely aligned */
-    color:#121212;
-}
-
-.select-img {
-    height: 30vh;
-}
-
-path {
-    transition: fill 0.5s;
-}
 
 .colouring-svg {
     fill-rule:evenodd;
@@ -27,18 +15,14 @@ path {
 }
 
 #mandala-1 {
-    max-width: 95vw;
     stroke-width:3.55px;
-    
 }
 
 #mandala-2 {
-    max-width: 95vw;
     stroke-width:3.55px;
 }
 
 #village-stairs {
-    max-width: 95vw;
     stroke-width:0.5px;
 }
 
@@ -50,50 +34,63 @@ path {
     fill: white;
 }
 
-#current-colour--box {
-    display: flex;
-    float: right;
-    padding-top: 20px;
-    margin-left: auto;
-    margin-right: -150px;
-    text-align: center;
+path {
+    transition: fill 0.5s;
 }
 
-#current-colour {
-    border: #121212 2px solid;
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    display: inline-block;
+@media screen and (min-width: 769px) {
+    .colouring-page {
+        display: grid;
+    }
+
+    .select-img {
+        max-width: 30%;
+    }
+
+    #current-colour--box {
+        padding-top: 20px;
+        /* margin-left: auto; */
+        /* margin-right: -150px; */
+        /* text-align: center; */
+    }
+
+    #current-colour {
+        border: #121212 2px solid;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+    }
+
+    #colour-palette {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: auto;
+        margin-right: 5%;
+        margin-top: 5%;
+        width: auto;
+        gap: 0.5rem;
+        width: 200px;
+    }
+
+    #colour-palette--inner {
+        width: 6rem;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+        border-radius: 10px;
+        border: #121212 1px solid;
+    }
+
+    #custom-colour-input {
+        height: 3rem;
+        width: 6rem;
+        border-radius: 10px;
+        border: none;
+        ;
+    }
 }
 
-#colour-palette {
-    display: flex;
-    float: right;
-    margin-left: auto;
-    margin-right: 5%;
-    margin-top: 90px;
-    flex-wrap: wrap;
-    width: auto;
-    justify-content: center;
-    gap: 13px;
-    width: 200px;
+@media screen and (max-width: 768px) {
+    
 }
-
-#colour-palette--inner {
-    width: 90px;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 45px;
-    border-radius: 10px;
-    line-height: 50px;
-    border: #121212 1px solid;
-}
-
-#colour-input {
-    height: 40px;
-    width: 80px;
-    border-radius: 10px;
-}
-
