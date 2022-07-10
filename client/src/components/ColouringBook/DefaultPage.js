@@ -8,9 +8,9 @@ const DefaultPage = ({handleImageSelection}) => {
     return (
         <>
             <h2>Choose a picture to colour in: </h2>
-            <img src={village} className='select-img' onClick={()=>{handleImageSelection('village')}} onTouchStart={()=>{handleImageSelection('village')}}/>
-            <img src={mandala1} className='select-img' onClick={()=>{handleImageSelection('mandala1')}} onTouchStart={()=>{handleImageSelection('mandala1')}}/>
-            <img src={mandala2} id='mandala2-img' className='select-img' onClick={()=>{handleImageSelection('mandala2')}} onTouchStart={()=>{handleImageSelection('mandala2')}}/>
+            <img src={village} alt='Village' className='select-img' onClick={()=>{handleImageSelection('village')}} onTouchStart={()=>{handleImageSelection('village')}}/>
+            <img src={mandala1} alt='Mandala' className='select-img' onClick={()=>{handleImageSelection('mandala1')}} onTouchStart={()=>{handleImageSelection('mandala1')}}/>
+            <img src={mandala2} alt='Paisley Petal' id='mandala2-img' className='select-img' onClick={()=>{handleImageSelection('mandala2')}} onTouchStart={()=>{handleImageSelection('mandala2')}}/>
         </>
     )
 }
