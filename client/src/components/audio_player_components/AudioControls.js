@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import ControlButtons from "./AudioButtons"
 
-const AudioControls = ({selected, audioData}) => {
+const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     const [audioIndex, setAudioIndex] = useState(0)
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
@@ -89,6 +89,21 @@ const AudioControls = ({selected, audioData}) => {
         }
     }, [audioIndex]);
 
+    //  Handles scrubbing (the progress bar)
+    const onScrub = (value) => {
+        clearInterval(intervalRef.current) // Clears any timers running
+        audioRef.current.currentTime = value;
+        setAudioProgress(audioRef.current.currentTime);
+        console.log(value + " <<< this is value")
+    }
+    
+    const onScrubEnd = () => {
+        if (!isPlaying) {
+            setIsPlaying(true);
+        }
+            startTimer();
+    }
+
     return(
         <>
             <div className="audioControls">
@@ -100,6 +115,17 @@ const AudioControls = ({selected, audioData}) => {
                     onPreviousClick={previousAudio}
                     onNextClick={nextAudio}
                     onPlayPauseClick={setIsPlaying}
+                />
+                <input
+                    type="range"
+                    value={audioProgress}
+                    step="1"
+                    min="0"
+                    max={duration ? duration : `${duration}`}
+                    className="progress"
+                    onChange={(e) => onScrub(e.target.value)}
+                    onMouseUp={onScrubEnd}
+                    onKeyUp={onScrubEnd}
                 />
             </div>
         </>
