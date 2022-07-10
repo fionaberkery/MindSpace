@@ -1,4 +1,3 @@
-
 import './App.css';
 import './components/NavBar/navBar.css'
 import React, {useState, useEffect} from 'react'
@@ -13,6 +12,7 @@ import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/Journal/NewEntry';
 import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
 import ProfilePage from './components/UserProfile/ProfilePage';
+import {Helmet} from 'react-helmet';
 
 function App() {
 
@@ -28,13 +28,12 @@ function App() {
     .then(journalEntries => setSavedJournalEntries(journalEntries))
 }, [])
 
- 
 
   return (
-
- 
-
     <>
+      <Helmet>
+        <title>Wellbeing First Aid Kit</title>
+      </Helmet>
     
       <Router>
       <NavBar/>

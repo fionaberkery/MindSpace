@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Helmet } from 'react-helmet';
 import DefaultPage from '../components/ColouringBook/DefaultPage';
 import MandalaImage1 from '../components/ColouringBook/images/MandalaImage1';
 import MandalaImage2 from '../components/ColouringBook/images/MandalaImage2';
@@ -29,6 +30,9 @@ const ColouringBookContainer = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Wellbeing - Colour</title>
+            </Helmet>
             <h2>Colour Away</h2>
             <nav className='nav-colouring'>
                 {colouringNav()}
