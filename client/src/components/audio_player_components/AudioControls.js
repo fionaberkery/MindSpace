@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ControlButtons from "./AudioButtons"
 
 const AudioControls = ({selected, audioData}) => {
@@ -24,6 +24,37 @@ const AudioControls = ({selected, audioData}) => {
     }
 
     console.log(audioIndex, " << this is selected audioIndex in audioData")
+
+    const nextAudio = () => {
+
+    }
+
+    const previousAudio = () => {
+
+    }
+
+    const startTimer = () => {
+        // Clears any timers running
+        clearInterval(intervalRef.current);
+
+        intervalRef.current = setInterval(() => {
+            if (audioRef.current.ended) {
+                nextAudio();
+            } else {
+                setAudioProgress(audioRef.current.currentTime);
+            }
+        }, [1000]);
+        }
+
+    // Starts and stops audio when the play/pause button is used.
+    useEffect(() => {
+        if (isPlaying) {
+            audioRef.current.play();
+            startTimer();
+        } else {
+            audioRef.current.pause();
+        }
+    }, [isPlaying]);
 
     return(
         <>
