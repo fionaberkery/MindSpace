@@ -25,7 +25,7 @@ const AudioPlayer = () => {
                 <AudioList audioData={audioData} onAudioClick={onAudioClick}/>
             </div>
             <div>
-                { selected ? <AudioControls selected = {selected} />: null }
+                { selected ? <AudioControls audioData={audioData} selected = {selected} />: null }
             </div>
         </>
     )
