@@ -12,26 +12,27 @@ const ColouringBookContainer = () => {
         setSelection(selection)
     }
 
+    const colouringNav = ()=>{
+        switch (selection) {
+            case 'default':
+                return <DefaultPage handleImageSelection={handleImageSelection} />
+            case 'village':
+                return <VillageStairsImage handleImageSelection={handleImageSelection} />
+            case 'mandala1':
+                return <MandalaImage1 handleImageSelection={handleImageSelection} />
+            case 'mandala2':
+                return <MandalaImage2 handleImageSelection={handleImageSelection} />
+            default:
+                return null;
+        }
+    }
+
     return (
         <div>
             <h2>Colour Away</h2>
-            <br/>
-
-            {(()=>{
-                switch (selection) {
-                    case 'default':
-                        return <DefaultPage handleImageSelection={handleImageSelection} />
-                    case 'village':
-                        return <VillageStairsImage handleImageSelection={handleImageSelection} />
-                    case 'mandala1':
-                        return <MandalaImage1 handleImageSelection={handleImageSelection} />
-                    case 'mandala2':
-                        return <MandalaImage2 handleImageSelection={handleImageSelection} />
-                    default:
-                        return null;
-                }
-            })()}
-            
+            <nav className='nav-colouring'>
+                {colouringNav()}
+            </nav>
         </div>
     )
 }
