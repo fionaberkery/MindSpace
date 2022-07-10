@@ -3,11 +3,11 @@ import UserJournalEntry from "./UserJournalEntry";
 import { Link } from "react-router-dom";
 
 
-const ProfilePage = ({currentUserJournalEntries, currentUser}) => {
+const ProfilePage = ({currentUserJournalEntries, currentUser, deleteUserJournalEntry}) => {
 
     const textInputs = currentUserJournalEntries.map(entry => {
-        return <UserJournalEntry entry={entry}/>
-    })
+        return <UserJournalEntry deleteUserJournalEntry={deleteUserJournalEntry} entry={entry}/>
+    }) 
 
 
 

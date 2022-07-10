@@ -1,6 +1,10 @@
 import React from "react";
 
-const UserJournalEntry = ({entry}) => {
+const UserJournalEntry = ({entry, deleteUserJournalEntry}) => {
+
+    // const handleDelete = () => {
+    //     deleteUserJournalEntry(entry.id)
+    // }
 
     return (
 
@@ -12,9 +16,9 @@ const UserJournalEntry = ({entry}) => {
             <h5> Journal Entry </h5> 
             <p> {entry.textInput} </p>
 
-            <button> Delete </button>
+            <button> Delete Entry </button>
             
-            <button> Edit </button>
+            
 
             <hr></hr>
 

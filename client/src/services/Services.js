@@ -21,13 +21,6 @@ export const UserJournalEntriesService = {
     }
 }
 
-// export const UserJournalEntriesService = {
-//     getJournalEntriesByUserName(name) {
-//         return fetch(`${baseURL}/journals/user?userid=${name}`)
-//         .then(res => res.json())
-//     }
-// }
-
 export const PostJournalEntry = (payload) => {
     const url = `${baseURL}/journal`
     return fetch(url, {
@@ -48,10 +41,10 @@ export const PostNewUser = (payload) => {
         .then(res => res.json())
 }
 
-// export const AudioService =  {
-//     getAudios() {
-//         return fetch(`${baseURL}/audio`)
-//         .then(res => res.json());
-//     }
+// export const DeleteJournalEntry = (id) => {
+//     const url = `${baseURL}/journal/${id}`
+//     return fetch(url, {
+//         method: 'DELETE'
+//     })
 // }
 
