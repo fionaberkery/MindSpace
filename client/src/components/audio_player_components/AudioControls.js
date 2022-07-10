@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ControlButtons from "./AudioButtons"
 
 const AudioControls = ({selected, audioData}) => {
@@ -7,6 +7,19 @@ const AudioControls = ({selected, audioData}) => {
     const [isPlaying, setIsPlaying] = useState(true);
     
     const SERVER_ADDRESS= "http://localhost:8080/audiofiles/";
+
+    // The audio element 
+    const audioRef = useRef(new Audio(SERVER_ADDRESS+selected.filePath))
+    // Reference to set interval timer.
+    const intervalRef = useRef()
+    // Boolean value determines when particular actions are ready to be run.
+    const isReady = useRef(false)
+
+
+
+    const onPlayPauseClick = () => {
+        !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
+    }
 
     return(
         <>
