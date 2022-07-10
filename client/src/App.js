@@ -13,6 +13,7 @@ import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/Journal/NewEntry';
 import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
 import ProfilePage from './components/UserProfile/ProfilePage';
+import WalkingGameContainer from './containers/WalkingGameContainer';
 
 function App() {
 
@@ -60,6 +61,10 @@ function App() {
 
         <Route path="/game">
 npm           {/* sounds component */}
+        </Route>
+
+        <Route path="WalkGame">
+          <WalkingGameContainer/>
         </Route>
 
         <Route path="/journalEntries">
