@@ -4,6 +4,14 @@
     color:#121212;
 }
 
+.select-img {
+    height: 30vh;
+}
+
+#mandala2-img {
+    width: 35vw;
+}
+
 path {
     transition: fill 0.5s;
 }
@@ -93,8 +101,3 @@ path {
     border-radius: 10px;
 }
 
-.select-btn {
-    padding: 0.5em;
-    border: #121212 solid 2px;
-    border-radius: 5px;
-}

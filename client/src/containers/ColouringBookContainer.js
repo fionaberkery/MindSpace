@@ -31,11 +31,7 @@ const ColouringBookContainer = () => {
                         return null;
                 }
             })()}
-
-            {/* {selectedImage}
-            <h4 onClick={handleImageSelection}>Village</h4>
-            <h4 onClick={handleImageSelection}>Mandala1</h4>
-            <h4 onClick={handleImageSelection}>Mandala2</h4> */}
+            
         </div>
     )
 }
