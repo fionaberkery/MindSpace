@@ -8,7 +8,7 @@ import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/UserJournal/NewEntry';
-import { DeleteJournalEntry, JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
+import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
 
@@ -96,7 +96,7 @@ function App() {
 
           <Route path="/profile">
             <ProfilePage 
-            deleteUserJournalEntry={deleteUserJournalEntry}
+            
             currentUserJournalEntries={currentUserJournalEntries} 
             currentUser={currentUser} />
           </Route>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserJournalEntry = ({entry, deleteUserJournalEntry}) => {
+const UserJournalEntry = ({entry}) => {
 
     // const handleDelete = () => {
     //     deleteUserJournalEntry(entry.id)
