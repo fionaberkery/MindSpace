@@ -18,6 +18,10 @@ const AudioPlayer = () => {
         setSelected(audio)
     }
 
+    // const onNextClick = (selected) => {
+    //     setSelected(selected)
+    // }
+
     
     return(
         <>
@@ -25,7 +29,7 @@ const AudioPlayer = () => {
                 <AudioList audioData={audioData} onAudioClick={onAudioClick}/>
             </div>
             <div>
-                { selected ? <AudioControls audioData={audioData} selected = {selected} />: null }
+                { selected ? <AudioControls audioData={audioData} selected = {selected} onNextClick={selected} />: null }
             </div>
         </>
     )

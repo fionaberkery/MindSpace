@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import ControlButtons from "./AudioButtons"
+import "../audio_player_components/ControlButtons.css"
 
 const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     const [audioIndex, setAudioIndex] = useState(0)
@@ -107,9 +108,11 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     return(
         <>
             <div className="audioControls">
-                <h3>Audio Controls</h3>
-                <li>{selected.name}</li>
-                {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
+                <div className="audioInfo">
+                    <h3>Audio Controls</h3>
+                    <li>{selected.name}</li>
+                    {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
+                </div>
                 <ControlButtons
                     isPlaying={isPlaying}
                     onPreviousClick={previousAudio}

@@ -3,10 +3,12 @@ import { default as Play } from "../../static/icons8-play-100.png"
 import { default as Pause } from "../../static/icons8-pause-100.png"
 import { default as Next } from "../../static/icons8-end-100.png"
 import { default as Previous } from "../../static/icons8-skip-to-start-100.png"
+import "../audio_player_components/ControlButtons.css"
+
 
 const ControlButtons = ({ isPlaying, onPlayPauseClick, onNextClick, onPreviousClick }) => (
 
-    <div className="audioButtons">
+    <div className="buttonControls">
         <button
             className="prev"
             onClick={onPreviousClick}
