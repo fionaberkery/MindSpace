@@ -1,0 +1,29 @@
+.button-controls {
+  display: flex;
+  justify-content: space-between;
+  width:  75%;
+  margin: 0 auto 15px;
+}
+
+.button-controls > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+  /* .buttonControls .prev svg,
+  .buttonControls .next svg {
+    max-width: 1%;
+    height: auto; 
+    } 
+  
+  .audio-controls .play svg, 
+  .audio-controls .pause svg {
+    max-width: 40px;
+    height: auto;
+  } */
+  
+.audio-controls path {
+    fill: var(--white);
+  }

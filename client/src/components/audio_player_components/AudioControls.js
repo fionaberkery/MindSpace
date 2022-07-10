@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import ControlButtons from "./AudioButtons"
-import "../audio_player_components/ControlButtons.css"
+import "../audio_player_components/AudioControls.css"
 
 const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     const [audioIndex, setAudioIndex] = useState(0)
@@ -105,33 +105,34 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
             startTimer();
     }
 
+    const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
+    const progressStyling = `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))`
+
     return(
-        <>
-            <div className="audioControls">
-                <div className="audioInfo">
-                    <h3>Audio Controls</h3>
-                    <li>{selected.name}</li>
-                    {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
-                </div>
-                <ControlButtons
-                    isPlaying={isPlaying}
-                    onPreviousClick={previousAudio}
-                    onNextClick={nextAudio}
-                    onPlayPauseClick={setIsPlaying}
-                />
-                <input
-                    type="range"
-                    value={audioProgress}
-                    step="1"
-                    min="0"
-                    max={duration ? duration : `${duration}`}
-                    className="progress"
-                    onChange={(e) => onScrub(e.target.value)}
-                    onMouseUp={onScrubEnd}
-                    onKeyUp={onScrubEnd}
-                />
+        <div className="audio-controls">
+            <div className="audio-info">
+                <p>{selected.name}</p>
+                {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
             </div>
-        </>
+            <ControlButtons 
+                isPlaying={isPlaying}
+                onPreviousClick={previousAudio}
+                onNextClick={nextAudio}
+                onPlayPauseClick={setIsPlaying}
+            />
+            <input
+                type="range"
+                value={audioProgress}
+                step="1"
+                min="0"
+                max={duration ? duration : `${duration}`}
+                className="progress"
+                style={{ background: progressStyling }}
+                onChange={(e) => onScrub(e.target.value)}
+                onMouseUp={onScrubEnd}
+                onKeyUp={onScrubEnd}
+            />
+        </div>
     )
 }
 

@@ -1,0 +1,27 @@
+.audio-controls {
+    width:  65%;
+    margin: 0 auto 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    }
+
+.audio-controls > * {
+    box-sizing: border-box;
+}
+
+.name {
+    margin-bottom: 4vw;
+    align-self: center;
+}
+
+input[type=range] {
+	height: 5px;
+	-webkit-appearance: none;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	background: #3b7677;
+	transition: background 0.2s ease;
+	cursor: pointer;
+}
