@@ -15,15 +15,19 @@ const AudioControls = ({selected, audioData}) => {
     // Boolean value determines when particular actions are ready to be run.
     const isReady = useRef(false)
 
+    const { duration } = audioRef.current
 
+    console.log(audioData)
 
     const onPlayPauseClick = () => {
         !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
     }
 
+    console.log(audioIndex, " << this is selected audioIndex in audioData")
+
     return(
         <>
-            <div>
+            <div className="audioControls">
                 <h3>Audio Controls</h3>
                 <li>{selected.name}</li>
                 {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
