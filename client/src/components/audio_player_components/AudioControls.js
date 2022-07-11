@@ -8,7 +8,7 @@ const AudioControls = ({
     onNextClick, 
     onPreviousClick
     }) => {
-        
+
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     
@@ -109,7 +109,6 @@ const AudioControls = ({
         <div className="audio-controls">
             <div className="audio-info">
                 <p>{selected.name}</p>
-                {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
             </div>
             <AudioButtons 
                 isPlaying={isPlaying}
