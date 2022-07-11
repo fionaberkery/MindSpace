@@ -9,14 +9,7 @@
         "titleBar.activeBackground": "#bddadb",
         "titleBar.activeForeground": "#15202b",
         "titleBar.inactiveBackground": "#bddadb99",
-        "titleBar.inactiveForeground": "#15202b99",
-        "activityBar.activeBackground": "#deeced",
-        "activityBar.activeBorder": "#bb83b8",
-        "activityBar.background": "#deeced",
-        "activityBar.foreground": "#15202b",
-        "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#bb83b8",
-        "activityBarBadge.foreground": "#15202b"
+        "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#bddadb"
 }

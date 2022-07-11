@@ -5,7 +5,7 @@ import './containers/journalLogin.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-import AudioPlayer from './containers/AudioPlayer';
+// import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import UserProfileContainer from './containers/UserProfileContainer';
@@ -20,14 +20,23 @@ import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
 import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
+// Audio imports
+import { AudioService } from "./services/Services";
+import AudioList from '../src/components/audio_player_components/AudioList';
+import AudioControls from "../src/components/audio_player_components/AudioControls";
+
 
 function App() {
-
 
   const [savedUsers, setSavedUsers] = useState([])
   const [savedJournalEntries, setSavedJournalEntries] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserJournalEntries, setCurrentUserJournalEntries] = useState([])
+  // Audio state
+  const [audioData, setAudioData] = useState([])
+  const [selected, setSelected] = useState(null)
+  // Audio controls state
+  const [audioIndex, setAudioIndex] = useState(0)
 
   useEffect(() => {
     UserService.getUsers()
@@ -61,6 +70,60 @@ function App() {
     setCurrentUserJournalEntries(user.journalEntries)
 }
 
+// >> Audio player code start <<
+
+  useEffect(() => {
+      AudioService.getAudios()
+      .then(audioData => setAudioData(audioData))
+  }, [])
+
+  const onAudioClick = (audio) => {
+      setSelected(audio)
+  }
+
+// Audio Controls <<<<<<<<<<<<<<<<<<<<<<<<
+
+// const onNextClick = (selected) => {
+//     setSelected(selected)
+// }
+
+// if (!active) return null
+
+  useEffect(() => {
+    if(selected !== null){
+    const audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
+  }})
+  console.log(audioIndex, " << this is selected audioIndex in audioData")
+
+
+  const onNextClick = () => {
+    if(selected !== null){
+      if (audioIndex < audioData.length - 1) {
+          setAudioIndex(audioIndex + 1)
+          setSelected(audioData.at(audioIndex + 1))
+      } else {
+          setAudioIndex(0)
+          setSelected(audioData.at(0))
+      }
+    }
+  }
+
+  const onPreviousClick = () => {
+    if(selected !== null){
+      if (audioIndex - 1 < 0) {
+          setAudioIndex(audioData.length - 1)
+          setSelected(audioData.at(audioIndex.length - 1))
+      } else {
+          setAudioIndex(audioIndex - 1)
+          setSelected(audioData.at(audioIndex - 1))
+      }
+    }
+  }
+
+
+// >> End audio player code <<
+
   return (
     <>
 
@@ -74,7 +137,24 @@ function App() {
       <Router>
         
         <NavBar/>
-        
+        {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
+
+        {/* <AudioPlayer active={true}/> */} 
+        <div>
+            <AudioList audioData={audioData} 
+            onAudioClick={onAudioClick}/>
+        </div>
+        <div>
+            { selected ? <AudioControls 
+            selected = {selected}
+            audioIndex = {audioIndex}
+            onNextClick={onNextClick}
+            onPreviousClick={onPreviousClick}
+            />: null }
+        </div>
+
+
+        {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
         <Switch> 
 
           <Route exact path="/">
@@ -88,10 +168,9 @@ function App() {
           <Route path="/colour">
             <ColouringBookContainer/>
           </Route>
-
+          {/* 
           <Route path="/listen">
-            <AudioPlayer/>
-          </Route>
+          </Route> */}
 
           <Route path="/play">
             <Games></Games>

@@ -1,9 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
-import ControlButtons from "./AudioButtons"
+import AudioButtons from "./AudioButtons"
 import "../audio_player_components/AudioControls.css"
 
-const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
-    const [audioIndex, setAudioIndex] = useState(0)
+const AudioControls = ({
+    selected,
+    audioIndex,
+    onNextClick, 
+    onPreviousClick,
+    onPlayPauseClick
+    }) => {
+
+    // const [audioIndex, setAudioIndex] = useState(0)
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     
@@ -16,31 +23,45 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     // Boolean value determines when particular actions are ready to be run.
     const isReady = useRef(false)
 
+    const handleNextClick = () => {
+        onNextClick()
+    }
+
+    const handlePreviousClick = () => {
+        onPreviousClick()
+    }
+
     const { duration } = audioRef.current
 
-    console.log(audioData)
+    // console.log(audioData)
 
-    const onPlayPauseClick = () => {
-        !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
-    }
+    // useEffect(() => {
+    //     const audioObjects = audioData.map(audio => audio.id)
+    //     setAudioIndex(audioObjects.indexOf(selected.id))
+    // })
+    // console.log(audioIndex, " << this is selected audioIndex in audioData")
 
-    console.log(audioIndex, " << this is selected audioIndex in audioData")
 
-    const nextAudio = () => {
-        if (audioIndex < audioData.length - 1) {
-            setAudioIndex(audioIndex + 1)
-        } else {
-            setAudioIndex(0);
-        }
-    }
+    // const onPlayPauseClick = () => {
+    //     !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
+    // }
 
-    const previousAudio = () => {
-        if (audioIndex - 1 < 0) {
-            setAudioIndex(audioData.length - 1);
-        } else {
-            setAudioIndex(audioIndex - 1);
-        }
-    }
+    // const nextAudio = () => {
+    //     if (audioIndex < audioData.length - 1) {
+    //         setAudioIndex(audioIndex + 1)
+    //     } else {
+    //         setAudioIndex(0);
+    //     }
+    // }
+
+    // const previousAudio = () => {
+    //     if (audioIndex - 1 < 0) {
+    //         setAudioIndex(audioData.length - 1);
+    //     } else {
+    //         setAudioIndex(audioIndex - 1);
+    //     }
+    // }
+
 
     const startTimer = () => {
         // Clears any timers running
@@ -48,12 +69,13 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
 
         intervalRef.current = setInterval(() => {
             if (audioRef.current.ended) {
-                nextAudio()
+                onNextClick()
             } else {
                 setAudioProgress(audioRef.current.currentTime);
             }
         }, [1000])
         }
+
 
     // Starts and stops audio when the play/pause button is used.
     useEffect(() => {
@@ -91,22 +113,22 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     }, [audioIndex]);
 
     //  Handles scrubbing (the progress bar)
-    const onScrub = (value) => {
-        clearInterval(intervalRef.current) // Clears any timers running
-        audioRef.current.currentTime = value;
-        setAudioProgress(audioRef.current.currentTime);
-        console.log(value + " <<< this is value")
-    }
+    // const onScrub = (value) => {
+    //     clearInterval(intervalRef.current) // Clears any timers running
+    //     audioRef.current.currentTime = value;
+    //     setAudioProgress(audioRef.current.currentTime);
+    //     console.log(value + " <<< this is value")
+    // }
     
-    const onScrubEnd = () => {
-        if (!isPlaying) {
-            setIsPlaying(true);
-        }
-            startTimer();
-    }
+    // const onScrubEnd = () => {
+    //     if (!isPlaying) {
+    //         setIsPlaying(true);
+    //     }
+    //         startTimer();
+    // }
 
-    const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
-    const progressStyling = `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))`
+    // const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
+    // const progressStyling = `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))`
 
     return(
         <div className="audio-controls">
@@ -114,13 +136,13 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
                 <p>{selected.name}</p>
                 {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
             </div>
-            <ControlButtons 
+            <AudioButtons 
                 isPlaying={isPlaying}
-                onPreviousClick={previousAudio}
-                onNextClick={nextAudio}
-                onPlayPauseClick={setIsPlaying}
+                onPreviousClick={handlePreviousClick}
+                onNextClick={handleNextClick}
+                // onPlayPauseClick={handlePlayPauseClick}
             />
-            <input
+            {/* <input
                 type="range"
                 value={audioProgress}
                 step="1"
@@ -131,7 +153,7 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
                 onChange={(e) => onScrub(e.target.value)}
                 onMouseUp={onScrubEnd}
                 onKeyUp={onScrubEnd}
-            />
+            /> */}
         </div>
     )
 }
