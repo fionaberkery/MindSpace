@@ -140,8 +140,15 @@ public class DataLoader implements ApplicationRunner {
 
         Audio audio1 = new Audio("Rain Sounds 1", "RainTest.mp3");
         audioRepository.save(audio1);
-        Audio audio2 = new Audio("Rain Sounds 2", "507902__inuetc__heavy-rain-sound-inu-etc.mp3");
+        Audio audio2 = new Audio("Heavy Rain", "507902__inuetc__heavy-rain-sound-inu-etc.mp3");
         audioRepository.save(audio2);
+        Audio audio3 = new Audio("Wood Fire", "Fire, Burning, Wood, Crispy, Medium Intensity SND8761.mp3");
+        audioRepository.save(audio3);
+        Audio audio4 = new Audio("Ambient Forest", "Ambience, Forest, Birds, Crow, Insects, Leaves SND1340.mp3");
+        audioRepository.save(audio4);
+        Audio audio5 = new Audio("Forest Birds, Wind in the Trees", "Ambience, Forest, Birds Singing, Chirps, Light Wind In Trees, Leaf Forest 01 SND0568.mp3");
+        audioRepository.save(audio5);
+
 
 
 

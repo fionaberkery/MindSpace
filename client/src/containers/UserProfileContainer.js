@@ -16,6 +16,7 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
     return (
 
         <>
+
         <div className="login-page">
             <div className="sub-login-page">
             
@@ -55,8 +56,10 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
             </div>
         </div>
 
+
         </>
     )
 }
 
 export default UserProfileContainer
+

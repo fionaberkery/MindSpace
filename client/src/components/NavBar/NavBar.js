@@ -5,6 +5,7 @@ import React from "react"
 const NavBar = () => {
     return(
         <>
+
             <nav className="navBar">
 
                 <Link to="/"> Home </Link> 
@@ -15,6 +16,7 @@ const NavBar = () => {
                 <Link to="/journal"> Your Journal </Link>
 
             </nav>
+
         </>
     )
 }

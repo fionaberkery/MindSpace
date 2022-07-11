@@ -1,12 +1,14 @@
 import './App.css';
 import './components/NavBar/navBar.css'
 import './containers/journalLogin.css'
+
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
+
 import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
@@ -17,6 +19,7 @@ import {Helmet} from 'react-helmet';
 
 
 function App() {
+
 
   const [savedUsers, setSavedUsers] = useState([])
   const [savedJournalEntries, setSavedJournalEntries] = useState([])
@@ -57,6 +60,7 @@ function App() {
 
   return (
     <>
+
       <Helmet>
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -114,6 +118,30 @@ function App() {
             onUserSelected={onUserSelected}
             addNewUser={addNewUser} />
           </Route>
+
+        <Route path="WalkGame">
+          <WalkingGameContainer/>
+        </Route>
+
+        <Route path="/journalEntries">
+          <JournalList 
+          setCurrentUserJournalEntries={setCurrentUserJournalEntries} 
+          currentUserJournalEntries={currentUserJournalEntries} 
+          savedUsers={savedUsers} 
+          savedJournalEntries={savedJournalEntries}/>
+        </Route>
+
+        <Route path="/create">
+          <NewEntry></NewEntry>
+        </Route>
+
+        <Route path="/login">
+          <UserProfileContainer setCurrentUserJournalEntries={setCurrentUserJournalEntries} currentUser={currentUser} savedUsers={savedUsers} setCurrentUser={setCurrentUser} />
+        </Route>
+
+        <Route path="/profile">
+          <ProfilePage/>
+        </Route>
 
       </Switch>
 

@@ -23,6 +23,7 @@ export const UserJournalEntriesService = {
 
 export const PostJournalEntry = (payload) => {
     const url = `${baseURL}/journal`
+
     return fetch(url, {
         method: 'POST',
         body: JSON.stringify(payload),
@@ -47,4 +48,5 @@ export const PostNewUser = (payload) => {
 //         method: 'DELETE'
 //     })
 // }
+
 

@@ -39,9 +39,11 @@ const ColouringBookContainer = () => {
                 <title>Wellbeing - Colour</title>
             </Helmet>
             <h2>Colour Away</h2>
+
             <nav className='nav-colouring'>
                 {colouringNav()}
             </nav>
+
         </div>
     )
 }

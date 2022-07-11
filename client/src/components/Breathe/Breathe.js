@@ -1,4 +1,5 @@
-import React,{useState, createContext} from "react";
+
+import React,{useState, useEffect, createContext} from "react";
 import ReactSwitch from "react-switch";
 import './breathe.css'
 
@@ -6,6 +7,7 @@ export const ThemeContext = createContext(null)
 
 const Breathe = () => {
 
+<<
     const [currentWord, setCurrentWord]= useState(true)
 
     setTimeout (()=>{

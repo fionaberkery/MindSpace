@@ -20,7 +20,9 @@ const Palette = ({ setCurrentColour }) => {
                 <input id="custom-colour-input" type="color" name="head" onChange={changeColour}/>
             </div>
             {colours.map((colour, index) => {
+
                 return <div onClick={changeColour} onTouchStart={changeColour} key={index} id="colour-palette--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>
+
             })}
         </div>
     )

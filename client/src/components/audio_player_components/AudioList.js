@@ -4,14 +4,16 @@ import AudioListItem from './AudioListItem';
 
 const AudioList = ({audioData, onAudioClick}) => {
 
-    console.log(audioData)
     const audioList = audioData.map((audio) => {
-        return  <AudioListItem audio={audio} key={audio.id} onAudioClick={onAudioClick}/>})
-
+        return  <AudioListItem 
+        audio={audio} 
+        key={audio.id} 
+        onAudioClick={onAudioClick}/>
+        })
 
     return(
         <>
-            <h2>AudioList</h2>
+            <h3>AudioList</h3>
             {audioList}
         </>
     )

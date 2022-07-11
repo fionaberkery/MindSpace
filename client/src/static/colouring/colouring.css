@@ -6,10 +6,12 @@
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-miterlimit:1.5;
+
     stroke:black;
     shape-rendering:geometricPrecision; 
     text-rendering:geometricPrecision; 
     image-rendering:optimizeQuality; 
+
     line-height: 5em;
 }
 
@@ -32,6 +34,7 @@
 .fil0{
     fill: white;
 }
+
 
 path {
     cursor: pointer;

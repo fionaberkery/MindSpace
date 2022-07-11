@@ -4,6 +4,7 @@ import "../../../static/colouring/colouring.css";
 
 const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
 
+
     const [fillColours, setFillColours] = useState(Array(130).fill("white"));
     const [currentColour, setCurrentColour] = useState("white");
 
@@ -12,6 +13,7 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
         newColours[event.target.id] = currentColour;
         return setFillColours(newColours);
     }
+
 
     const touchPaintColour = (event) => {
 		event.preventDefault();

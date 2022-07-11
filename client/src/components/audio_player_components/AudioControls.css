@@ -1,0 +1,35 @@
+.audio-controls {
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    color: var(--white);
+    background-color: #61d0d2;
+    }
+
+.audio-controls > * {
+    box-sizing: border-box;
+}
+
+.audio-info {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.name {
+    margin-bottom: 4vw;
+    align-self: center;
+}
+
+input[type=range] {
+	height: 5px;
+	-webkit-appearance: none;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	background: #3b7677;
+	transition: background 0.2s ease;
+	cursor: pointer;
+}
