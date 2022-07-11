@@ -7,11 +7,10 @@ import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import UserProfileContainer from './containers/UserProfileContainer';
-import NewEntry from './components/UserJournal/NewEntry';
-import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
-import ProfilePage from './components/UserJournal/ProfilePage';
-import NewProfile from './components/UserJournal/NewProfile';
-
+import NewEntry from './components/Journal/NewEntry';
+import { JournalEntryService , PostJournalEntry, UserService } from './services/Services';
+import ProfilePage from './components/UserProfile/ProfilePage';
+import {Helmet} from 'react-helmet';
 
 function App() {
 
@@ -53,8 +52,13 @@ function App() {
 }
 
   return (
-
     <>
+      <Helmet>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
+        <title>Wellbeing First Aid Kit</title>
+      </Helmet>
     
       <Router>
         
