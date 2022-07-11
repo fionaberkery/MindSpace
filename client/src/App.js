@@ -83,8 +83,6 @@ function App() {
       setSelected(audio)
   }
 
-// Audio Controls <<<<<<<<<<<<<<<<<<<<<<<<
-
 // if (!active) return null
 
   useEffect(() => {
