@@ -24,6 +24,7 @@ import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
 import { AudioService } from "./services/Services";
 import AudioList from '../src/components/audio_player_components/AudioList';
 import AudioControls from "../src/components/audio_player_components/AudioControls";
+import Modal from 'react-modal';
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
   const [selected, setSelected] = useState(null)
   // Audio controls state
   const [audioIndex, setAudioIndex] = useState(0)
-  const [toggleModal, setToggleModal] = useState(false)
+  const [toggleModal, setToggleModal] = useState(true)
 
 
   useEffect(() => {
@@ -136,19 +137,27 @@ function App() {
 
         {/* <AudioPlayer active={true}/> */}
         <div>
-          <div>
-              <AudioList audioData={audioData} 
-              onAudioClick={onAudioClick}/>
-          </div>
-          <div>
-              { selected ? <AudioControls 
-              selected = {selected}
-              audioIndex = {audioIndex}
-              onNextClick={onNextClick}
-              onPreviousClick={onPreviousClick}
-              />
-              : null }
-          </div>
+          <Modal
+            isOpen={toggleModal}
+            ariaHideApp={false}
+            contentLabel="Bird Details"
+            className="modal-box"
+            overlayClassName="overlay"
+          >
+            <div>
+                <AudioList audioData={audioData} 
+                onAudioClick={onAudioClick}/>
+            </div>
+            <div>
+                { selected ? <AudioControls 
+                selected = {selected}
+                audioIndex = {audioIndex}
+                onNextClick={onNextClick}
+                onPreviousClick={onPreviousClick}
+                />
+                : null }
+            </div>
+          </Modal>
         </div>
 
 
