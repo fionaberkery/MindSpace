@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import './journal.css'
+import './newEntry.css'
 
 
 const NewEntry = ({addNewJournalEntry, currentUser}) => {
@@ -39,26 +39,34 @@ const NewEntry = ({addNewJournalEntry, currentUser}) => {
 
         <>
 
-            <h2> this is a new entry </h2>
+        <div className="new-entry">
 
+            <h2> New Journal Entry </h2>
+
+            <div className="entry-form">
             <form onSubmit={handleSubmit}>
-                
+                <br></br>
                 <label> Date : </label>
                 <input onChange={handleDateInput} type="text" placeholder="DD-MM-YY" required>
                 </input>
-
-                <label> Journal Entry </label> 
-                <input type="text" value={textField} placeholder="Enter your text here" onChange={handleTextInput} required />
+                <br></br><br></br>
+ 
+                <textarea value={textField} placeholder="Enter your text here" onChange={handleTextInput} required />
             
-                <input type="submit" value={buttonTextJournal} />       
+                <input type="submit" value={buttonTextJournal} className="save-button" />       
         
             </form>
+            <button onClick={handleDiscardClick} className="discard-button"> <img src="https://img.icons8.com/material-rounded/24/000000/delete-message--v1.png" height="20px" /> </button>
+            <p className="hide" > delete </p>
+            </div>
 
             
             
-            <button onClick={handleDiscardClick}> Discard </button>
+           
 
             <button> <Link to="/profile"> Return to profile </Link> </button>
+
+        </div>
 
         </>
     )

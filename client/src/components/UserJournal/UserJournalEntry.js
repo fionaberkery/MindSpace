@@ -1,4 +1,5 @@
 import React from "react";
+import './userProfile.css'
 
 const UserJournalEntry = ({entry}) => {
 
@@ -10,17 +11,20 @@ const UserJournalEntry = ({entry}) => {
 
         <>
 
-            <h5> Date : </h5> 
-            <p> {entry.date} </p>
-            
-            <h5> Journal Entry </h5> 
-            <p> {entry.textInput} </p>
+                <div className="journal-entry">
 
-            <button> Delete Entry </button>
-            
-            
+                    <div className="entry-text">
+                        <p id="title">  Journal Entry : {entry.date} </p> 
+                        <p> {entry.textInput} </p>
+                    </div>
 
-            <hr></hr>
+                    <div>
+                        <button className="delete-button"> <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" height="20px" /> </button>
+                    </div>
+                
+                </div>
+
+                <br></br>
 
         </>
     )

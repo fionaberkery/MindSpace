@@ -1,5 +1,6 @@
 import './App.css';
 import './components/NavBar/navBar.css'
+import './containers/journalLogin.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
@@ -11,6 +12,7 @@ import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
+import Home from './containers/Home';
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [savedUsers, savedJournalEntries])
+  }, [])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -55,7 +57,7 @@ function App() {
   return (
 
     <>
-    
+
       <Router>
         
         <NavBar/>
@@ -63,7 +65,7 @@ function App() {
         <Switch> 
 
           <Route exact path="/">
-            {/* home component */}
+            <Home/>
           </Route>
 
           <Route path="/breathe">
@@ -111,8 +113,12 @@ function App() {
 
       </Router>
 
+    
+
     </>
   )
 }
 
 export default App
+
+// savedUsers, savedJournalEntries
