@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.RequestWrapper;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,18 +43,20 @@ public class UserController {
         return userRepository.save(userToEdit);
     }
 
-    // delete user by id
-    @DeleteMapping(value = "/users/{id}")
-    public ResponseEntity deleteUser(@PathVariable Long id){
-        try // try this first
-        {
-            userRepository.deleteById(id);
-            return new ResponseEntity<>("User " + id + " Deleted", HttpStatus.OK);
-        }
-        catch(Exception e) // if the first doesn't work then do this
-        {
-            return new ResponseEntity<>("ooopppsss", HttpStatus.BAD_REQUEST);
-        }
-    }
+
+//    // delete user by id
+//    @DeleteMapping(value = "/users/{id}")
+//    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+//        try // try this first
+//        {
+//            userRepository.deleteById(id);
+//            return new ResponseEntity<String>("User " + id + " Deleted", HttpStatus.OK);
+//        } catch (Exception e) // if the first doesn't work then do this
+//        {
+//            return new ResponseEntity<String>("User Not Deleted - Server Error", HttpStatus.BAD_REQUEST);
+//        }
+//    }
+
+
 
 }

@@ -14,8 +14,15 @@ export const JournalEntryService =  {
     }
 }
 
+export const UserJournalEntriesService = {
+    getJournalEntriesById(id) {
+        return fetch(`${baseURL}/journals/user?userid=${id}`)
+        .then(res => res.json())
+    }
+}
+
 export const PostJournalEntry = (payload) => {
-    const url = `${baseURL}/journals`
+    const url = `${baseURL}/journal`
     return fetch(url, {
         method: 'POST',
         body: JSON.stringify(payload),
@@ -24,10 +31,20 @@ export const PostJournalEntry = (payload) => {
     .then(res => res.json())
 }
 
-// export const AudioService =  {
-//     getAudios() {
-//         return fetch(`${baseURL}/audio`)
-//         .then(res => res.json());
-//     }
+export const PostNewUser = (payload) => {
+    const url = `${baseURL}/users`
+    return fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(res => res.json())
+}
+
+// export const DeleteJournalEntry = (id) => {
+//     const url = `${baseURL}/journal/${id}`
+//     return fetch(url, {
+//         method: 'DELETE'
+//     })
 // }
 
