@@ -50,3 +50,8 @@ const Breathe = () => {
 }
 
 export default Breathe
+
+// const colours = [
+//     '#E6E8E6', 'RED', '#86BBD8', '#2C497F', '#629677', '#98A886', 'TEAL', '#BFFFBC', '#FDCA40', '#E18335', 'CORAL', '#C4A69D', '#634B66', 'FUCHSIA', '#E6D3A3', 'MAROON', '#121212'
+
+// ]
