@@ -30,15 +30,11 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 			
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour}/>
 
-				{/* <div id="current-colour--box">
-				</div> */}
 
-					<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+				<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
 			</div>
 
-				
-			
 
 			<svg id="village-stairs" className='colouring-svg' dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
 

@@ -15,6 +15,7 @@ const colours = [
     }
 
     return (
+
         <div id="colour-palette">
 
             <p>Current colour: </p>
@@ -24,8 +25,6 @@ const colours = [
 
             <input id="custom-colour-input" type="color" name="head" onChange={changeColour}/>
 
-         
-
         </div>
 
         <div onClick={changeColour} onTouchStart={changeColour} key='white' id="colour-palette--inner" style = {{ backgroundColor: "white", color: "white", border: "lightgrey 1px solid"}}>white</div>
@@ -33,7 +32,6 @@ const colours = [
             {colours.map((colour, index) => {
                 return <div onClick={changeColour} onTouchStart={changeColour} key={index} id="colour-palette--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>
             })}
-
 
         </div>
     )
