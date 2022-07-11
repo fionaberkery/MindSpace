@@ -1,11 +1,18 @@
+/* #828282
+#425454
+#d4bebe
+#b0b7ba */
+
 .login-page
 {
     text-align: center;
-    justify-content: center;
+    justify-content: flex-end;
     display: flex;
-    padding: 90px 0 90px 0;
-    background-image: url("/src/images/journal.jpg");
+    padding: 90px 90px 90px 0;
+    background-image: url("/src/static/journal/11.jpg") ;
     background-size: cover;
+    min-height: 100vh;
+
 }
 
 
@@ -16,9 +23,10 @@
     flex-direction: column;
     height: 550px;
     width: 35%;
-    box-shadow: 5px 8px 9px 8px #a1729e;
-    border-radius: 60px;
-    background-color: white;
+    box-shadow: 2px 5px 7px 4px rgb(177, 172, 172);
+    border-style: solid;
+    border-radius: 1px;
+    /* background-color: #636b6129; */
 }
 
 .login-boxes
@@ -39,13 +47,15 @@
     border-radius: 20px;
     border-style: none;
     font-size: 14px;
-    background-color: #a1729e;
+    background-color: #d4bebe;
     cursor: pointer;
 }
 
+
+
 .login-button:hover
 {
-    background-color: #dc9b99;
+    background-color: #828282;
     transition: 0.7s;
 }
 
@@ -64,7 +74,7 @@
     margin-bottom: 10px;
     margin-top: 5px;
     text-decoration: none;
-    color:#a1729e;
+    color: #828282;
 }
 
 .forgot-password:hover

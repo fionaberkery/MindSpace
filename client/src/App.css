@@ -1,4 +1,24 @@
+@font-face {
+    font-family: mogata;
+    src: url("/src/static/mogata.normaloblique.otf");
+}
+
+@font-face {
+    font-family: lamarkie;
+    src: url("/src/static/Lamarkie.otf");
+}
+
+@font-face {
+    font-family: monkeg;
+    src: url("/src/static/MonkegRegular-rgKGA.ttf");
+}
+
 *
 {
     font-family: 'Poppins';
+}
+
+*
+{
+    margin: 0;
 }

@@ -15,12 +15,12 @@ const Jigsaw = ()=>{
         setText("Well Done! How about you pick another picture or increase the number of peices");
     };
 
-    // const pic1= "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-    // const pic2= "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg"
-    // const pic3= "https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"
+    const pic1= "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+    const pic2= "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg"
+    const pic3= "https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"
 
-    // const pictures = [pic1,pic2,pic3]
-    const pictureList = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg","https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg","https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"]
+    const pictureList = [pic1,pic2,pic3]
+    // const pictureList = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg","https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg","https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"]
 
     const numberOfRows = [3,4,5,6,7,8,9,10]
     const numberOfColumns = [3,4,5,6,7,8,9,10]
@@ -31,8 +31,8 @@ const Jigsaw = ()=>{
         onPictureSelected(chosenPicture)
     }
 
-    const pictureOptions = pictureList.map((index) =>{
-        return<option value={index} key={index}></option>
+    const pictureOptions = pictureList.map((pictureList, index) =>{
+        return<option value={index} key={index}>{pictureList}</option>
     })
 
     const onPictureSelected = function(picture){
@@ -45,8 +45,8 @@ const Jigsaw = ()=>{
         onRowsSelected(chosenRows)
     }
 
-    const rowOptions = numberOfRows.map((index) =>{
-        return<option value={index} key={index}></option>
+    const rowOptions = numberOfRows.map((numberOfRows, index) =>{
+        return<option value={index} key={index}>{numberOfRows}</option>
     })
 
     const onRowsSelected = function(rows){
@@ -58,13 +58,15 @@ const Jigsaw = ()=>{
         onColumnSelected(chosenRows)
     }
 
+    const columnOptions = numberOfColumns.map((numberOfColumns, index) =>{
+        return<option value={index} key={index}>{numberOfColumns}</option>
+    })
+
     const onColumnSelected = function(columns){
         setColumns(columns)
     }
 
-    const columnOptions = numberOfColumns.map((index) =>{
-        return<option value={index} key={index}></option>
-    })
+
 
 
 
@@ -78,8 +80,8 @@ return(
             {pictureOptions}
             </select>
             <select defaultValue="" onChange={handleRowChange} className="drop-down" >
-                <option value="" selected>Number of Rows</option>
-            {rowOptions}
+                <option value="4" selected>Number of Rows</option>{rowOptions}
+            
             </select>
             <select defaultValue="" onChange={handleColumnChange} className="drop-down" >
                 <option value="" selected>Number of Columns</option>
