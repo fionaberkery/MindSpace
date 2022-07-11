@@ -1,6 +1,6 @@
 .new-entry
 {
-    background-image: url("/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/images/journal.jpg");
+    background-image: url("/src/images/journal.jpg");
     background-size:cover;
     background-attachment: fixed;
     background-repeat:no-repeat;
