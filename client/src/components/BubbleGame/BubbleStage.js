@@ -52,6 +52,7 @@ const BubbleStage = () => {
         const xy = getRandomPosition();
         console.log(xy);
         const styles = {
+
         top: xy[0] + "px",
         left: xy[1] + "px",
         zIndex: index,
@@ -64,6 +65,8 @@ const BubbleStage = () => {
         // console.log(bubble.props)
         // bubble.props.style = styles
         // bubble.classList.add("animating");
+
+
     }
 
     const popBubble =(e)=> {

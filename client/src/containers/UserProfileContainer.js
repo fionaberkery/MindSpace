@@ -23,6 +23,7 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
                 <div className="login-title">
                     <h2> Journal Login </h2>
                 </div>   
+                <br></br>
                 
                 <div className="login-boxes">
                     <select onChange={handleChange}>
@@ -33,18 +34,20 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
                         
                     <input type="password" placeholder="🔒 password"/> 
                     
+                    
                     <div id="login-options">
                     <p id="p">
                     <a href="" className="forgot-password"> Forgot password? </a> or <Link to="/newprofile" className="forgot-password"> Create new profile</Link> 
                     </p>
                     </div>
+                    <br></br>
 
                     <button className="login-button"> 
                         <Link to="/profile" className="link">Login</Link> 
                     </button>
                 </div>
                 
-                <br></br>
+                <br></br><br></br>
 
                 <p> Or login using </p>
                 <div className="icons">
