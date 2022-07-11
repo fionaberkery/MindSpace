@@ -38,7 +38,7 @@ function App() {
   const [selected, setSelected] = useState(null)
   // Audio controls state
   const [audioIndex, setAudioIndex] = useState(0)
-  const [toggleModal, setToggleModal] = useState(true)
+  const [toggleModal, setToggleModal] = useState(false)
 
 
   useEffect(() => {
@@ -86,6 +86,14 @@ function App() {
 
 // if (!active) return null
 
+  const showModal = () => {
+    setToggleModal(true)
+  }
+
+  const closeModal = () => {
+    setToggleModal(false)
+  }
+
   useEffect(() => {
     if(selected !== null){
     const audioObjects = audioData.map(audio => audio.id)
@@ -132,7 +140,7 @@ function App() {
     
       <Router>
         
-        <NavBar/>
+        <NavBar showModal={showModal}/>
         {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
 
         {/* <AudioPlayer active={true}/> */}
@@ -140,7 +148,7 @@ function App() {
           <Modal
             isOpen={toggleModal}
             ariaHideApp={false}
-            contentLabel="Bird Details"
+            contentLabel="Audio Player"
             className="modal-box"
             overlayClassName="overlay"
           >
