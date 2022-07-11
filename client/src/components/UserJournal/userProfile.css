@@ -4,18 +4,18 @@
 
 .profile-page
 {
-    background-image: url("/src/images/journal.jpg");
+    background-image: url("/src/static/journal/13.jpg");
     background-size:cover;
     background-attachment: fixed;
     background-repeat:no-repeat;
     background-position: center;
     color: #fff;
     min-height: 100vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
-
+/* 
 .journal-entry
 {
     display: flex;
@@ -25,15 +25,20 @@
     text-align: center;
     border-width: 5px;
     border-style: solid;
-    border-color: #405788;
+    border-color: #b0b7ba;
     border-radius: 10px;
-}
+} */
 
-.entry-container
+/* #828282
+#425454
+#d4bebe
+#b0b7ba */
+
+/* .entry-container
 {
     display: inline-block;
     justify-content: space-between;
-}
+} */
 
 
 .delete-button

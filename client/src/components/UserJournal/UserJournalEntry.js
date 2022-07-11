@@ -1,33 +1,34 @@
-import React from "react";
+import React, {useRef} from "react";
 import './userProfile.css'
+import {motion} from "framer-motion"
+
 
 const UserJournalEntry = ({entry}) => {
 
-    // const handleDelete = () => {
-    //     deleteUserJournalEntry(entry.id)
-    // }
+    const carousel = useRef()
 
     return (
 
         <>
 
-                <div className="journal-entry">
+                <motion.div className="carousel">
 
-                    <div className="entry-text">
+                    <motion.div layoutScroll className="inner-carousel">
+                    <motion.div className="carousel-item">
                         <p id="title">  Journal Entry : {entry.date} </p> 
                         <p> {entry.textInput} </p>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
-                    <div>
-                        <button className="delete-button"> <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png" height="20px" /> </button>
-                    </div>
                 
-                </div>
-
-                <br></br>
-
+            
+                </motion.div>
+                
         </>
     )
 }
 
 export default UserJournalEntry
+
+
+

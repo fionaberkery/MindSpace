@@ -1,0 +1,33 @@
+.carousel-entry{
+    min-height: 30rem;
+    min-width: 20rem;
+    padding: 40px;
+}
+.carousel-entry {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    pointer-events: none;
+    background-image: url("/src/static/journal/gradient4.png");
+}
+.inner-carousel{
+    display:flex;
+   
+}
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+   
+}
+
+.carousel-profile-page {
+    /* background-image: url("/src/static/journal/gradient2.png"); */
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    color: #121212;
+    min-height: 100vh;
+}
+
