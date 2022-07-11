@@ -54,13 +54,14 @@ const BubbleStage = () => {
         const xy = getRandomPosition();
         console.log(xy);
         const styles = {
-        top: xy[0] + "px",
-        left: xy[1] + "px",
-        zIndex: index,
-        animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
+            top: xy[0] + "px",
+            left: xy[1] + "px",
+            zIndex: index,
+            animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
         }
         console.log(styles);
-        Object.assign(bubble, styles); // breaks here, throws Uncaught TypeError: Cannot add property top, object is non-extensible
+        console.log(bubble["props"]);
+        // Object.assign(bubble, styles); // breaks here, throws Uncaught TypeError: Cannot add property top, object is non-extensible
         bubble.classList.add("animating");
     }
 
