@@ -22,7 +22,7 @@ color: transparent white ;
     border: 1px solid black;
 }
 
-table {
+/* table {
 border-collapse: collapse;
 border: 3px whitesmoke solid;
 }
@@ -30,7 +30,7 @@ border: 3px whitesmoke solid;
 td{
     padding: 0;
     
-}
+} */
 
 .bBorder{
     border-bottom: solid black 2px;;

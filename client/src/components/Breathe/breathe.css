@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 /* styling */
 
@@ -114,9 +114,10 @@ body .breathe-container {
 }
 
 #light {
-    background: url('/src/static/breathe/blue-pink-sky.jpg');
+    background: url('/src/static/breathe/snow-leaf.jpg');
     background-size:cover;
     background-attachment: fixed;
+    background-color: #091418;
     background-repeat:no-repeat;
     background-position: center;
 }
