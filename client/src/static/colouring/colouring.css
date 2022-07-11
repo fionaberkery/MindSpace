@@ -11,7 +11,6 @@
     text-rendering:geometricPrecision; 
     image-rendering:optimizeQuality; 
     line-height: 5em;
-    max-width: 95vw;
 }
 
 #mandala-1 {
@@ -35,15 +34,22 @@
 }
 
 path {
+    cursor: pointer;
     transition: fill 0.5s;
 }
 
-@media screen and (min-width: 769px) {
-    .colouring-page {
+/************* Large screen sizes *************/
+@media screen and (min-width: 701px) {
+    /* .colouring-page {
         display: grid;
+    } */
+
+    .colouring-svg {
+        max-width: 95vw;
     }
 
     .select-img {
+        cursor: pointer;
         max-width: 30%;
     }
 
@@ -73,6 +79,7 @@ path {
     }
 
     #colour-palette--inner {
+        cursor: pointer;
         width: 6rem;
         text-align: center;
         margin-top: auto;
@@ -83,6 +90,7 @@ path {
     }
 
     #custom-colour-input {
+        cursor: pointer;
         height: 3rem;
         width: 6rem;
         border-radius: 10px;
@@ -91,6 +99,24 @@ path {
     }
 }
 
-@media screen and (max-width: 768px) {
-    
+/************ Small screen sizes *************/
+@media screen and (max-width: 700px) {
+    .colouring-page {
+        /* display: flex; */
+        
+    }
+
+    .colouring-svg {
+        max-width: 100vw;
+    }
+
+    .nav-colouring {
+        /* font-size: 18px; */
+        display: grid;
+        grid-template-columns: 100vw;
+    }
+
+    .select-img {
+        max-width: 95vw;
+    }
 }

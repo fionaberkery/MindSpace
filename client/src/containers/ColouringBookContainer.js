@@ -13,16 +13,21 @@ const ColouringBookContainer = () => {
         setSelection(selection)
     }
 
+    const handleTouchImageSelection = (selection, event) => {
+        event.preventDefault();
+        setSelection(selection);
+    }
+
     const colouringNav = ()=>{
         switch (selection) {
             case 'default':
-                return <DefaultPage handleImageSelection={handleImageSelection} />
+                return <DefaultPage handleImageSelection={handleImageSelection} handleTouchImageSelection={handleTouchImageSelection} />
             case 'village':
-                return <VillageStairsImage handleImageSelection={handleImageSelection} />
+                return <VillageStairsImage handleImageSelection={handleImageSelection} handleTouchImageSelection={handleTouchImageSelection} />
             case 'mandala1':
-                return <MandalaImage1 handleImageSelection={handleImageSelection} />
+                return <MandalaImage1 handleImageSelection={handleImageSelection} handleTouchImageSelection={handleTouchImageSelection} />
             case 'mandala2':
-                return <MandalaImage2 handleImageSelection={handleImageSelection} />
+                return <MandalaImage2 handleImageSelection={handleImageSelection} handleTouchImageSelection={handleTouchImageSelection} />
             default:
                 return null;
         }

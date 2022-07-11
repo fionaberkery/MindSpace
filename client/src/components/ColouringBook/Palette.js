@@ -22,7 +22,8 @@ const Palette = ({ setCurrentColour }) => {
             {colours.map((colour, index) => {
                 return <div onClick={changeColour} onTouchStart={changeColour} key={index} id="colour-palette--inner" style={{ backgroundColor: colour, color: colour }}>{colour}</div>
             })}
-        </div>)
+        </div>
+    )
 }
 
 export default Palette;
