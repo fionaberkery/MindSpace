@@ -1,0 +1,153 @@
+
+
+html {
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 4px white;
+}
+/* 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} */
+
+.score {
+  z-index: 90;
+  display: block;
+  position: relative;
+  /* background: #ea3b3b; */
+  padding: 10px;
+  font-size: 34px;
+  padding: 0.5em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(40, 40, 40);
+  /* text-shadow: -2px 3px 0 #bb1616; */
+}
+
+.bubble {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  /* transition: all ease-in-out; */
+  cursor: pointer;
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  background-image: url("/src/images/bubble.png")
+  /* background-image: url("https://uploads.codesandbox.io/uploads/user/e75d21d3-e2a7-4d7a-bd14-09ebe09ee6b0/YLcO-water-bubble.png") */
+    no-repeat 50% / contain;
+}
+
+.bubble.popped {
+  animation: popped 0.3s ease-out both;
+  animation-duration: 0.3s !important;
+}
+
+.bubble.animating {
+  animation: float 12s linear infinite both;
+}
+
+.stage {
+  overflow: hidden;
+  transform: scale(1);
+  background: url('/src/images/jeffrey-workman-YvkH8R1zoQM-unsplash.jpg') no-repeat 50% / contain;
+  max-width:70%;
+  /* max-height:80%; */
+  
+
+  position: relative;
+  width: 90vw;
+  height: 60vh;
+  
+}
+
+button {
+  opacity: 0.8;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  color: grey;
+  border: 0;
+  font-size: 50px;
+  color: white;
+  background: #3b95ea;
+  padding: 0.5em;
+  border: 1px solid #3b52ea;
+  border-radius: 10px;
+  cursor: pointer;
+  /* box-shadow: -10px 10px 0 #031d90; */
+  transition: all 0.3s ease-in-out;
+  line-height: 1;
+  /* text-shadow: -5px 5px 0 #1621bb; */
+}
+
+@keyframes popped {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000%);
+  }
+}
+
+@keyframes messageDisplay {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-shadow: -2px 4px 0 #fff;
+  color: yellow;
+  font-size: 200px;
+  z-index: -1;
+}
+.message.animated {
+  z-index: 99;
+  animation: messageDisplay 1s ease;
+}
