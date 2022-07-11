@@ -10,8 +10,8 @@ function Games(){
             <nav>
 
 
-            <Link to="/game/Jigsaw"> Jigsaw Puzzles </Link> <br></br>
-            <Link to="/game/Bubbles"> Bubble Popping </Link> <br></br>
+            <Link to="/jigsaw"> Jigsaw Puzzles </Link> <br></br>
+            <Link to="/bubbles"> Bubble Popping </Link> <br></br>
 
         </nav>
         </div>

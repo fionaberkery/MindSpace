@@ -7,6 +7,13 @@ export const UserService =  {
     }
 }
 
+export const AudioService = {
+    getAudios() {
+        return fetch(`${baseURL}/audio`)
+        .then(res => res.json())
+    }
+}
+
 export const JournalEntryService =  {
     getJournalEntries() {
         return fetch(`${baseURL}/journals`)
@@ -41,6 +48,8 @@ export const PostNewUser = (payload) => {
     })
         .then(res => res.json())
 }
+
+
 
 // export const DeleteJournalEntry = (id) => {
 //     const url = `${baseURL}/journal/${id}`

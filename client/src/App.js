@@ -8,7 +8,6 @@ import NavBar from './components/NavBar/NavBar';
 import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
-
 import UserProfileContainer from './containers/UserProfileContainer';
 import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
@@ -16,7 +15,11 @@ import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
 import Home from './containers/Home';
 import {Helmet} from 'react-helmet';
-
+import JournalList from './components/Journal/JournalList.js'
+import WalkingGameContainer from './containers/WalkingGameContainer'
+import Games from './components/Games/Games';
+import Jigsaw from './components/Games/jigsaw/Jigsaw';
+import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
 
 function App() {
 
@@ -90,8 +93,16 @@ function App() {
             <AudioPlayer/>
           </Route>
 
-          <Route path="/game">
-            {/* sounds component */}
+          <Route path="/play">
+            <Games></Games>
+          </Route>
+
+          <Route path="/jigsaw">
+            <Jigsaw/>
+          </Route>
+
+          <Route path="/bubbles">
+            <BubbleGame/>
           </Route>
 
           <Route path="/create">
@@ -142,6 +153,8 @@ function App() {
         <Route path="/profile">
           <ProfilePage/>
         </Route>
+
+        
 
       </Switch>
 

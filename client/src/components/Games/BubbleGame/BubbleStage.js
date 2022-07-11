@@ -92,7 +92,7 @@ return (
     {ready ? (
       renderBubbles()
     ) : (
-      <button onClick={isReady}>Ready</button>
+      <button className="bubble-button" onClick={isReady}>Ready</button>
     )}
   </div>
 );

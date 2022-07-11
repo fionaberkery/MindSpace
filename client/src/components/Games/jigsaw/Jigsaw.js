@@ -71,6 +71,8 @@ const Jigsaw = ()=>{
 
 return(
     <>
+    <div>
+    <br></br><br></br><br></br>
                 <select defaultValue="" onChange={handlePictureChange} className="drop-down" >
                 <option value="" selected>Select Picture</option>
             {pictureOptions}
@@ -91,6 +93,7 @@ return(
         onSolved={set}
         className="jigsaw-puzzle"
     />
+    </div>
 
 </>
 )
