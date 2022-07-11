@@ -28,10 +28,11 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 
 			<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 			<div id="current-colour--box">
+				<p>Current colour: </p>
 				<div id="current-colour" style={{ background: currentColour }} />
 			</div>
 
-			<svg id="village-stairs" dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
+			<svg id="village-stairs" className='colouring-svg' dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
 
 				<g id="black-outline">
 					<rect width="574" height="574"/>

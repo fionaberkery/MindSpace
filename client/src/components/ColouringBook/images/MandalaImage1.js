@@ -27,10 +27,11 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
 
             <Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
             <div id="current-colour--box">
+                <p>Current colour: </p>
                 <div id="current-colour" style={{ background: currentColour }} />
             </div>
 
-            <svg id="mandala-1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 1000 45000 48000">
+            <svg id="mandala-1" className='colouring-svg' xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 1000 45000 48000">
                 {/* <rect id="white-background-box" fill="white" width="4200" height="4200"/> */}
                 <g id="Layer_x0020_1">
                     <metadata id="CorelCorpID_0Corel-Layer"/>
