@@ -19,6 +19,7 @@
     "react-simple-parallax": "^0.2.6",
     "react-switch": "^7.0.0",
     "simple-parallax-js": "^5.6.2",
+    "sudoku-react": "^0.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

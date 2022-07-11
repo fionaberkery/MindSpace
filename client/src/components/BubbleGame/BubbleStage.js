@@ -16,65 +16,71 @@ const BubbleStage = () => {
   //   setBubblesPopped() >1
   // }
 
-    const init = ()=> {
-            console.log("init");
-            const bubbles = renderBubbles();
-            bubbles.forEach((bubble, index) => {
-            console.log(bubble);
-            animateBubble(bubble, index);
-        })
-    }
+    // const init = ()=> {
+    //         // console.log("init");
+    //         // const bubbles = renderBubbles();
+    //         // bubbles.forEach((bubble, index) => {
+    //         // console.log(bubble);
+    //         // animateBubble(bubble, index);
+    //     })
+    // }
 
     const isReady= () =>{
         console.log("ready");
-        init();
+        // init();
         setReady(true);
     }
 
     const renderBubbles=()=> {
         const arr = [...Array(bubbleCount)].map((x, i) => (
-            x = <BubblePop key={i} pop={popBubble} />
+            x = <BubblePop key={i}  pop={popBubble} style={getBubbleStyle(i)}/>
         ));
         return [...arr];
     }
 
     const getRandomPosition = () => {
         console.log("random position");
-        // const x = document.body.offsetHeight - Element.clientHeight;
-        // const y = document.body.offsetWidth - Element.clientWidth;
-        const x = 10;
-        const y = 10;
+        const x = 500;
+        const y = 500;
         const randomX = Math.floor(Math.random() * x);
         const randomY = Math.floor(Math.random() * y);
         return [randomX, randomY];
     }
 
-    const animateBubble =(bubble, index)=> {
+    const getBubbleStyle =(index)=> {
         console.log("animatin bubbles");
         const xy = getRandomPosition();
         console.log(xy);
         const styles = {
-            top: xy[0] + "px",
-            left: xy[1] + "px",
-            zIndex: index,
-            animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
+
+        top: xy[0] + "px",
+        left: xy[1] + "px",
+        zIndex: index,
+        animation: "float 12s linear infinite both",
+        animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
         }
-        console.log(styles);
-        console.log(bubble["props"]);
-        // Object.assign(bubble, styles); // breaks here, throws Uncaught TypeError: Cannot add property top, object is non-extensible
-        bubble.classList.add("animating");
+        return styles
+        // console.log(styles);
+        // Object.assign(bubble, {style :styles}); // breaks here, throws Uncaught TypeError: Cannot add property top, object is non-extensible
+        // console.log(bubble.props)
+        // bubble.props.style = styles
+        // bubble.classList.add("animating");
+
+
     }
 
     const popBubble =(e)=> {
         e.preventDefault();
         console.log("poppin");
         const bubble = e.target;
+        console.log(bubble);
         const audio = document.getElementById("pop");
-        bubble.classList.remove("animating");
-        bubble.classList.add("popped");
+        console.log(bubble.style.display)
+        bubble.style.setProperty("animation", "popped .3s ease-out both"); //not perfect lol
+        // bubble.classList.add("popped");
         audio.play();
         setBubblesPopped(bubblesPopped+1);
-        window.setTimeout(function() {
+        setTimeout(function() {
         bubble.style.display = "none";
         }, 500);
     }

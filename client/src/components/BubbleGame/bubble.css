@@ -37,15 +37,18 @@ html {
     /* transition: all ease-in-out; */
     cursor: pointer;
     position: absolute;
-    width: 10vw;
-    height: 10vh;
-    background-image: url("/src/images/bubble.png")
-    /* background-image: url("https://uploads.codesandbox.io/uploads/user/e75d21d3-e2a7-4d7a-bd14-09ebe09ee6b0/YLcO-water-bubble.png") */
-      no-repeat 50% / contain;
+
+    width: 75px;
+    height:75px;
+    background-image: url("/src/images/bubble_small.png");
+    background-color: none
+    ;
+  /* no-repeat 50% / contain; */
   }
-  
   .bubble.popped {
-    animation: popped 0.3s ease-out both;
+    animation: popped 0.3s ease-in-out both;
+
+ 
     animation-duration: 0.3s !important;
   }
   
