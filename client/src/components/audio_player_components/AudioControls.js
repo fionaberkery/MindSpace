@@ -6,11 +6,9 @@ const AudioControls = ({
     selected,
     audioIndex,
     onNextClick, 
-    onPreviousClick,
-    onPlayPauseClick
-    }) => {
+    onPreviousClick
 
-    // const [audioIndex, setAudioIndex] = useState(0)
+    }) => {
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     
@@ -31,6 +29,14 @@ const AudioControls = ({
         onPreviousClick()
     }
 
+    const handlePlayPauseClick = () => {
+        onPlayPauseClick()
+    }
+
+    const onPlayPauseClick = () => {
+        !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
+    }
+
     const { duration } = audioRef.current
 
     const startTimer = () => {
@@ -45,7 +51,6 @@ const AudioControls = ({
             }
         }, [1000])
         }
-
 
     // Starts and stops audio when the play/pause button is used.
     useEffect(() => {
@@ -67,38 +72,38 @@ const AudioControls = ({
 
      // Setup for when changing audio
     useEffect(() => {
-        audioRef.current.pause();
+        audioRef.current.pause()
     
-        audioRef.current = new Audio(SERVER_ADDRESS+selected.filePath);
-        setAudioProgress(audioRef.current.currentTime);
+        audioRef.current = new Audio(SERVER_ADDRESS+selected.filePath)
+        setAudioProgress(audioRef.current.currentTime)
     
         if (isReady.current) {
-            audioRef.current.play();
-            setIsPlaying(true);
-            startTimer();
+            audioRef.current.play()
+            setIsPlaying(true)
+            startTimer()
         } else {
         // Set the isReady ref as true for the next pass
-            isReady.current = true;
+            isReady.current = true
         }
-    }, [audioIndex]);
+    }, [audioIndex])
 
     //  Handles scrubbing (the progress bar)
-    // const onScrub = (value) => {
-    //     clearInterval(intervalRef.current) // Clears any timers running
-    //     audioRef.current.currentTime = value;
-    //     setAudioProgress(audioRef.current.currentTime);
-    //     console.log(value + " <<< this is value")
-    // }
+    const onScrub = (value) => {
+        clearInterval(intervalRef.current) // Clears any timers running
+        audioRef.current.currentTime = value;
+        setAudioProgress(audioRef.current.currentTime)
+        console.log(value + " <<< this is value")
+    }
     
-    // const onScrubEnd = () => {
-    //     if (!isPlaying) {
-    //         setIsPlaying(true);
-    //     }
-    //         startTimer();
-    // }
+    const onScrubEnd = () => {
+        if (!isPlaying) {
+            setIsPlaying(true)
+        }
+            startTimer()
+    }
 
-    // const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
-    // const progressStyling = `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))`
+    const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
+    const progressStyling = `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, #fff), color-stop(${currentPercentage}, #777))`
 
     return(
         <div className="audio-controls">
@@ -110,9 +115,9 @@ const AudioControls = ({
                 isPlaying={isPlaying}
                 onPreviousClick={handlePreviousClick}
                 onNextClick={handleNextClick}
-                // onPlayPauseClick={handlePlayPauseClick}
+                onPlayPauseClick={handlePlayPauseClick}
             />
-            {/* <input
+            <input
                 type="range"
                 value={audioProgress}
                 step="1"
@@ -123,7 +128,7 @@ const AudioControls = ({
                 onChange={(e) => onScrub(e.target.value)}
                 onMouseUp={onScrubEnd}
                 onKeyUp={onScrubEnd}
-            /> */}
+            />
         </div>
     )
 }

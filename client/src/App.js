@@ -37,6 +37,8 @@ function App() {
   const [selected, setSelected] = useState(null)
   // Audio controls state
   const [audioIndex, setAudioIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true);
+
 
   useEffect(() => {
     UserService.getUsers()
@@ -82,10 +84,6 @@ function App() {
   }
 
 // Audio Controls <<<<<<<<<<<<<<<<<<<<<<<<
-
-// const onNextClick = (selected) => {
-//     setSelected(selected)
-// }
 
 // if (!active) return null
 
