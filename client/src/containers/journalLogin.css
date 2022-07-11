@@ -4,7 +4,7 @@
     justify-content: center;
     display: flex;
     padding: 90px 0 90px 0;
-    background-image: url("/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/images/journal.jpg");
+    background-image: url("/src/images/journal.jpg");
     background-size: cover;
 }
 
