@@ -1,4 +1,9 @@
+@font-face {
+    font-family: myFont;
+    src: url("/src/static/mogata.normaloblique.otf");
+}
+
 *
 {
-    font-family: 'Poppins';
+    font-family: myFont;
 }
