@@ -19,7 +19,7 @@ import JournalList from './components/Journal/JournalList.js'
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
-import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
+import BubbleGame from './components/BubbleGame/BubbleGame.js'
 
 function App() {
 
