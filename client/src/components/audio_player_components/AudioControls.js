@@ -7,8 +7,8 @@ const AudioControls = ({
     audioIndex,
     onNextClick, 
     onPreviousClick
-
     }) => {
+        
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     

@@ -37,7 +37,7 @@ function App() {
   const [selected, setSelected] = useState(null)
   // Audio controls state
   const [audioIndex, setAudioIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [toggleModal, setToggleModal] = useState(false)
 
 
   useEffect(() => {
@@ -117,7 +117,6 @@ function App() {
     }
   }
 
-
 // >> End audio player code <<
 
   return (
@@ -135,19 +134,21 @@ function App() {
         <NavBar/>
         {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
 
-        {/* <AudioPlayer active={true}/> */} 
+        {/* <AudioPlayer active={true}/> */}
         <div>
-            <AudioList audioData={audioData} 
-            onAudioClick={onAudioClick}/>
-        </div>
-        <div>
-            { selected ? <AudioControls 
-            selected = {selected}
-            audioIndex = {audioIndex}
-            onNextClick={onNextClick}
-            onPreviousClick={onPreviousClick}
-            />
-            : null }
+          <div>
+              <AudioList audioData={audioData} 
+              onAudioClick={onAudioClick}/>
+          </div>
+          <div>
+              { selected ? <AudioControls 
+              selected = {selected}
+              audioIndex = {audioIndex}
+              onNextClick={onNextClick}
+              onPreviousClick={onPreviousClick}
+              />
+              : null }
+          </div>
         </div>
 
 
