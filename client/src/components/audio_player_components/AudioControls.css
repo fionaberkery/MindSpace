@@ -1,13 +1,21 @@
 .audio-controls {
-    width:  65%;
-    margin: 0 auto 15px;
-    cursor: pointer;
-    border: none;
-    background: none;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    color: var(--white);
+    background-color: #61d0d2;
     }
 
 .audio-controls > * {
     box-sizing: border-box;
+}
+
+.audio-info {
+    text-align: center;
+    z-index: 1;
+    position: relative;
 }
 
 .name {
