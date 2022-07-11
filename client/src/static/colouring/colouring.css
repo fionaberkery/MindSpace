@@ -41,6 +41,8 @@ path {
 
 /************* Large screen sizes *************/
 @media screen and (min-width: 701px) {
+  
+
     .colouring-page {
         display: flex;
         flex-wrap: wrap;
@@ -61,6 +63,7 @@ path {
     .select-img {
         cursor: pointer;
         max-width: 30%;
+        
     }
 
     .petal {
@@ -72,11 +75,24 @@ path {
         /* margin-top: 20rem;
         margin-bottom: 20rem; */
         cursor: pointer;
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
         border-radius: 10px;
     }
 
-    #current-colour--box {
+    .colouring-title{
+        text-align: center;
+        font-family: lamarkie, Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    #current-colour--box{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        margin: 0.5em;
+    }
+
+    #current-colour--box-jen {
         text-align: center;
         /* padding-top: 20px; */
         padding-left: auto;
@@ -85,14 +101,23 @@ path {
     }
 
     #current-colour {
-        margin-left: 33%;
-        border: #121212 2px solid;
+        margin-left: -44%;
+        border: #121212b4 2px solid;
         height: 4rem;
         width: 4rem;
         border-radius: 50%;
     }
 
     #colour-palette {
+       display:grid;
+       grid-template-columns: 33% 33% 33%;
+       gap: 0.5em;
+       box-shadow: 2px 5px 7px 4px rgb(177, 172, 172);
+       padding: 2em;
+       
+    }
+
+    #colour-palette-jen {
         display: grid;
         grid-template-columns: 50% 50%;
         /* margin-left: auto;
@@ -110,8 +135,8 @@ path {
         margin-top: auto;
         margin-bottom: auto;
         height: 3rem;
-        border-radius: 10px;
-        border: #121212 1px solid;
+        border-radius: 5px;
+        border: #12121205 1px solid;
     }
 
     #custom-colour-input {
