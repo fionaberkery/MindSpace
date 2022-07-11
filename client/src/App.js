@@ -15,7 +15,6 @@ import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
 import Home from './containers/Home';
 import {Helmet} from 'react-helmet';
-import JournalList from './components/Journal/JournalList.js'
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
@@ -132,14 +131,6 @@ function App() {
 
         <Route path="WalkGame">
           <WalkingGameContainer/>
-        </Route>
-
-        <Route path="/journalEntries">
-          <JournalList 
-          setCurrentUserJournalEntries={setCurrentUserJournalEntries} 
-          currentUserJournalEntries={currentUserJournalEntries} 
-          savedUsers={savedUsers} 
-          savedJournalEntries={savedJournalEntries}/>
         </Route>
 
         <Route path="/create">

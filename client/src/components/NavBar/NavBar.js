@@ -12,7 +12,7 @@ const NavBar = () => {
                 <Link to="/breathe"> Breathe </Link> 
                 <Link to="/colour"> Colour </Link> 
                 <Link to="/listen"> Listen </Link> 
-                <Link to="/play"> Game </Link> 
+                <Link to="/play"> Play </Link> 
                 <Link to="/journal"> Your Journal </Link>
 
             </nav>

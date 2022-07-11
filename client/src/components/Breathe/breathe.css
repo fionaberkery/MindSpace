@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 /* styling */
 
@@ -29,16 +29,15 @@ body .breathe-container {
     animation: breathe 14000ms infinite;
 } 
 
-.gradient-circle{
+#light .gradient-circle{
     background: conic-gradient(
-        #55b7a4 10%,
-        #4ca493 20%,
-        #fff 40%,
+        #5a7f7c 10%,
+        #719290 20%,
+        #d6eefa 40%,
         #fff 50%,
-        #336d62 60%,
-        #2a5b52 90%,
-        #51b19e 100%
-
+        #3f5456 60%,
+        #425454 90%,
+        #5a7f7c 100%
     );
 
     height:320px;
@@ -50,9 +49,9 @@ body .breathe-container {
     border-radius: 50%;
 }
 
-.circle {
+#light .circle {
     /* background-color: #010f1c; */
-    background: linear-gradient(pink, #7B9E89  );
+    background: linear-gradient(#afcad3, #7B9E89  );
     height: 100%;
     width: 100%;
     top: 0;
@@ -81,19 +80,6 @@ body .breathe-container {
     /* animation: pointercolour 18400ms infinite;  */
 }
 
-.word{
-    display:flex;
-    justify-content: center;
-    align-self: flex-end;
-    border-radius: 50%;
-    background-color:transparent;
-    height:100%;
-    width: 100%;
-    top: 0;
-    z-index: -1;
-
-}
-
 .word-container{
     display:flex;
     justify-content: center;
@@ -107,6 +93,7 @@ body .breathe-container {
 }
 
 .word {
+    font-family: lamarkie, sans-serif;
     display:flex;
     justify-content: center;
     align-self:center;
@@ -114,35 +101,62 @@ body .breathe-container {
 }
 
 #light {
-    background: url('/src/static/breathe/blue-pink-sky.jpg');
-    background-size:cover;
+    background: url('/src/static/breathe/snow-leaf.jpg');
+    background-size:contain;
     background-attachment: fixed;
+    background-color: #091418;
     background-repeat:no-repeat;
     background-position: center;
 }
 
 #dark {
-    background: url('/src/static/breathe/forrest.jpg');
-    background-size:cover;
+    background: url('/src/static/breathe/water2.jpg');
+    background-size:contain;
     background-attachment: fixed;
     background-repeat:no-repeat;
     background-position: center;
+    background-color: #4b5964;
 }
 
 #dark .gradient-circle {
+
     background: conic-gradient(
-        blue 10%,
-        lightblue 20%,
+        #b3c4cb 10%,
+        #eff0f1 20%,
         #fff 40%,
         #fff 50%,
-        orange 60%,
-        red 90%,
-        pink 100%
+        #afb6bb 60%,
+        #7f8a91 90%,
+        #b3c4cb 100%
     );
+    height:320px;
+    width: 320px;
+    position: absolute;
+    top: - 10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
 }
 
 #dark .circle {
-    background-image: linear-gradient(lightblue, lightgreen );
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: linear-gradient(#d4bebe, #b3c4cb );
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switch {
+
 }
 
 /* animations */
@@ -177,3 +191,66 @@ body .breathe-container {
 
 
 /* three classes for breathing in out and hold */
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border-style: solid;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: transparent;
+}
+
+input:focus + .slider {
+    background-color: transparent;
+    
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
