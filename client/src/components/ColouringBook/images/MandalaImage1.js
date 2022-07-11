@@ -25,13 +25,15 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
     return (
         <div className='colouring-page'>
 
-            <Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
-            <div id="current-colour--box">
-                <p>Current colour: </p>
-                <div id="current-colour" style={{ background: currentColour }} />
-            </div>
+            <div className='flex-palette'>
+				<div id="current-colour--box">
+					<p>Current colour: </p>
+					<div id="current-colour" style={{ background: currentColour }} />
+				</div>
+				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
+			</div>
 
-            <svg id="mandala-1" className='colouring-svg' xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 1000 45000 48000">
+            <svg id="mandala-1" className='colouring-svg mandala-sizing' xmlns="http://www.w3.org/2000/svg" version="1.1" width="750" height="750" viewBox="3000 3000 36000 36000">
                 {/* <rect id="white-background-box" fill="white" width="4200" height="4200"/> */}
                 <g id="Layer_x0020_1">
                     <metadata id="CorelCorpID_0Corel-Layer"/>

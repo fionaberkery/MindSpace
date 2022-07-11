@@ -41,12 +41,21 @@ path {
 
 /************* Large screen sizes *************/
 @media screen and (min-width: 701px) {
-    /* .colouring-page {
-        display: grid;
-    } */
+    .colouring-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .flex-palette {
+        /* margin-right: 10%; */
+        /* display: grid; */
+        /* align-items: center; */
+    }
 
     .colouring-svg {
-        max-width: 95vw;
+        max-width: 75%;
     }
 
     .select-img {
@@ -54,27 +63,42 @@ path {
         max-width: 30%;
     }
 
+    .petal {
+        max-width: 35%;
+        margin-bottom: 1rem;
+    }
+
+    .select-btn {
+        /* margin-top: 20rem;
+        margin-bottom: 20rem; */
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
     #current-colour--box {
-        padding-top: 20px;
-        /* margin-left: auto; */
+        text-align: center;
+        /* padding-top: 20px; */
+        padding-left: auto;
         /* margin-right: -150px; */
         /* text-align: center; */
     }
 
     #current-colour {
+        margin-left: 33%;
         border: #121212 2px solid;
-        height: 6rem;
-        width: 6rem;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
     }
 
     #colour-palette {
         display: grid;
         grid-template-columns: 50% 50%;
-        margin-left: auto;
+        /* margin-left: auto;
         margin-right: 5%;
         margin-top: 5%;
-        width: auto;
+        width: auto; */
         gap: 0.5rem;
         width: 200px;
     }
@@ -108,6 +132,19 @@ path {
 
     .colouring-svg {
         max-width: 95vw;
+    }
+
+    #village-stairs {
+        height: 70%;
+    }
+
+    #mandala-1 {
+        height: 70%;
+        width: auto;
+    }
+
+    #mandala-2 {
+        height: 65%;
     }
 
     .nav-colouring {
