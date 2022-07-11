@@ -13,6 +13,7 @@ import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
 import Home from './containers/Home';
+import {Helmet} from 'react-helmet';
 
 
 function App() {
@@ -55,9 +56,14 @@ function App() {
 }
 
   return (
-
     <>
-
+      <Helmet>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
+        <title>Wellbeing First Aid Kit</title>
+      </Helmet>
+    
       <Router>
         
         <NavBar/>
