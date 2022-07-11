@@ -7,7 +7,6 @@ export const ThemeContext = createContext(null)
 
 const Breathe = () => {
 
-<<
     const [currentWord, setCurrentWord]= useState(true)
 
     setTimeout (()=>{

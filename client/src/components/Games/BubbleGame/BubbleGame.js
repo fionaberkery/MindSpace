@@ -7,6 +7,7 @@ const BubbleGame =() =>{
 
     return(
         <div>
+        <br></br>
         <BubbleStage />
       </div>
 
