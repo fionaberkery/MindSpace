@@ -73,7 +73,7 @@ const BubbleStage = () => {
         console.log(bubble);
         const audio = document.getElementById("pop");
         console.log(bubble.style.display)
-        bubble.style.setProperty("animation", "popped 0.3s ease-out both"); //not perfect lol
+        bubble.style.setProperty("animation", "popped .3s ease-out both"); //not perfect lol
         // bubble.classList.add("popped");
         audio.play();
         setBubblesPopped(bubblesPopped+1);
