@@ -33,36 +33,6 @@ const AudioControls = ({
 
     const { duration } = audioRef.current
 
-    // console.log(audioData)
-
-    // useEffect(() => {
-    //     const audioObjects = audioData.map(audio => audio.id)
-    //     setAudioIndex(audioObjects.indexOf(selected.id))
-    // })
-    // console.log(audioIndex, " << this is selected audioIndex in audioData")
-
-
-    // const onPlayPauseClick = () => {
-    //     !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
-    // }
-
-    // const nextAudio = () => {
-    //     if (audioIndex < audioData.length - 1) {
-    //         setAudioIndex(audioIndex + 1)
-    //     } else {
-    //         setAudioIndex(0);
-    //     }
-    // }
-
-    // const previousAudio = () => {
-    //     if (audioIndex - 1 < 0) {
-    //         setAudioIndex(audioData.length - 1);
-    //     } else {
-    //         setAudioIndex(audioIndex - 1);
-    //     }
-    // }
-
-
     const startTimer = () => {
         // Clears any timers running
         clearInterval(intervalRef.current);

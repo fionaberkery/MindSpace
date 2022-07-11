@@ -150,7 +150,8 @@ function App() {
             audioIndex = {audioIndex}
             onNextClick={onNextClick}
             onPreviousClick={onPreviousClick}
-            />: null }
+            />
+            : null }
         </div>
 
 
