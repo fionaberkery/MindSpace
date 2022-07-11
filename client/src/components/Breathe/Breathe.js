@@ -1,6 +1,7 @@
 
 import React,{useState, useEffect, createContext} from "react";
 import ReactSwitch from "react-switch";
+import Switch from "react-switch";
 import './breathe.css'
 
 export const ThemeContext = createContext(null)
@@ -26,9 +27,16 @@ const Breathe = () => {
         <ThemeContext.Provider value={{theme, toggleTheme}}>
             <section className="breathe-container" id={theme}>
 
-            <label> {theme === 'light' ? "Breathe in the sky" : "Breathe in the Forrest"} </label>
-            <ReactSwitch onChange={toggleTheme} checked={theme === "light"}/>
+            <div className="toggle">
             
+            <label> {theme === 'light' ? "Earth Mode" : "Water Mode"} </label>
+            
+            <label className="switch">
+                <input onChange={toggleTheme} checked={theme === "light"} type="checkbox" />
+                <span className="slider round"></span>
+                </label>
+            </div>
+
                 <div className="circle-container">
         
                     <div className="circle"> 
