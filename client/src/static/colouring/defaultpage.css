@@ -1,0 +1,24 @@
+.image-item{
+    min-height: 30rem;
+    min-width: 20rem;
+    padding: 40px;
+}
+
+.image-item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    pointer-events: none;
+}
+
+.inner-colour-carousel{
+    display:flex;
+    /* background-color: lightblue; */
+
+}
+
+.colour-carousel{
+    cursor: grab;
+    overflow: hidden;
+    /* background-color: rgb(231, 178, 209); */
+}

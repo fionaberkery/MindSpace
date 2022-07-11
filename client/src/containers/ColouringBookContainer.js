@@ -4,6 +4,8 @@ import DefaultPage from '../components/ColouringBook/DefaultPage';
 import MandalaImage1 from '../components/ColouringBook/images/MandalaImage1';
 import MandalaImage2 from '../components/ColouringBook/images/MandalaImage2';
 import VillageStairsImage from '../components/ColouringBook/images/VillageStairsImage';
+import { motion } from 'framer-motion';
+
 
 const ColouringBookContainer = () => {
     
@@ -35,9 +37,11 @@ const ColouringBookContainer = () => {
 
     return (
         <div>
+
             <Helmet>
                 <title>Wellbeing - Colour</title>
             </Helmet>
+            
             <h2 className='colouring-title'>Colour Away</h2>
 
             <nav className='nav-colouring'>
