@@ -1,6 +1,7 @@
 package com.server.server.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.type.descriptor.sql.VarcharTypeDescriptor;
 
 import javax.persistence.*;
 
@@ -16,7 +17,7 @@ public class JournalEntry {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "textInput")
+    @Column(name = "textInput", length=10000)
     private String textInput;
 
     @ManyToOne(optional = false)

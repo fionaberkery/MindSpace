@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 
-.breathe-container {
-    background: url('/src/static/breathe/calm-water.jpg');
+/* styling */
+
+body .breathe-container {
+    /* background: url('/src/static/breathe/calm-water.jpg'); */
     background-size:contain;
     background-attachment: fixed;
     background-repeat:no-repeat;
@@ -16,8 +18,6 @@
     /* margin: 8em; */
 }
 
-/* styling */
-
 .circle-container{
     display:flex;
     align-items:center;
@@ -26,7 +26,7 @@
     width:300px;
     margin:auto;
     position:relative;
-    animation: breathe 18400ms infinite;
+    animation: breathe 14000ms infinite;
 } 
 
 .gradient-circle{
@@ -67,7 +67,7 @@
     left: 140px;
     width: 20px;
     height: 190px;
-    animation:rotate 18400ms linear forwards infinite ;
+    animation:rotate 14000ms linear forwards infinite ;
     transform-origin: bottom center;
 }
 
@@ -92,6 +92,57 @@
     top: 0;
     z-index: -1;
 
+}
+
+.word-container{
+    display:flex;
+    justify-content: center;
+    align-self: flex-end;
+    border-radius: 50%;
+    background-color:transparent;
+    height:100%;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.word {
+    display:flex;
+    justify-content: center;
+    align-self:center;
+    font-size: 20px;
+}
+
+#light {
+    background: url('/src/static/breathe/blue-pink-sky.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+#dark {
+    background: url('/src/static/breathe/forrest.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+#dark .gradient-circle {
+    background: conic-gradient(
+        blue 10%,
+        lightblue 20%,
+        #fff 40%,
+        #fff 50%,
+        orange 60%,
+        red 90%,
+        pink 100%
+    );
+}
+
+#dark .circle {
+    background-image: linear-gradient(lightblue, lightgreen );
 }
 
 /* animations */
@@ -122,6 +173,7 @@
       transform: scale(.5)
     }
 }
+
 
 
 /* three classes for breathing in out and hold */

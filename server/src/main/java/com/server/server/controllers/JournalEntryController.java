@@ -2,11 +2,13 @@ package com.server.server.controllers;
 import com.server.server.models.JournalEntry;
 import com.server.server.models.User;
 import com.server.server.repositories.JournalEntryRepository;
+import com.server.server.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -15,43 +17,40 @@ public class JournalEntryController {
     @Autowired
     JournalEntryRepository journalEntryRepository;
 
+    UserRepository userRepository;
+
     // see all journal entries
     @GetMapping(value = "/journals")
-    public ResponseEntity<List<JournalEntry>> getAllJournalEntries(){
+    public ResponseEntity<List<JournalEntry>> getAllJournalEntries() {
         return new ResponseEntity<>(journalEntryRepository.findAll(), HttpStatus.OK);
-    }
-
-    // get journal entry by id
-    @GetMapping(value = "/journals/{id}")
-    public ResponseEntity getJournalEntry(@PathVariable Long id){
-        return new ResponseEntity<>(journalEntryRepository.findById(id), HttpStatus.OK);
     }
 
     // create new journal entry
     @PostMapping(value = "/journal")
-    public ResponseEntity<JournalEntry> postJournalEntry(@RequestBody JournalEntry journalEntry){
-        journalEntryRepository.save(journalEntry);
-        return new ResponseEntity<>(journalEntry, HttpStatus.CREATED);
+    public JournalEntry newEntry(@RequestBody JournalEntry newJournalEntry) {
+        return journalEntryRepository.save(newJournalEntry);
     }
 
     // edit journal entry
     @PutMapping(value = "/journal")
-    public JournalEntry journalEntryToEdit(@RequestBody JournalEntry journalEntryToEdit){
+    public JournalEntry journalEntryToEdit(@RequestBody JournalEntry journalEntryToEdit) {
         return journalEntryRepository.save(journalEntryToEdit);
     }
 
     // delete journal entry by id
-    @DeleteMapping(value = "/journals/{id}")
-    public ResponseEntity deleteJournalEntry(@PathVariable Long id){
+    @DeleteMapping(value = "/journal/{id}")
+    public ResponseEntity<String> deleteEntry(@PathVariable Long id) {
         try // try this first
         {
             journalEntryRepository.deleteById(id);
-            return new ResponseEntity<>("Journal Entry " + id + " Deleted", HttpStatus.OK);
-        }
-        catch(Exception e) // if the first doesn't work then do this
+            return new ResponseEntity<String>("Journal Entry " + id + " Deleted", HttpStatus.OK);
+        } catch (Exception e) // if the first doesn't work then do this
         {
-            return new ResponseEntity<>("Journal Entry Not Deleted - Server Error", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Journal Entry Not Deleted - Server Error", HttpStatus.BAD_REQUEST);
         }
     }
-
 }
+
+
+
+

@@ -1,0 +1,129 @@
+.login-page
+{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-image: url("/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/images/journal.jpg");
+    background-size: cover;
+}
+
+
+.sub-login-page
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+    width: 35%;
+    box-shadow: 5px 8px 9px 8px #a1729e;
+    border-radius: 60px;
+    background-color: white;
+}
+
+.login-boxes
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.login-button
+{
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #a1729e;
+    cursor: pointer;
+}
+
+.login-button:hover
+{
+    background-color: #dc9b99;
+    transition: 0.7s;
+}
+
+.link
+{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.forgot-password
+{
+    font-size: 0.9vw;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    color:#a1729e;
+}
+
+.forgot-password:hover
+{
+    transition: 0.5s;
+    align-items: center;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 0.9vw;
+    cursor: pointer;
+    color: #dc9b99;
+}
+
+#p
+{
+    font-size: 0.8vw;
+}
+
+.icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.google-icon
+{
+    margin: 10px;
+}
+
+.apple-icon
+{
+    margin: 10px;
+}
+
+.fb-icon
+{
+    margin: 10px;
+}
+
+#login-options
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.new-profile-button
+{
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 12px;
+    background-color: #a1729e;
+    cursor: pointer;
+}
+
+select
+{
+    color: grey;
+}
