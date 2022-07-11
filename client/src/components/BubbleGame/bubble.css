@@ -1,54 +1,24 @@
-
-/* 
-html {
-  box-sizing: border-box;
-  position: fixed;
-  overflow: hidden;
-} */
-/* 
-* {
-  margin: 0;
-  padding: 4px white;
-} */
-/* 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-} */
-
 .score {
-    z-index: 90;
     display: block;
-    position: relative;
-    /* background: #ea3b3b; */
-    padding: 10px;
     font-size: 34px;
     padding: 0.5em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(40, 40, 40);
-    /* text-shadow: -2px 3px 0 #bb1616; */
+    color: white;
   }
   
   .bubble {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     opacity: 1;
     transform: scale(1);
-    /* transition: all ease-in-out; */
     cursor: pointer;
     position: absolute;
-
+    background-image: url("/src/static/bubbles/bubble_small.png");
     width: 75px;
     height:75px;
-    background-image: url("/src/images/bubble_small.png");
-    background-color: none
-    ;
-  /* no-repeat 50% / contain; */
+    background-color: none;
   }
+
   .bubble.popped {
     animation: popped 0.3s ease-in-out both;
-
- 
     animation-duration: 0.3s !important;
   }
   
@@ -57,20 +27,15 @@ html {
   }
   
   .stage {
+    margin-top: 1.4%;
     overflow: hidden;
-    transform: scale(1);
-    background: url('/src/images/jeffrey-workman-YvkH8R1zoQM-unsplash.jpg') no-repeat 50% / contain;
-    max-width:70%;
-    /* max-height:80%; */
-    
-  
+    /* transform: scale(1); */
+    background: url('/src/static/bubbles/tinysunlight.jpg') no-repeat 50% / cover;
     position: relative;
-    width: 90vw;
-    height: 60vh;
-    
+    height: 100vh;
   }
   
-  .bubble-button {
+  .bubble-btn {
     opacity: 0.8;
     position: absolute;
     top: 25%;
@@ -86,10 +51,9 @@ html {
     border: 1px solid #3b52ea;
     border-radius: 10px;
     cursor: pointer;
-    /* box-shadow: -10px 10px 0 #031d90; */
+    box-shadow: -10px 10px 0 #031d90;
     transition: all 0.3s ease-in-out;
     line-height: 1;
-    /* text-shadow: -5px 5px 0 #1621bb; */
   }
   
   @keyframes popped {
@@ -140,7 +104,7 @@ html {
     }
   }
   
-  .message {
+  /* .message {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -154,4 +118,4 @@ html {
     z-index: 99;
     animation: messageDisplay 1s ease;
   }
-  
+   */
