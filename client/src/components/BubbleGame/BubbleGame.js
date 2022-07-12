@@ -70,7 +70,6 @@ const BubbleGame =() =>{
         ) : (
             <button className="bubble-btn" onClick={isReady}>Ready</button>
         )}
-            
         </div>
 
     )

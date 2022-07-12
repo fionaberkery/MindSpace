@@ -5,7 +5,7 @@
 /* styling */
 
 body .breathe-container {
-    /* background: url('/src/static/breathe/calm-water.jpg'); */
+
     background-size:contain;
     background-attachment: fixed;
     background-repeat:no-repeat;
@@ -188,10 +188,7 @@ body .breathe-container {
     }
 }
 
-
-
-/* three classes for breathing in out and hold */
-
+/* toggle */
 
 .switch {
     position: relative;

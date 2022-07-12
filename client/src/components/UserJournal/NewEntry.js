@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import './userProfile.css'
 
 
 
-const NewEntry = ({addNewJournalEntry, currentUser}) => {
+const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
 
     const [textField, setTextField] = useState()
     const [textInput, setTextInput] = useState("")
     const [date, setDate] = useState("")
-    const [buttonTextJournal, setButtonTextJournal] = useState("Save New Entry")
+    const [buttonTextJournal, setButtonTextJournal] = useState("Save")
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -20,7 +21,7 @@ const NewEntry = ({addNewJournalEntry, currentUser}) => {
         addNewJournalEntry(newEntry)
         setDate("")
         event.target.reset()
-        setButtonTextJournal("New entry complete")
+        setButtonTextJournal("New entry saved")
     }
 
     const handleDateInput = (event) => {
@@ -38,36 +39,36 @@ const NewEntry = ({addNewJournalEntry, currentUser}) => {
     return (
 
         <>
+        <div className="new-entry-page">
+        <div className="sub-new-entry-page">
 
-        <div className="new-entry">
-
-            <h2> New Journal Entry </h2>
+            <h2 className="my-journal-title" > New Journal Entry </h2>
 
             <div className="entry-form">
-            <form onSubmit={handleSubmit}>
-                <br></br>
-                <label> Date : </label>
-                <input onChange={handleDateInput} type="text" placeholder="DD-MM-YY" required>
-                </input>
-                <br></br><br></br>
- 
-                <textarea value={textField} placeholder="Enter your text here" onChange={handleTextInput} required />
-            
-                <input type="submit" value={buttonTextJournal} className="save-button" />       
-        
-            </form>
-            <button onClick={handleDiscardClick} className="discard-button"> <img src="https://img.icons8.com/material-rounded/24/000000/delete-message--v1.png" height="20px" /> </button>
-            <p className="hide" > delete </p>
-            </div>
+                <div className="sub-entry-form">
+                    <form onSubmit={handleSubmit}>
+                        <br></br>
+                        <label> Date : </label>
+                        <input onChange={handleDateInput} type="text" placeholder="DD-MM-YY" required>
+                        </input>
+                        <br></br><br></br>
+                        
+                        <textarea cols="70" rows="17" value={textField} placeholder="Enter your text here" onChange={handleTextInput} required />
+                    
+                        <div className="save-flex">
+                        <input type="submit" value={buttonTextJournal} className="save-button" /> 
+                        </div>      
+                    </form>
+                    <button onClick={handleDiscardClick} className="discard-button"> <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png" height="20px"/> </button>
+                    </div>
+                </div>
 
-            
-            
-           
-
-            <button> <Link to="/profile"> Return to profile </Link> </button>
+                <div className="flex-return-button">
+                    <button className="return-button" > <Link className="link" to="/profile"> Return to profile </Link> </button>
+                </div>
 
         </div>
-
+        </div>
         </>
     )
 }

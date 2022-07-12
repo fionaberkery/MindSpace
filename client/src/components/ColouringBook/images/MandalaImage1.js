@@ -26,10 +26,10 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
         <div className='colouring-page'>
 
             <div className='flex-palette'>
-	
+			
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 
-                <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+                <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
 			</div>
 

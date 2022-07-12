@@ -1,10 +1,9 @@
-
+/* JIGSAW  */
 .title {
     text-align: center;
     color: green;
     margin: 2rem;
 }
-  
 
 .jigsaw-puzzle {
     width: 90vh;
@@ -13,3 +12,130 @@
     margin: auto;
     box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
 }
+
+/*  */
+
+.select
+{
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+
+}
+
+.jigsaw-page
+{
+    height:100vh;
+    background:linear-gradient( rgb(152, 207, 244), #FFFFFF);
+    
+}
+
+#dropdown-menus-flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* FLOATING ANIMATION */
+
+section h2{
+    color:#fff;
+    font-size:2em;
+    text-transform:uppercase ;
+    text-shadow:0 1px 4px red;
+  }
+  section .set{
+    position:absolute ;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+  }
+  section .set div{
+    position:absolute ;
+    display:block ;
+  }
+  section .set div:nth-child(1){
+    left:20%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-7s;
+  }
+  section .set div:nth-child(2){
+    left:50%;
+    animation:animate 20s linear infinite ;
+    animation-delay:-5s;
+  }
+  section .set div:nth-child(3){
+    left:70%;
+    animation:animate 20s linear infinite ;
+    animation-delay:0s;
+  }
+  section .set div:nth-child(4){
+    left:0%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-5s;
+  }
+  section .set div:nth-child(5){
+    left:85%;
+    animation:animate 18s linear infinite ;
+    animation-delay:-10s;
+  }
+  section .set div:nth-child(6){
+    left:20%;
+    animation:animate 15s linear infinite ;
+    animation-delay:-7s;
+  }
+  section .set div:nth-child(7){
+    left:0%;
+    animation:animate 12s linear infinite ;
+    
+  }
+  section .set div:nth-child(8){
+    left:60%;
+    animation:animate 15s linear infinite ;
+  }
+
+  .set2{
+    transform:scale(2) rotateY(180deg);
+    filter:blur(2px);
+  }
+  .set3{
+    transform:scale(0.8) rotateX(180deg);
+    filter:blur(4px);
+  }
+
+  @keyframes animate{
+    0%{
+      opacity:0;
+      top: -10%;
+      transform:translateX(20px) rotate(0deg);
+    }
+    10%{
+      opacity:1;
+    }
+    20%{
+      transform:translateX(-20px) rotate(45deg);
+    }
+    40%{
+      transform:translateX(-20px) rotate(90deg);
+    }
+    60%{
+      transform:translateX(20px) rotate(180deg);
+    }
+    80%{
+      transform:translateX(-20px) rotate(180deg);
+    }
+    100%{
+      top: 110%;
+      transform:translateX(-20px) rotate(225deg);
+    }
+  }

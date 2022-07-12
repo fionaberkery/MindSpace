@@ -5,116 +5,101 @@
     color: white;
   }
   
-  .bubble {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    opacity: 1;
+.bubble {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+  position: absolute;
+  background-image: url("/src/static/bubbles/bubble_small.png");
+  width: 75px;
+  height:75px;
+  background-color: none;
+}
+
+.bubble.popped {
+  animation: popped 0.3s ease-in-out both;
+  animation-duration: 0.3s !important;
+}
+
+.bubble.animating {
+  animation: float 12s linear infinite both;
+}
+
+.stage {
+  margin-top: 1.4%;
+  overflow: hidden;
+  background: url('/src/static/bubbles/canyon.jpg') no-repeat 50% / cover;
+  position: relative;
+  height: 100vh;
+}
+
+.bubble-btn {
+  opacity: 0.8;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  color: grey;
+  border: 0;
+  font-size: 50px;
+  color: white;
+  background: #3b95ea;
+  padding: 0.5em;
+  border: 1px solid #3b52ea;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: -10px 10px 0 #031d90;
+  transition: all 0.3s ease-in-out;
+  line-height: 1;
+}
+
+@keyframes popped {
+  0% {
     transform: scale(1);
-    cursor: pointer;
-    position: absolute;
-    background-image: url("/src/static/bubbles/bubble_small.png");
-    width: 75px;
-    height:75px;
-    background-color: none;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
   }
 
-  .bubble.popped {
-    animation: popped 0.3s ease-in-out both;
-    animation-duration: 0.3s !important;
+  5% {
+    opacity: 1;
   }
-  
-  .bubble.animating {
-    animation: float 12s linear infinite both;
+
+  95% {
+    opacity: 1;
   }
-  
-  .stage {
-    margin-top: 1.4%;
-    overflow: hidden;
-    background: url('/src/static/bubbles/canyon.jpg') no-repeat 50% / cover;
-    position: relative;
-    height: 100vh;
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000%);
   }
-  
-  .bubble-btn {
-    opacity: 0.8;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: inherit;
-    color: grey;
-    border: 0;
-    font-size: 50px;
-    color: white;
-    background: #3b95ea;
-    padding: 0.5em;
-    border: 1px solid #3b52ea;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: -10px 10px 0 #031d90;
-    transition: all 0.3s ease-in-out;
-    line-height: 1;
-  }
-  
-  @keyframes popped {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: scale(3);
-    }
-  }
-  
-  @keyframes float {
-    0% {
-      opacity: 0;
-      transform: translateY(200%);
-    }
-  
-    5% {
-      opacity: 1;
-    }
-  
-    95% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0;
-      transform: translateY(-1000%);
-    }
-  }
-  
-  @keyframes messageDisplay {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0);
-    }
-  
-    50% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-  
-    100% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(3);
-    }
-  }
-  
-  /* .message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+}
+
+@keyframes messageDisplay {
+  0% {
+    opacity: 0;
     transform: translate(-50%, -50%) scale(0);
-    text-shadow: -2px 4px 0 #fff;
-    color: yellow;
-    font-size: 200px;
-    z-index: -1;
   }
-  .message.animated {
-    z-index: 99;
-    animation: messageDisplay 1s ease;
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
-   */
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}
+

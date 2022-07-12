@@ -1,13 +1,4 @@
-/* .profile-page
-{
-    background-image: url("/src/static/journal/13.jpg");
-    background-size:cover;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-position: center;
-    color: #fff;
-    min-height: 100vh;
-} */
+/* USER PROFILE */
 
 .delete-button
 {
@@ -16,6 +7,7 @@
     border-style: none;
     font-size: 1vw;
     background: none;
+    cursor: pointer;
 }
 
 .delete-button:hover
@@ -24,7 +16,53 @@
     transform: scale(1.25);
 }
 
-/* .entry-text
+.my-journal-title
+{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: lamarkie, sans-serif;
+}
+
+.new-entry-button
+{
+    align-items: center;
+    margin-left: 10px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+}
+
+.new-entry-button:hover
+{
+    background-color: #828282;
+    transition: 0.7s;
+}
+
+.logout-button
+{
+    align-items: center;
+    margin-left: 10px;
+    padding: 12px 20px;
+    border-radius: 7px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+}
+
+.logout-button:hover
+{
+    background-color: #828282;
+    transition: 0.7s;
+}
+
+.entry-text
 {
     border-style: solid;
     border-color: #405788;
@@ -34,30 +72,163 @@
     margin-bottom: 10px;
     padding: 10px;
     background-color: #eeb69f;
-} */
+}
 
+/* NEW ENTRY PAGE */
 
-/* 
-.journal-entry
+.new-entry-page
+{
+    background-image: url("/src/static/journal/bi.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.return-button
+{
+    align-items: center;
+    margin-left: 10px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+}
+
+.return-button:hover
+{
+    background-color: #828282;
+    transition: 0.7s;
+}
+
+.save-button
+{
+    align-items: center;
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    color: #828282;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.save-button:hover
+{
+    background-color: #d4bebe;
+    transition: 0.7s;
+}
+
+.discard-button
+{
+    background: transparent;
+    border-style: none ;
+}
+
+.sub-entry-form
+{
+    display: flex;
+    justify-content: center;
+}
+
+.sub-entry-form
+{
+    padding: 20px 40px 20px 40px;
+    margin: 10px;
+    border-radius: 2px;
+    background-color: #d4bebea2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.entry-form 
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.flex-return-button
+{
+    display: flex;
+    justify-content: center;
+}
+
+.save-flex
+{
+    display: flex;
+    justify-content: center;
+}
+
+.text-flex
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* NEW PROFILE */
+
+.new-profile
+{
+    text-align: center;
+    justify-content: flex-end;
+    display: flex;
+    padding: 90px 90px 90px 0;
+    background-image: url("/src/static/journal/11.jpg") ;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.sub-new-profile
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+    width: 35%;
+    box-shadow: 2px 5px 7px 4px rgb(177, 172, 172);
+    border-style: solid;
+    border-radius: 1px;
+}
+
+.form-flex
 {
     display: flex;
     flex-direction: column;
-    height: 400px;
-    width: 500px;
-    text-align: center;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #b0b7ba;
-    border-radius: 10px;
-} */
+    justify-content: space-evenly;
+    padding: 50px;
+}
 
-/* #828282
-#425454
-#d4bebe
-#b0b7ba */
-
-/* .entry-container
+.label-size
 {
-    display: inline-block;
-    justify-content: space-between;
-} */
+    height: 40px;
+    font-size: 1.2vw;
+}
+
+.save-new-button
+{
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 10px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.save-new-button:hover
+{
+    background-color: #828282;
+    transition: 0.7s;
+} 
