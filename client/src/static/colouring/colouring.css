@@ -51,12 +51,12 @@ path {
        
 
 
-        /* background-image:url('/src/static/journal/7.jpg');
+        background-image:url('/src/static/journal/7.jpg');
         background-size:cover;
         background-attachment: fixed;
         background-repeat:no-repeat;
         background-position: center;
-        min-height: 100vw; */
+        min-height: 100vw;
 
     }
 
@@ -80,6 +80,20 @@ path {
         max-width: 35%;
         margin-bottom: 1rem;
     }
+
+    .general-button
+    {
+        align-items: center;
+        margin-left: 10px; 
+        margin-right: 80px; 
+        padding: 12px 20px; 
+        border-radius: 7px;
+        border-style: none;
+        font-size: 14px; 
+        background-color: #D4BEBE;
+        cursor: pointer;
+    }
+
 
     .select-btn {
         cursor: pointer;

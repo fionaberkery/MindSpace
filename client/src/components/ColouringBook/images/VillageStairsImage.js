@@ -31,7 +31,7 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour}/>
 
 
-				<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+				<button className='general-button' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
 			</div>
 
