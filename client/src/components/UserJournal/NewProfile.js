@@ -34,7 +34,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
         setPassword("")
         event.target.reset()
         onUserSelected(newUser)
-        setButtonTextProfile("New Profile Successfully Created!")
+        setButtonTextProfile("Profile Created!")
         setComponentToShow(true)
     }
 
@@ -45,17 +45,24 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
         <div className="new-profile">
         <div className="sub-new-profile">
 
-            <form onSubmit={handleSubmit} > 
-                    <input type="text" placeholder="Enter name" onChange={handleNameChange} required />
+        <h1 > Enter Details </h1>
+
             
-                    <input type="text" placeholder="Enter email" onChange={handleEmailChange} required />
+                <form className="form-flex" onSubmit={handleSubmit} > 
+                    <input className="label-size" type="text" placeholder="Enter username" onChange={handleNameChange} required />
+                    <br></br>
+                
+                    <input className="label-size" type="text" placeholder="Enter email" onChange={handleEmailChange} required />
+                    <br></br>
 
-                    <input type="text" placeholder="Create password" onChange={handlePasswordChange} required />
+                    <input className="label-size" type="text" placeholder="Create password" onChange={handlePasswordChange} required />
+                    <br></br><br></br>
 
-                    <input type="submit" value={buttonTextProfile}/>
+                    <input className="save-new-button" type="submit" value={buttonTextProfile}/>
                 </form>
+            
 
-                {componentToShow ? <button> <Link to="/journal"> Return to log in</Link> </button> : null}
+                {componentToShow ? <button className="save-new-button" > <Link className="link" to="/journal"> Return to log in</Link> </button> : null}
         </div>
         </div>
 

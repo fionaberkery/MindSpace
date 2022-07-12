@@ -197,30 +197,37 @@
     border-radius: 1px;
 }
 
-/* .login-boxes
+.form-flex
 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding-left: 20%;
-    padding-right: 20%;
+    justify-content: space-evenly;
+    padding: 50px;
 }
 
-.login-button
+.label-size
+{
+    height: 40px;
+    font-size: 1.2vw;
+}
+
+.save-new-button
 {
     align-items: center;
     margin-left: 80px;
     margin-right: 80px;
-    padding: 12px 20px;
-    border-radius: 7px;
+    padding: 10px;
+    border-radius: 4px;
     border-style: none;
     font-size: 14px;
     background-color: #d4bebe;
     cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-.login-button:hover
+.save-new-button:hover
 {
     background-color: #828282;
     transition: 0.7s;
-} */
+} 

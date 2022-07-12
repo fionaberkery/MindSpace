@@ -36,9 +36,12 @@ const ProfilePage = ({currentUserJournalEntries}) => {
                 </motion.div>
             </motion.div>
             </div>
+            <br></br>
 
             <button className="new-entry-button" id="button-position" > <Link className="link" to="/create"> New journal entry </Link></button>
             <button className="logout-button" id="login-button-id" > <Link to="/home" className="link" > Log out </Link> </button>
+            <br></br>
+            <br></br>
 
         </div>
         </div>
