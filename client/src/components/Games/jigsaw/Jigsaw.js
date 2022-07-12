@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "./jigsaw.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+import Jigsaw1 from '/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw1.png'
+import Jigsaw2 from "/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw2.png"
+import Jigsaw3 from '/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw3.png'
+
+
 
 
 const Jigsaw = ()=>{
@@ -66,36 +71,77 @@ const Jigsaw = ()=>{
         setColumns(columns)
     }
 
-
-
-
-
-
 return(
     <>
-    <div>
-    <br></br><br></br><br></br>
-                <select defaultValue="" onChange={handlePictureChange} className="drop-down" >
+    
+    <div className="jigsaw-page">
+
+            <br></br><br></br><br></br>
+
+            <div id="dropdown-menus-flex">
+
+            <select defaultValue="" onChange={handlePictureChange} className="drop-down" >
                 <option value="" selected>Select Picture</option>
-            {pictureOptions}
+                {pictureOptions}
             </select>
+            
             <select defaultValue="" onChange={handleRowChange} className="drop-down" >
                 <option value="4" selected>Number of Rows</option>{rowOptions}
-            
             </select>
+            
             <select defaultValue="" onChange={handleColumnChange} className="drop-down" >
                 <option value="" selected>Number of Columns</option>
-            {columnOptions}
+                {columnOptions}
             </select>
-    <h2 className="title">{text}</h2>
-    <JigsawPuzzle
-        imageSrc={picture}
-        rows={rows}
-        columns={columns}
-        onSolved={set}
-        className="jigsaw-puzzle"
-    />
+
+            </div>
+
+            <h2 className="title">{text}</h2>
+    
+            <JigsawPuzzle
+                imageSrc={picture}
+                rows={rows}
+                columns={columns}
+                onSolved={set}
+                className="jigsaw-puzzle"
+            />
     </div>
+
+    <section>
+
+  <div class="set">
+    <div><img src={Jigsaw1} height="40px" width="40px" /></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    
+  </div>
+  <div class="set set2">
+  <div><img src={Jigsaw1} height="40px" width="40px" /></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    
+  </div>
+  <div class="set set3">
+  <div><img src={Jigsaw1} height="40px" width="40px" /></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
+    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
+  </div>
+</section>
 
 </>
 )
