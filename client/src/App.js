@@ -80,11 +80,13 @@ function App() {
         .then(audioData => setAudioData(audioData))
   }, [])
 
-  const onAudioClick = (audio) => {
+  const onAudioChange = (audio) => {
       setSelected(audio)
+      console.log(audio)
       const audioObjects = audioData.map(audio => audio.id)
       setAudioIndex(audioObjects.indexOf(audio.id))
   }
+  
 
   const showModal = () => {
     setToggleModal(true)
@@ -151,7 +153,7 @@ function App() {
             <div className='modal-content'>
               <div className='modal-audio-list'>
                   <AudioList audioData={audioData} 
-                  onAudioClick={onAudioClick}/>
+                  onAudioChange={onAudioChange}/>
               </div>
               <div className='modal-audio-controls'>
                   { selected ? <AudioControls 
@@ -163,7 +165,7 @@ function App() {
                   : null }
               </div>
               <a> 
-                <img src={closeModalButton} class='close-modal-button' alt="close modal button"/>              
+                <img src={closeModalButton} className='close-modal-button' alt="close modal button"/>              
               </a>
             </div>
           </Modal>
