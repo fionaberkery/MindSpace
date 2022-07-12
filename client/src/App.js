@@ -83,6 +83,8 @@ function App() {
 
   const onAudioClick = (audio) => {
       setSelected(audio)
+      onst audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
   }
 
   const showModal = () => {
@@ -92,15 +94,7 @@ function App() {
   const closeModal = () => {
     setToggleModal(false)
   }
-
-  useEffect(() => {
-    if(selected !== null){
-    const audioObjects = audioData.map(audio => audio.id)
-    setAudioIndex(audioObjects.indexOf(selected.id))
-  }})
-
-
-
+  
   const onNextClick = () => {
     if(selected !== null){
       if (audioIndex < audioData.length - 1) {

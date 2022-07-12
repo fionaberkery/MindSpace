@@ -20,7 +20,7 @@ const ColouringBookContainer = () => {
         setSelection(selection);
     }
 
-    const colouringNav = ()=>{
+    const colouringNav = () => {
         switch (selection) {
             case 'default':
                 return <DefaultPage handleImageSelection={handleImageSelection} handleTouchImageSelection={handleTouchImageSelection} />
