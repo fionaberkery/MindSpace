@@ -15,7 +15,6 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
         return setFillColours(newColours);
     }
 
-
 	const touchPaintColour = (event) => {
 		event.preventDefault();
 		const newColours = [...fillColours];
@@ -27,11 +26,9 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 		<div className='colouring-page'>
 			
 			<div className='flex-palette'>
-				<div id="current-colour--box">
-					<p>Current colour: </p>
-					<div id="current-colour" style={{ background: currentColour }} />
-				</div>
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
+				
+				<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 			</div>
 
 			<svg id="village-stairs" className='colouring-svg' dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
@@ -801,9 +798,6 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 					<path fill={fillColours[375]} onClick={paintColour} onTouchStart={touchPaintColour} id="375" d="M300.6,237.19c-1.5-2.42-1.06-4.5,1.16-5.2C301.37,233.75,302.69,235.78,300.6,237.19Z" transform="translate(-0.5 -0.5)" />
 				</g>
 			</svg>
-
-			<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
-
 
 		</div>
 	)

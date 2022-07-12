@@ -29,8 +29,7 @@
   .stage {
     margin-top: 1.4%;
     overflow: hidden;
-    /* transform: scale(1); */
-    background: url('/src/static/bubbles/tinysunlight.jpg') no-repeat 50% / cover;
+    background: url('/src/static/bubbles/canyon.jpg') no-repeat 50% / cover;
     position: relative;
     height: 100vh;
   }

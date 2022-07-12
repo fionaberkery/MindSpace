@@ -27,11 +27,11 @@ const MandalaImage2 = ({handleImageSelection, handleTouchImageSelection}) => {
         <div className='colouring-page'>
 
             <div className='flex-palette'>
-				<div id="current-colour--box">
-					<p>Current colour: </p>
-					<div id="current-colour" style={{ background: currentColour }} />
-				</div>
+
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
+                
+                <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+                
 			</div>
         
             <svg id="mandala-2" className='colouring-svg' xmlns="http://www.w3.org/2000/svg" width="574" height="574" version="1.1" viewBox="0 0 42000 42000">
@@ -313,9 +313,6 @@ const MandalaImage2 = ({handleImageSelection, handleTouchImageSelection}) => {
                     </g>
                 </g>
             </svg>
-
-            <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
-
 
         </div>
     )
