@@ -42,7 +42,8 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
     return (
 
         <>
-        <br></br>
+        <div className="new-profile">
+        <div className="sub-new-profile">
 
             <form onSubmit={handleSubmit} > 
                     <input type="text" placeholder="Enter name" onChange={handleNameChange} required />
@@ -55,6 +56,8 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
                 </form>
 
                 {componentToShow ? <button> <Link to="/journal"> Return to log in</Link> </button> : null}
+        </div>
+        </div>
 
         </>
     )

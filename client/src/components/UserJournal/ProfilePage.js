@@ -2,6 +2,7 @@ import React from "react";
 import {motion} from 'framer-motion'
 import './carousel.css'
 import './userProfile.css'
+import '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/containers/journalLogin.css'
 import { Link } from "react-router-dom";
 
 const ProfilePage = ({currentUserJournalEntries}) => {
@@ -15,8 +16,7 @@ const ProfilePage = ({currentUserJournalEntries}) => {
 
         <div className="profile-page-header">
             <h1 className="my-journal-title">  My Journal </h1> 
-            <button> <Link to="/home"> Log out </Link> </button>
-            <button> <Link to="/create"> New journal entry </Link></button>     
+            
         </div>
 
         <div className="carousel-div"> 
@@ -36,6 +36,10 @@ const ProfilePage = ({currentUserJournalEntries}) => {
                 </motion.div>
             </motion.div>
             </div>
+
+            <button className="new-entry-button" id="button-position" > <Link className="link" to="/create"> New journal entry </Link></button>
+            <button className="logout-button" id="login-button-id" > <Link to="/home" className="link" > Log out </Link> </button>
+
         </div>
         </div>
         </>
