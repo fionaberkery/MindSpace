@@ -4,7 +4,7 @@ import './userProfile.css'
 
 
 
-const NewEntry = ({addNewJournalEntry, currentUser}) => {
+const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
 
     const [textField, setTextField] = useState()
     const [textInput, setTextInput] = useState("")

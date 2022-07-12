@@ -34,7 +34,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [])
+  }, [savedUsers, currentUserJournalEntries])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -48,7 +48,7 @@ function App() {
     PostJournalEntry(newEntry)
     .then(entry => {
       const newJournalEntriesList = [...savedJournalEntries, entry]
-      setSavedJournalEntries(newJournalEntriesList)
+      setCurrentUserJournalEntries(newJournalEntriesList)
     })
   }
 
@@ -165,4 +165,4 @@ function App() {
 
 export default App
 
-// savedUsers, savedJournalEntries
+
