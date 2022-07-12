@@ -7,3 +7,12 @@
 {
     font-family: myFont;
 }
+
+.modal-box {
+    position: absolute;
+    border: hidden;
+}
+
+.modal-content {
+    
+}

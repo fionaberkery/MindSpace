@@ -147,21 +147,23 @@ function App() {
             isOpen={toggleModal}
             ariaHideApp={false}
             contentLabel="Audio Player"
-            className="modal-box"
             overlayClassName="overlay"
+            className='modal-box'
           >
-            <div>
-                <AudioList audioData={audioData} 
-                onAudioClick={onAudioClick}/>
-            </div>
-            <div>
-                { selected ? <AudioControls 
-                selected = {selected}
-                audioIndex = {audioIndex}
-                onNextClick={onNextClick}
-                onPreviousClick={onPreviousClick}
-                />
-                : null }
+            <div className='modal-content'>
+              <div>
+                  <AudioList audioData={audioData} 
+                  onAudioClick={onAudioClick}/>
+              </div>
+              <div>
+                  { selected ? <AudioControls 
+                  selected = {selected}
+                  audioIndex = {audioIndex}
+                  onNextClick={onNextClick}
+                  onPreviousClick={onPreviousClick}
+                  />
+                  : null }
+              </div>
             </div>
           </Modal>
         </div>
