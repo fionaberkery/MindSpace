@@ -15,6 +15,7 @@
     
 
 .feature {
+    margin-top: 150px;
     display: grid;
     height: 90vh;
     place-items: center;
