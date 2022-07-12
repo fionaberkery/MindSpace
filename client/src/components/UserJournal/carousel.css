@@ -7,7 +7,6 @@
     width: 100%;
     height: 30rem;
     border-radius: 2px;
-    pointer-events: none;
     background-color: #d4bebea2;
     display: flex;
     flex-direction: column;
@@ -27,7 +26,6 @@
     background-attachment: fixed;
     background-repeat:no-repeat;
     background-position: center;
-    color: #121212;
     min-height: 100vh;
 }
 
