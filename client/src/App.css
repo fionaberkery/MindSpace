@@ -11,8 +11,21 @@
 .modal-box {
     position: absolute;
     border: hidden;
+    z-index: 100;
 }
 
 .modal-content {
-    
+    /* position: fixed; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "soundlist controls"
+}
+
+.modal-audio-list {
+    grid-area: "soundlist";
+}
+
+.modal-audio-controls {
+    grid-area: "controls";
 }

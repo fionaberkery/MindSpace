@@ -151,11 +151,11 @@ function App() {
             className='modal-box'
           >
             <div className='modal-content'>
-              <div>
+              <div className='modal-audio-list'>
                   <AudioList audioData={audioData} 
                   onAudioClick={onAudioClick}/>
               </div>
-              <div>
+              <div className='modal-audio-controls'>
                   { selected ? <AudioControls 
                   selected = {selected}
                   audioIndex = {audioIndex}
