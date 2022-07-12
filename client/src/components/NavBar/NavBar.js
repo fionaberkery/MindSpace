@@ -25,7 +25,7 @@ const NavBar = ({showModal}) => {
                     <Link className="nav-links" to="/colour"> Colour </Link> 
                     <Link className="nav-links" onClick={showModal}> Listen </Link> 
                     <Link className="nav-links"to="/play"> Play </Link> 
-                    <Link className="nav-links" to="/journal"> Your Journal </Link>
+                    <Link className="nav-links" to="/journal"> Journal </Link>
                     <h1 className="navbar-app-name">Name of App</h1>
                     
 
