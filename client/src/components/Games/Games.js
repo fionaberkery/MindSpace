@@ -12,13 +12,19 @@ function Games() {
     return(
 
         <div className="play-home">
+        
+            <Helmet>
+                <title>
+                    Wellbeing - Play
+                </title>
+            </Helmet>
 
         <div id="play-title">
         <h1> Play </h1>
         </div>
             
             <div className="jigsaw-link">
-                <Link to="/jigsaw">  <img id="jigsaw-img" src={Jigsaw} height="600px" width="600px"/></Link>  
+                <Link to="/jigsaw"> <img id="jigsaw-img" src={Jigsaw} height="600px" width="600px"/></Link>  
             </div>
 
             <div className="bubble-link">

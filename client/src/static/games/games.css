@@ -7,10 +7,11 @@
 }
 
 .games-nav--link {
+    font-family: lamarkie;
+    font-size: 14px;
     text-decoration: none;
     color: #121212;
     padding: 0.25rem;
-    border: #121212 2px solid;
 }
 
 .games-nav--link:visited {
