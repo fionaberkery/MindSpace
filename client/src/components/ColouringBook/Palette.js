@@ -11,7 +11,7 @@ const colours = [
         if(event.target.value !== undefined) {
             return setCurrentColour(event.target.value);
         }
-        return setCurrentColour(event.target.textContent);   
+        return setCurrentColour(event.target.textContent);
     }
 
     return (
@@ -20,7 +20,7 @@ const colours = [
 
             <p>Current colour: </p>
             <div id="current-colour" style={{ background: currentColour }} />
- 
+
             <div id="colour-palette--inner" onClick={changeColour} onTouchStart={changeColour}>
 
             <input id="custom-colour-input" type="color" name="head" onChange={changeColour}/>
