@@ -21,9 +21,6 @@ const AudioPlayer = () => {
     const onNextClick = (selected) => {
         setSelected(selected)
     }
-
-    if (!active) return null
-
     
     return(
         <>
