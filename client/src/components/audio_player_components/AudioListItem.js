@@ -8,7 +8,7 @@ const AudioListItem = ({audio, onAudioClick}) => {
 
     return(
 
-            <li onClick={handleAudioClick}> {audio.name}</li>
+            <li onClick={handleAudioClick} id='audio-list-item'> {audio.name}</li>
 
     )   
 }

@@ -108,15 +108,16 @@ footer
 .modal-box {
     position: absolute;
     border: hidden;
-    z-index: 100;
+    z-index: 1;
 }
 
 .modal-content {
     /* position: fixed; */
+    color: #f3f3f3;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas:
-    "soundlist controls"
+    "soundlist controls close"
 }
 
 .modal-audio-list {
@@ -126,3 +127,16 @@ footer
 .modal-audio-controls {
     grid-area: "controls";
 }
+
+.close-modal-button {
+    grid-area: "close";
+    width: 1em;
+    height: auto;
+    margin: 0.5em;
+    margin-top: 1em;
+    margin-left: 7em;
+}
+
+/* #audio-list-item {
+
+} */
