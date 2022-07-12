@@ -1,21 +1,16 @@
-import React, {useEffect, useState } from "react";
-import BubblePop from "./BubblePop";
+import React from "react";
 import './bubble.css'
 
 
-const BubbleStage = ({renderBubbles, bubblesPopped}) => {
+const BubbleStage = ({renderBubbles}) => {
 
 
     return (
     <div>
-        {/* <div className="message">{message}</div> */}
         <audio
             id="pop"
             src="https://uploads.codesandbox.io/uploads/user/e75d21d3-e2a7-4d7a-bd14-09ebe09ee6b0/JMLB-pop.mp3"
         />
-        <span className="score">
-            Score : {bubblesPopped}  
-        </span>
         {renderBubbles()}
     </div>
     );
