@@ -47,7 +47,7 @@ const BubbleGame = () => {
             left: xy[1] + 10 + "vh",
             top: xy[0] + "vw",
             zIndex: index,
-            // animation: "float 20s linear infinite both",
+            animation: "float 20s linear infinite both",
             animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
         }
         return styles;

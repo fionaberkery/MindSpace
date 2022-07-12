@@ -83,7 +83,7 @@ function App() {
 
   const onAudioClick = (audio) => {
       setSelected(audio)
-      onst audioObjects = audioData.map(audio => audio.id)
+      const audioObjects = audioData.map(audio => audio.id)
     setAudioIndex(audioObjects.indexOf(selected.id))
   }
 
