@@ -1,7 +1,7 @@
-#home-page {
+body {
     height: 90vh;
     margin: 0;
-    /* background-image: url('/src/static/breathe/splash.jpg'); */
+    background-image: url('/src/static/breathe/splash.jpg');
     background-size: cover;
     color: white;
     font-family: "poppins";
@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 90vh;
+    /* background-image: url('/src/static/breathe/splash.jpg'); */
 }
     
 
@@ -19,18 +20,18 @@
     display: grid;
     height: 90vh;
     place-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     border-right: 1px solid rgba(225, 225, 225, 0.1);
     background-size: contain;
     /* opacity: 1; */
 }
 
-.feature:hover {
+/* .feature:hover {
     opacity: 1;
-}
+} */
 
-.feature-img {
+.feature .feature-img {
     position: absolute;
     top: 0;
     left: 0;
