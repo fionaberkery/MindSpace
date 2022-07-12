@@ -7,6 +7,7 @@
     border-style: none;
     font-size: 1vw;
     background: none;
+    cursor: pointer;
 }
 
 .delete-button:hover
