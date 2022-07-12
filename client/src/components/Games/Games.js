@@ -1,11 +1,9 @@
 import {Link} from "react-router-dom"
 import React from "react"
 import Jigsaw from './jigsaw.jpg'
-import B2 from './b2.jpg'
 import B4 from './b4.jpg'
 import './gameHome.css'
 import {Helmet} from 'react-helmet';
-import "../../static/games/games.css"
 
 function Games() {
 

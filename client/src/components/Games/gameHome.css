@@ -33,3 +33,23 @@
     justify-content: center;
 }
 
+.games {
+    margin-top: 2%;
+}
+
+.games-nav {
+    margin-top: 2%;
+}
+
+.games-nav--link {
+    font-family: lamarkie;
+    font-size: 14px;
+    text-decoration: none;
+    color: #121212;
+    padding: 0.25rem;
+}
+
+.games-nav--link:visited {
+    color: #121212;
+}
+

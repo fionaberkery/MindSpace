@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./jigsaw.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
-import Jigsaw1 from './jigsaw1.png'
-import Jigsaw2 from './jigsaw2.png'
-import Jigsaw3 from './jigsaw3.png'
+import Jigsaw1 from './jigsaw1.png';
+import Jigsaw2 from './jigsaw2.png';
+import Jigsaw3 from './jigsaw3.png';
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import butterfliesImage from './butterflies.jpg';
+import sunsetImage from './sunset.jpg';
+import flowerImage from './flower.jpg';
 
 
 
@@ -22,12 +25,11 @@ const Jigsaw = ()=>{
         setText("Well Done! How about you pick another picture or increase the number of peices");
     };
 
-    const pic1= "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-    const pic2= "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg"
-    const pic3= "https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"
+    const pic1= sunsetImage;
+    const pic2= butterfliesImage;
+    const pic3= flowerImage;
 
     const pictureList = [pic1,pic2,pic3]
-    // const pictureList = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg","https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg","https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"]
 
     const numberOfRows = [3,4,5,6,7,8,9,10]
     const numberOfColumns = [3,4,5,6,7,8,9,10]
