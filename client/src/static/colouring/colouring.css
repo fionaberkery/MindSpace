@@ -37,7 +37,7 @@ path {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        background-image:url('/src/static/journal/7.jpg');
+        /* background-image:url('/src/static/journal/7.jpg'); */
         background-size:cover;
         background-attachment: fixed;
         background-repeat:no-repeat;
