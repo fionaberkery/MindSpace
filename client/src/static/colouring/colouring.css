@@ -1,0 +1,237 @@
+/************ All styling for the Colour section as follows ************/
+
+.colouring-svg {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:1.5;
+    stroke:black;
+    shape-rendering:geometricPrecision; 
+    text-rendering:geometricPrecision; 
+    image-rendering:optimizeQuality; 
+    line-height: 5em;
+}
+
+#mandala-1 {
+    stroke-width:3.55px;
+}
+
+#mandala-2 {
+    stroke-width:3.55px;
+}
+
+#village-stairs {
+    stroke-width:0.5px;
+}
+
+.fil1 {
+    fill: #121212;
+}
+
+.fil0{
+    fill: white;
+}
+
+
+path {
+    cursor: pointer;
+    transition: fill 0.5s;
+}
+
+/************* Large screen sizes *************/
+@media screen and (min-width: 701px) {
+  
+
+    .colouring-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+       
+
+
+        /* background-image:url('/src/static/journal/7.jpg');
+        background-size:cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        min-height: 100vw; */
+
+    }
+
+    .flex-palette {
+        /* margin-right: 10%; */
+        /* display: grid; */
+        /* align-items: center; */
+    }
+
+    .colouring-svg {
+        max-width: 75%;
+    }
+
+    .select-img {
+        cursor: pointer;
+        max-width: 30%;
+        
+    }
+
+    .petal {
+        max-width: 35%;
+        margin-bottom: 1rem;
+    }
+
+    .select-btn {
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .colouring-title{
+        text-align: center;
+        font-family: lamarkie, Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2em;
+        padding: 0.5em;
+    }
+
+    #current-colour--box{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        margin: 0.5em;
+    }
+
+    #current-colour--box-jen {
+        text-align: center;
+        /* padding-top: 20px; */
+        padding-left: auto;
+        /* margin-right: -150px; */
+        /* text-align: center; */
+    }
+
+    #current-colour {
+        margin-left: -44%;
+        border: #121212b4 2px solid;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        
+    }
+
+    #colour-palette {
+       display:grid;
+       grid-template-columns: 33% 33% 33%;
+       gap: 0.5em;
+       box-shadow: 2px 5px 7px 4px rgb(177, 172, 172);
+       padding: 2em;
+       margin-bottom: 15px;
+      
+    }
+
+    #colour-palette-jen {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* margin-left: auto;
+        margin-right: 5%;
+        margin-top: 5%;
+        width: auto; */
+        gap: 0.5rem;
+        width: 200px;
+    }
+
+    #colour-palette--inner {
+        cursor: pointer;
+        width: 6rem;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+        border-radius: 5px;
+        border: #12121205 1px solid;
+    }
+
+    #custom-colour-input {
+        cursor: pointer;
+        height: 3rem;
+        width: 6rem;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+/************ Small screen sizes *************/
+@media screen and (max-width: 700px) {
+    /* .colouring-page {
+        display: flex;
+        
+    } */
+
+    .colouring-svg {
+        max-width: 95vw;
+    }
+
+    #village-stairs {
+        height: 70%;
+    }
+
+    #mandala-1 {
+        height: 70%;
+        width: auto;
+    }
+
+    #mandala-2 {
+        height: 65%;
+    }
+
+    .nav-colouring {
+        /* font-size: 18px; */
+        display: grid;
+        grid-template-columns: 100vw;
+    }
+
+    .select-img {
+        cursor: pointer;
+        max-width: 95vw;
+    }
+
+    #current-colour--box {
+        display: inline-block;
+    }
+
+    #current-colour {
+        border: #121212 2px solid;
+        height: 2rem;
+        width: 3rem;
+        border-radius: 10px;
+    }
+
+    #colour-palette {
+        display: flex;
+        flex-wrap: wrap;
+        /* margin-left: auto; */
+        /* margin-right: 5%; */
+        /* margin-top: 5%; */
+        /* width: auto; */
+        gap: 0.5rem;
+        /* width: 200px; */
+    }
+
+    #colour-palette--inner {
+        cursor: pointer;
+        width: 3rem;
+        text-align: center;
+        font-size: xx-small;
+        /* margin-top: auto;
+        margin-bottom: auto; */
+        height: 1.9rem;
+        border-radius: 10px;
+        /* border: #121212 1px solid; */
+    }
+
+    #custom-colour-input {
+        cursor: pointer;
+        height: 2.1rem;
+        width: 3.2rem;
+        border-radius: 10px;
+        border: none;
+    }
+}
