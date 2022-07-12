@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './home.css'
-import Breath from '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/static/breathe/snow-leaf.jpg'
-import Colour from '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/static/colouring/pencils1.jpg'
-import Play from '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/components/Games/jigsaw.jpg'
-import Journal from '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/static/journal/11.jpg'
+import Breath from '../../static/breathe/snow-leaf.jpg'
+import Colour from '../../static/colouring/pencils1.jpg'
+import Play from '../Games/jigsaw.jpg'
+import Journal from '../../static/journal/11.jpg'
+
 
 
 const Home = () => {
