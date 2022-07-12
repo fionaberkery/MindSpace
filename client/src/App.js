@@ -43,10 +43,10 @@ function App() {
 
   useEffect(() => {
     UserService.getUsers()
-    .then(users => setSavedUsers(users))
+      .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
-    .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [savedUsers, currentUserJournalEntries])
+      .then(journalEntries => setSavedJournalEntries(journalEntries))
+  }, [])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -77,11 +77,13 @@ function App() {
 
   useEffect(() => {
       AudioService.getAudios()
-      .then(audioData => setAudioData(audioData))
+        .then(audioData => setAudioData(audioData))
   }, [])
 
   const onAudioClick = (audio) => {
       setSelected(audio)
+      const audioObjects = audioData.map(audio => audio.id)
+      setAudioIndex(audioObjects.indexOf(audio.id))
   }
 
   const showModal = () => {
@@ -92,11 +94,7 @@ function App() {
     setToggleModal(false)
   }
 
-  useEffect(() => {
-    if(selected !== null){
-    const audioObjects = audioData.map(audio => audio.id)
-    setAudioIndex(audioObjects.indexOf(selected.id))
-  }})
+
   console.log(audioIndex, " << this is selected audioIndex in audioData")
 
 

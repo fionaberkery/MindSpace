@@ -12,7 +12,7 @@ const NavBar = ({showModal}) => {
                 <Link to="/"> Home </Link> 
                 <Link to="/breathe"> Breathe </Link> 
                 <Link to="/colour"> Colour </Link> 
-                <Link onClick={showModal}> Listen </Link> 
+                <a onClick={showModal}> Listen </a> 
                 <Link to="/play"> Play </Link> 
                 <Link to="/journal"> Your Journal </Link>
 
