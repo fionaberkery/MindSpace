@@ -12,7 +12,7 @@ import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
-import Home from './containers/Home';
+import Home from '../src/components/Home/Home.js'
 import {Helmet} from 'react-helmet';
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
