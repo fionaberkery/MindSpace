@@ -69,16 +69,17 @@ path {
         cursor: pointer;
         max-width: 30%;
         min-height: 30%;
-        gap: 1rem;
+        border-radius: 1%;
+
         
     }
     .petal {
         max-width: 30%;
         min-height: 30%;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
     }
 
-    .general-button
+    .select-btn
     {
         align-items: center;
         margin-left: 10px; 
@@ -89,13 +90,10 @@ path {
         font-size: 14px; 
         background-color: #D4BEBE;
         cursor: pointer;
+        
     }
 
-    .select-btn {
-        cursor: pointer;
-        padding: 0.5rem;
-        border-radius: 10px;
-    }
+    
 
     .colouring-title{
         text-align: center;

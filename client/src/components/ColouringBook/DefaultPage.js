@@ -18,9 +18,11 @@ const DefaultPage = ({handleImageSelection, handleTouchImageSelection}) => {
 
             <img src={mandala2} alt='Paisley Petal' className='select-img petal' onClick={()=>{handleImageSelection('mandala2')}} onTouchEnd={()=>{handleTouchImageSelection('mandala2')}}/>
 
+
             <img src={mandala1} alt='Mandala' className='select-img' onClick={()=>{handleImageSelection('mandala1')}} onTouchEnd={()=>{handleTouchImageSelection('mandala1')}}/>
 
             <img src={village} alt='Village' className='select-img' onClick={()=>{handleImageSelection('village')}} onTouchEnd={()=>{handleTouchImageSelection('village')}}/>
+
             
             </section>
 
