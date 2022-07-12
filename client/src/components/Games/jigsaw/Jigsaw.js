@@ -19,10 +19,10 @@ const Jigsaw = ()=>{
     const [rows, setRows]= useState(4);
     const [picture, setPicture]= useState("https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg");
 
-    const [text, setText] = useState("Can you complete the puzzle?");
+    const [text, setText] = useState("Puzzle Away");
     
     const set = () => {
-        setText("Well Done! How about you pick another picture or increase the number of peices");
+        setText("Well Done, how about you pick another picture or increase the number of peices");
     };
 
     const pic1= sunsetImage;
@@ -82,8 +82,6 @@ return(
         <title>Wellbeing - Jigsaw Puzzles</title>
     </Helmet>
     
-    <div className="jigsaw-page">
-
         <nav className="games-nav">
             <Link to='/play' className="games-nav--link">
                 <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
@@ -91,7 +89,21 @@ return(
             </Link>
         </nav>
 
+        <div className="jigsaw-page">
+
+        <h2 className="title">{text}</h2>
+        
+        <JigsawPuzzle
+            imageSrc={picture}
+            rows={rows}
+            columns={columns}
+            onSolved={set}
+            className="jigsaw-puzzle"
+        />
+
+
         <div id="dropdown-menus-flex">
+            
             <select defaultValue="" onChange={handlePictureChange} className="drop-down" >
                 <option value="" selected>Select Picture</option>
                 {pictureOptions}
@@ -105,19 +117,12 @@ return(
                 <option value="" selected>Number of Columns</option>
                 {columnOptions}
             </select>
+            
         </div>
 
-        <h2 className="title">{text}</h2>
-
-        <JigsawPuzzle
-            imageSrc={picture}
-            rows={rows}
-            columns={columns}
-            onSolved={set}
-            className="jigsaw-puzzle"
-        />
-
     </div>
+
+    
 
     <section>
 

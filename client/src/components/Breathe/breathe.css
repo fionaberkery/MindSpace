@@ -77,7 +77,7 @@ body .breathe-container {
     height: 20px;
     width: 20px;
     display:block;
-    /* animation: pointercolour 18400ms infinite;  */
+
 }
 
 .word-container{
@@ -155,9 +155,6 @@ body .breathe-container {
     align-items: center;
 }
 
-.switch {
-
-}
 
 /* animations */
 
