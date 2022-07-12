@@ -1,6 +1,9 @@
 .audio-controls {
-    max-width: 800vmax;
-    border-radius: 20px;
+    width: 50vw;
+    /* max-width: 800em; */
+    max-height: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding: 24px;
     /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
     margin: auto;
