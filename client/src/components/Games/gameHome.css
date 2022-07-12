@@ -1,29 +1,35 @@
 .play-home
 {
-    margin-top: 30px;
+    margin-top: 50px;
     min-height: 100vw;
-    background-size: cover;
     display: flex;
     justify-content: center;
 }
 
 .bubble-link
 {
-    padding: 100px;
+    padding: 50px;
+    margin-right: 40px;
 }
 
 .jigsaw-link
 {
-    padding: 100px;
+    padding: 50px;
 }
 
 #jigsaw-img
 {
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #bubble-img
 {
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+#play-title
+{
+    display: flex;
+    justify-content: center;
 }
 

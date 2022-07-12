@@ -19,11 +19,11 @@ import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
 import BubbleGame from './components/BubbleGame/BubbleGame.js'
 import Footer from './components/footer/Footer';
-// // Audio imports
-// import { AudioService } from "./services/Services";
-// import AudioList from '../src/components/audio_player_components/AudioList';
-// import AudioControls from "../src/components/audio_player_components/AudioControls";
-// import Modal from 'react-modal';
+// Audio imports
+import { AudioService } from "./services/Services";
+import AudioList from '../src/components/audio_player_components/AudioList';
+import AudioControls from "../src/components/audio_player_components/AudioControls";
+import Modal from 'react-modal';
 
 
 
@@ -33,12 +33,12 @@ function App() {
   const [savedJournalEntries, setSavedJournalEntries] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserJournalEntries, setCurrentUserJournalEntries] = useState([])
-  // // Audio state
-  // const [audioData, setAudioData] = useState([])
-  // const [selected, setSelected] = useState(null)
-  // // Audio controls state
-  // const [audioIndex, setAudioIndex] = useState(0)
-  // const [toggleModal, setToggleModal] = useState(false)
+  // Audio state
+  const [audioData, setAudioData] = useState([])
+  const [selected, setSelected] = useState(null)
+  // Audio controls state
+  const [audioIndex, setAudioIndex] = useState(0)
+  const [toggleModal, setToggleModal] = useState(false)
 
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [savedUsers, currentUserJournalEntries])
+  }, [])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -56,10 +56,11 @@ function App() {
     })
   }
 
+
   const addNewJournalEntry = (newEntry) => {
     PostJournalEntry(newEntry)
     .then(entry => {
-      const newJournalEntriesList = [...savedJournalEntries, entry]
+      const newJournalEntriesList = [...currentUserJournalEntries, entry]
       setCurrentUserJournalEntries(newJournalEntriesList)
     })
   }
@@ -70,61 +71,61 @@ function App() {
 
   const onUserSelected = function(user){
     setCurrentUser(user)
-    setCurrentUserJournalEntries(user.journalEntries)
+    setCurrentUserJournalEntries(user.journalEntries || [])
 }
 
-// // >> Audio player code start <<
+// >> Audio player code start <<
 
-//   useEffect(() => {
-//       AudioService.getAudios()
-//       .then(audioData => setAudioData(audioData))
-//   }, [])
+  useEffect(() => {
+      AudioService.getAudios()
+      .then(audioData => setAudioData(audioData))
+  }, [])
 
-//   const onAudioClick = (audio) => {
-//       setSelected(audio)
-//   }
+  const onAudioClick = (audio) => {
+      setSelected(audio)
+  }
 
-//   const showModal = () => {
-//     setToggleModal(true)
-//   }
+  const showModal = () => {
+    setToggleModal(true)
+  }
 
-//   const closeModal = () => {
-//     setToggleModal(false)
-//   }
+  const closeModal = () => {
+    setToggleModal(false)
+  }
 
-//   useEffect(() => {
-//     if(selected !== null){
-//     const audioObjects = audioData.map(audio => audio.id)
-//     setAudioIndex(audioObjects.indexOf(selected.id))
-//   }})
-//   console.log(audioIndex, " << this is selected audioIndex in audioData")
+  useEffect(() => {
+    if(selected !== null){
+    const audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
+  }})
 
 
-//   const onNextClick = () => {
-//     if(selected !== null){
-//       if (audioIndex < audioData.length - 1) {
-//           setAudioIndex(audioIndex + 1)
-//           setSelected(audioData.at(audioIndex + 1))
-//       } else {
-//           setAudioIndex(0)
-//           setSelected(audioData.at(0))
-//       }
-//     }
-//   }
 
-//   const onPreviousClick = () => {
-//     if(selected !== null){
-//       if (audioIndex - 1 < 0) {
-//           setAudioIndex(audioData.length - 1)
-//           setSelected(audioData.at(audioIndex.length - 1))
-//       } else {
-//           setAudioIndex(audioIndex - 1)
-//           setSelected(audioData.at(audioIndex - 1))
-//       }
-//     }
-//   }
+  const onNextClick = () => {
+    if(selected !== null){
+      if (audioIndex < audioData.length - 1) {
+          setAudioIndex(audioIndex + 1)
+          setSelected(audioData.at(audioIndex + 1))
+      } else {
+          setAudioIndex(0)
+          setSelected(audioData.at(0))
+      }
+    }
+  }
 
-// // >> End audio player code <<
+  const onPreviousClick = () => {
+    if(selected !== null){
+      if (audioIndex - 1 < 0) {
+          setAudioIndex(audioData.length - 1)
+          setSelected(audioData.at(audioIndex.length - 1))
+      } else {
+          setAudioIndex(audioIndex - 1)
+          setSelected(audioData.at(audioIndex - 1))
+      }
+    }
+  }
+
+// >> End audio player code <<
 
   return (
     <>
@@ -142,7 +143,7 @@ function App() {
         
         <NavBar/>
         
-        {/* <div>
+        <div>
           <Modal
             isOpen={toggleModal}
             ariaHideApp={false}
@@ -166,7 +167,7 @@ function App() {
               </div>
             </div>
           </Modal>
-        </div> */}
+        </div>
         
         <Switch> 
 

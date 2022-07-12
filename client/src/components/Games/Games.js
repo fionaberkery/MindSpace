@@ -12,13 +12,17 @@ function Games(){
     return(
 
         <div className="play-home">
+
+        <div id="play-title">
+        <h1> Play </h1>
+        </div>
             
             <div className="jigsaw-link">
-                <Link to="/jigsaw">  <img id="jigsaw-img" src={Jigsaw} height="400px" width="400px"/></Link>  
+                <Link to="/jigsaw">  <img id="jigsaw-img" src={Jigsaw} height="600px" width="600px"/></Link>  
             </div>
 
             <div className="bubble-link">
-                <Link to="/bubbles"> <img id="bubble-img" src={B2} height="400px" width="400px"/></Link>
+                <Link to="/bubbles"> <img id="bubble-img" src={B4} height="600px" width="600px"/></Link>
             </div>
 
         </div>
