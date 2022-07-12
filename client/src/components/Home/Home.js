@@ -14,7 +14,7 @@ const Home = () => {
             
             <>
             <div id="home-page">
-
+            <body>
             <div className="container">
                   
                   <div className="feature">
@@ -47,6 +47,7 @@ const Home = () => {
                   </div>
 
             </div>
+            </body>
             </div>
 
             </>
