@@ -59,15 +59,13 @@ html {
   .stage {
     overflow: hidden;
     transform: scale(1);
-    background: url('/src/images/jeffrey-workman-YvkH8R1zoQM-unsplash.jpg') no-repeat 50% / contain;
+    background: url('/src/images/jeffrey-workman-YvkH8R1zoQM-unsplash.jpg') no-repeat 50% / cover;
     max-width:70%;
     /* max-height:80%; */
-    
-  
     position: relative;
     width: 90vw;
     height: 60vh;
-    
+
   }
   
   .bubble-button {
@@ -153,5 +151,9 @@ html {
   .message.animated {
     z-index: 99;
     animation: messageDisplay 1s ease;
+  }
+
+  #bubble-div {
+    margin: 60px;
   }
   

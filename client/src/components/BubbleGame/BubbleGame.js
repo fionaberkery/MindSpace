@@ -6,7 +6,7 @@ import './bubble.css'
 const BubbleGame =() =>{
 
     return(
-        <div>
+        <div id="bubble-div">
             <BubbleStage />
         </div>
 
