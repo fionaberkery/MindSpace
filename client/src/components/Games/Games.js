@@ -1,24 +1,29 @@
-import {Link} from "react-router-dom";
-import React from "react";
+import {Link} from "react-router-dom"
+import React from "react"
+import Jigsaw from './jigsaw.jpg'
+import B2 from './b2.jpg'
+import B4 from './b4.jpg'
+import './gameHome.css'
 import {Helmet} from 'react-helmet';
 import "../../static/games/games.css"
 
-
 function Games() {
 
-    
     return(
-        <div className="games">
-            <Helmet>
-                <title>Wellbeing - Play</title>
-            </Helmet>
 
-            <h3> Games</h3>
+        <div className="play-home">
+
+        <div id="play-title">
+        <h1> Play </h1>
+        </div>
             
-            <nav className="games-nav">
-                <Link to="/jigsaw"> Jigsaw Puzzles </Link> <br/>
-                <Link to="/bubbles"> Bubble Popping </Link> <br/>
-            </nav>
+            <div className="jigsaw-link">
+                <Link to="/jigsaw">  <img id="jigsaw-img" src={Jigsaw} height="600px" width="600px"/></Link>  
+            </div>
+
+            <div className="bubble-link">
+                <Link to="/bubbles"> <img id="bubble-img" src={B4} height="600px" width="600px"/></Link>
+            </div>
         </div>
     )
 }

@@ -46,7 +46,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [savedUsers, currentUserJournalEntries])
+  }, [])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -56,10 +56,11 @@ function App() {
     })
   }
 
+
   const addNewJournalEntry = (newEntry) => {
     PostJournalEntry(newEntry)
     .then(entry => {
-      const newJournalEntriesList = [...savedJournalEntries, entry]
+      const newJournalEntriesList = [...currentUserJournalEntries, entry]
       setCurrentUserJournalEntries(newJournalEntriesList)
     })
   }
@@ -70,7 +71,7 @@ function App() {
 
   const onUserSelected = function(user){
     setCurrentUser(user)
-    setCurrentUserJournalEntries(user.journalEntries)
+    setCurrentUserJournalEntries(user.journalEntries || [])
 }
 
 // >> Audio player code start <<
@@ -82,6 +83,8 @@ function App() {
 
   const onAudioClick = (audio) => {
       setSelected(audio)
+      onst audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
   }
 
   const showModal = () => {
@@ -91,15 +94,7 @@ function App() {
   const closeModal = () => {
     setToggleModal(false)
   }
-
-  // useEffect(() => {
-  //   if(selected !== null){
-  //   const audioObjects = audioData.map(audio => audio.id)
-  //   setAudioIndex(audioObjects.indexOf(selected.id))
-  // console.log(audioIndex, " << this is selected audioIndex in audioData")
-  // }}, [])
-
-
+  
   const onNextClick = () => {
     if(selected !== null){
       if (audioIndex < audioData.length - 1) {
@@ -140,7 +135,7 @@ function App() {
     
       <Router>
         
-        <NavBar showModal={showModal}/>
+        <NavBar/>
         
         <div>
           <Modal
