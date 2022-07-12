@@ -115,13 +115,23 @@ footer
     /* position: fixed; */
     color: #f3f3f3;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
     grid-template-areas:
     "soundlist controls close"
 }
 
 .modal-audio-list {
     grid-area: "soundlist";
+    /* align-self: flex-end; */
+    /* margin-left: 10em; */
+    width: 10vw;
+    max-height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 24px;
+    /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
+    margin: auto;
+    background-color: #161616;
 }
 
 .modal-audio-controls {
