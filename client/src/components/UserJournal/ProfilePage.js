@@ -4,13 +4,19 @@ import './carousel.css'
 import './userProfile.css'
 import '../../containers/journalLogin.css'
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ProfilePage = ({currentUserJournalEntries}) => {
 
     return (
 
         <>
-        
+            <Helmet>
+                <title>
+                    Wellbeing - Your Journal
+                </title>
+            </Helmet>
+            
         <div className="carousel-profile-page">
         <div className="sub-profile-page">
 
