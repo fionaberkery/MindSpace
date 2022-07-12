@@ -7,26 +7,18 @@ import {Helmet} from 'react-helmet';
 
 const BubbleGame = () => {
 
-    const [bubbleCount, setBubbleCount] = useState(150);
-    const [bubblesPopped, setBubblesPopped] = useState(0);
+    const [bubbleCount, setBubbleCount] = useState(200);
     const [ready, setReady] = useState(false);
 
     useEffect(()=>{
-        console.log("useEffect fire")
-        startGame();
-    }, [ready])
-
-    const startGame = () => {
-        console.log("start game --> render bubbles")
         renderBubbles();
-    }
+    }, [ready])
 
     const isReady= () =>{
         setReady(true);
     }
 
     const renderBubbles = () => {
-        console.log("rendering bubbs")
         const arr = [...Array(bubbleCount)].map((bubble, index) => (
             bubble = <BubblePop key={index} pop={popBubble} style={getBubbleStyle(index)}/>
         ));
@@ -59,7 +51,6 @@ const BubbleGame = () => {
         const audio = document.getElementById("pop");
         bubble.style.setProperty("animation", "popped .3s ease-out both");
         audio.play();
-        setBubblesPopped(bubblesPopped+1);
         setTimeout(function() {
             bubble.style.display = "none";
         }, 500);
@@ -68,16 +59,19 @@ const BubbleGame = () => {
     return (
         <>
             <Helmet>
-                <title>Wellbeing - Popping Bubbles</title>
+                <title>Wellbeing - Bubbles</title>
             </Helmet>
 
             <nav className="games-nav">
-                <Link to='/play' className="games-nav--link">Back to Games Selection</Link>
+                <Link to='/play' className="games-nav--link">
+                    <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
+                    Play Something Else
+                </Link>
             </nav>
 
             <div className="stage">
             {ready ? (
-                <BubbleStage bubblesPopped={bubblesPopped} renderBubbles={renderBubbles} />
+                <BubbleStage renderBubbles={renderBubbles} />
             ) : (
                 <button className="bubble-btn" onClick={isReady}>Ready</button>
             )}

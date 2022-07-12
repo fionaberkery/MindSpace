@@ -1,0 +1,60 @@
+#home-page {
+    height: 90vh;
+    margin: 0;
+    /* background-image: url('/src/static/breathe/splash.jpg'); */
+    background-size: cover;
+    color: white;
+    font-family: "poppins";
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 90vh;
+}
+    
+
+.feature {
+    margin-top: 150px;
+    display: grid;
+    height: 90vh;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid rgba(225, 225, 225, 0.1);
+    background-size: contain;
+    /* opacity: 1; */
+}
+
+.feature:hover {
+    opacity: 1;
+}
+
+.feature-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    background-size: contain;
+    height: 30vw;
+    width: 50vw;
+}
+
+
+.feature:hover .feature-img{
+    opacity: 1;
+    /* transform: scale(1.2); */
+    transition: 0.3s;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content:hover {
+    transform: scale(1.3);
+    transform-origin: left 50%;
+}
+
