@@ -209,8 +209,6 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection}) => {
                     <path id="129" fill={fillColours[129]} onClick={paintColour} onTouchStart={touchPaintColour} d="M22555 34758c-63,-246 -247,-429 -403,-619 -246,306 -430,720 -319,1114 47,314 524,460 713,187 151,-208 67,-460 9,-682z"/>
                 </g>
             </svg>
-            
-           
 
         </div>
     )

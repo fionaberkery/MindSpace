@@ -15,7 +15,6 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
         return setFillColours(newColours);
     }
 
-
 	const touchPaintColour = (event) => {
 		event.preventDefault();
 		const newColours = [...fillColours];
@@ -804,8 +803,6 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 				</g>
 			</svg>
 
-		
-
 		</div>
 
 
@@ -814,9 +811,3 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 }
 
 export default VillageStairsImage;
-
-
-
-
-
-
