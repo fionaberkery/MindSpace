@@ -2,7 +2,7 @@ import React from "react";
 import {motion} from 'framer-motion'
 import './carousel.css'
 import './userProfile.css'
-import '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/containers/journalLogin.css'
+import '../../containers/journalLogin.css'
 import { Link } from "react-router-dom";
 
 const ProfilePage = ({currentUserJournalEntries}) => {
@@ -16,7 +16,6 @@ const ProfilePage = ({currentUserJournalEntries}) => {
 
         <div className="profile-page-header">
             <h1 className="my-journal-title">  My Journal </h1> 
-            
         </div>
 
         <div className="carousel-div"> 

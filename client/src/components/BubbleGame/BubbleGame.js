@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from "react";
-import BubbleStage from "./BubbleStage"
+import BubbleStage from "./BubbleStage";
 import BubblePop from "./BubblePop";
-import './bubble.css'
+import './bubble.css';
+import {Link} from "react-router-dom";
+import {Helmet} from 'react-helmet';
 
-const BubbleGame =() =>{
+const BubbleGame = () => {
 
     const [bubbleCount, setBubbleCount] = useState(150);
     const [bubblesPopped, setBubblesPopped] = useState(0);
@@ -23,7 +25,7 @@ const BubbleGame =() =>{
         setReady(true);
     }
 
-    const renderBubbles=()=> {
+    const renderBubbles = () => {
         console.log("rendering bubbs")
         const arr = [...Array(bubbleCount)].map((bubble, index) => (
             bubble = <BubblePop key={index} pop={popBubble} style={getBubbleStyle(index)}/>
@@ -39,19 +41,19 @@ const BubbleGame =() =>{
         return [randomX, randomY];
     }
 
-    const getBubbleStyle =(index)=> {
+    const getBubbleStyle = (index) => {
         const xy = getRandomPosition();
         const styles = {
             left: xy[1] + 10 + "vh",
             top: xy[0] + "vw",
             zIndex: index,
-            animation: "float 20s linear infinite both",
+            // animation: "float 20s linear infinite both",
             animationDuration: Math.floor(Math.random() * 15 + 7.5) + "s"
         }
         return styles;
     }
 
-    const popBubble =(event)=> {
+    const popBubble = (event) => {
         event.preventDefault();
         const bubble = event.target;
         const audio = document.getElementById("pop");
@@ -63,15 +65,24 @@ const BubbleGame =() =>{
         }, 500);
     }
 
-    return(
-        <div className="stage">
-        {ready ? (
-            <BubbleStage bubblesPopped={bubblesPopped} renderBubbles={renderBubbles} />
-        ) : (
-            <button className="bubble-btn" onClick={isReady}>Ready</button>
-        )}
-        </div>
+    return (
+        <>
+            <Helmet>
+                <title>Wellbeing - Popping Bubbles</title>
+            </Helmet>
 
+            <nav className="games-nav">
+                <Link to='/play' className="games-nav--link">Back to Games Selection</Link>
+            </nav>
+
+            <div className="stage">
+            {ready ? (
+                <BubbleStage bubblesPopped={bubblesPopped} renderBubbles={renderBubbles} />
+            ) : (
+                <button className="bubble-btn" onClick={isReady}>Ready</button>
+            )}
+            </div>
+        </>
     )
 }
 
