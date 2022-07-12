@@ -26,12 +26,17 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
     return (
 		<div className='colouring-page'>
 
-			<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
-			<div id="current-colour--box">
-				<div id="current-colour" style={{ background: currentColour }} />
+			<div className='flex-palette'>
+			
+				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour}/>
+
+
+				<button className='general-button' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+
 			</div>
 
-			<svg id="village-stairs" dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
+
+			<svg id="village-stairs" className='colouring-svg' dataname="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="574" height="574" viewBox="0 0 574 574">
 
 				<g id="black-outline">
 					<rect width="574" height="574"/>
@@ -799,10 +804,12 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection}) =
 				</g>
 			</svg>
 
-			<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
-
+		
 
 		</div>
+
+
+
 	)
 }
 

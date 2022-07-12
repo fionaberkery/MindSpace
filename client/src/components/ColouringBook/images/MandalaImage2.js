@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import Palette from '../Palette';
 import "../../../static/colouring/colouring.css";
@@ -27,13 +26,14 @@ const MandalaImage2 = ({handleImageSelection, handleTouchImageSelection}) => {
     return (
         <div className='colouring-page'>
 
-            <Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
-			<div id="current-colour--box">
+            <div className='flex-palette'>
+				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 
-				<div id="current-colour" style={{ background: currentColour }} />
+                <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+
 			</div>
         
-            <svg id="mandala-2" xmlns="http://www.w3.org/2000/svg" width="574" height="574" version="1.1" viewBox="0 0 42000 42000">
+            <svg id="mandala-2" className='colouring-svg' xmlns="http://www.w3.org/2000/svg" width="574" height="574" version="1.1" viewBox="0 0 42000 42000">
 
                 {/* <rect  className="fil0" width="4200" height="4200"/> */}
 
@@ -313,7 +313,7 @@ const MandalaImage2 = ({handleImageSelection, handleTouchImageSelection}) => {
                 </g>
             </svg>
 
-            <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+           
 
 
         </div>

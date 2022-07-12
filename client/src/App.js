@@ -5,7 +5,6 @@ import './containers/journalLogin.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-// import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import UserProfileContainer from './containers/UserProfileContainer';
@@ -15,16 +14,17 @@ import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
 import Home from './containers/Home';
 import {Helmet} from 'react-helmet';
-import JournalList from './components/Journal/JournalList.js'
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
-import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
+import BubbleGame from './components/BubbleGame/BubbleGame.js'
+import Footer from './components/footer/Footer';
 // Audio imports
 import { AudioService } from "./services/Services";
 import AudioList from '../src/components/audio_player_components/AudioList';
 import AudioControls from "../src/components/audio_player_components/AudioControls";
 import Modal from 'react-modal';
+
 
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
     .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
     .then(journalEntries => setSavedJournalEntries(journalEntries))
-  }, [])
+  }, [savedUsers, currentUserJournalEntries])
 
   const addNewUser = (newUser) => {
     PostNewUser(newUser)
@@ -60,7 +60,7 @@ function App() {
     PostJournalEntry(newEntry)
     .then(entry => {
       const newJournalEntriesList = [...savedJournalEntries, entry]
-      setSavedJournalEntries(newJournalEntriesList)
+      setCurrentUserJournalEntries(newJournalEntriesList)
     })
   }
 
@@ -83,8 +83,6 @@ function App() {
   const onAudioClick = (audio) => {
       setSelected(audio)
   }
-
-// if (!active) return null
 
   const showModal = () => {
     setToggleModal(true)
@@ -130,6 +128,8 @@ function App() {
 
   return (
     <>
+    <div id="page-content">
+    <div id="page-content-wrap">
 
       <Helmet>
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
@@ -141,7 +141,7 @@ function App() {
       <Router>
         
         <NavBar showModal={showModal}/>
-        {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
+        
         <div>
           <Modal
             isOpen={toggleModal}
@@ -167,7 +167,7 @@ function App() {
             </div>
           </Modal>
         </div>
-        {/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */}
+        
         <Switch> 
 
           <Route exact path="/">
@@ -181,9 +181,6 @@ function App() {
           <Route path="/colour">
             <ColouringBookContainer/>
           </Route>
-          {/* 
-          <Route path="/listen">
-          </Route> */}
 
           <Route path="/play">
             <Games></Games>
@@ -226,14 +223,6 @@ function App() {
           <WalkingGameContainer/>
         </Route>
 
-        <Route path="/journalEntries">
-          <JournalList 
-          setCurrentUserJournalEntries={setCurrentUserJournalEntries} 
-          currentUserJournalEntries={currentUserJournalEntries} 
-          savedUsers={savedUsers} 
-          savedJournalEntries={savedJournalEntries}/>
-        </Route>
-
         <Route path="/create">
           <NewEntry></NewEntry>
         </Route>
@@ -252,6 +241,9 @@ function App() {
 
       </Router>
 
+      </div>
+      <Footer/>
+      </div>
     
 
     </>
@@ -260,4 +252,4 @@ function App() {
 
 export default App
 
-// savedUsers, savedJournalEntries
+

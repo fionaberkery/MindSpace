@@ -1,0 +1,31 @@
+
+.carousel-entry {
+    min-height: 30rem;
+    min-width: 20rem;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    height: 30rem;
+    border-radius: 2px;
+    background-color: #d4bebea2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.inner-carousel{
+    display:flex;
+}
+.carousel{
+    overflow: hidden;
+}
+
+.carousel-profile-page {
+    background-image: url("/src/static/journal/bi.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+

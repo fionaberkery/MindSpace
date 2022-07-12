@@ -1,38 +1,54 @@
 import React from "react";
-import UserJournalEntry from "./UserJournalEntry";
-import { Link } from "react-router-dom";
+import {motion} from 'framer-motion'
+import './carousel.css'
 import './userProfile.css'
+import '/Users/fionaberkery/CodeClan_work/FinalProject/Wellbeing_FirstAidKit/client/src/containers/journalLogin.css'
+import { Link } from "react-router-dom";
 
-
-
-const ProfilePage = ({currentUserJournalEntries, currentUser, deleteUserJournalEntry}) => {
-
-    const textInputs = currentUserJournalEntries.map(entry => {
-        return <UserJournalEntry deleteUserJournalEntry={deleteUserJournalEntry} entry={entry}/>
-    }) 
-
-
+const ProfilePage = ({currentUserJournalEntries}) => {
 
     return (
 
         <>
-        <div className="profile-page">
         
-            <h1>  Profile </h1> 
+        <div className="carousel-profile-page">
+        <div className="sub-profile-page">
 
-            <button> <Link to="/home"> Log out </Link> </button>
+        <div className="profile-page-header">
+            <h1 className="my-journal-title">  My Journal </h1> 
+            
+        </div>
 
-            <button> <Link to="/create"> New journal entry </Link></button>
+        <div className="carousel-div"> 
 
-            <div className="entry-container">
-                <p>
-                    {textInputs}
-                </p>
+            <motion.div className="carousel">
+                <motion.div layoutScroll style={{ overflow: "scroll"}} className="inner-carousel">
+                    {currentUserJournalEntries.map(entry => {
+                    return (
+                        <motion.div className="carousel-entry" >
+                        <div>{entry.date}</div>
+                        <div>{entry.textInput}</div>
+                        <div> <button className="delete-button"> Delete </button>
+                        </div>
+                        </motion.div>
+                        )
+                    })}
+                </motion.div>
+            </motion.div>
             </div>
-                    
+            <br></br>
+
+            <button className="new-entry-button" id="button-position" > <Link className="link" to="/create"> New journal entry </Link></button>
+            <button className="logout-button" id="login-button-id" > <Link to="/home" className="link" > Log out </Link> </button>
+            <br></br>
+            <br></br>
+
+        </div>
         </div>
         </>
     )
 }
 
 export default ProfilePage
+
+
