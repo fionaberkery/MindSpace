@@ -1,7 +1,7 @@
 /* JIGSAW  */
 .title {
     text-align: center;
-    color: green;
+    color: white;
     margin: 2rem;
 }
 
@@ -29,7 +29,7 @@
 
 .jigsaw-page {
     height:100vh;
-    background:linear-gradient( rgb(152, 207, 244), #FFFFFF);
+    background:linear-gradient( rgb(101, 102, 104), #FFFFFF);
     
 }
 

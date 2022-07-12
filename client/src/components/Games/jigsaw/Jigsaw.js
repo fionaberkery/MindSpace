@@ -16,7 +16,7 @@ const Jigsaw = ()=>{
     const [rows, setRows]= useState(4);
     const [picture, setPicture]= useState("https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg");
 
-    const [text, setText] = useState("Unpuzzle the pieces!!");
+    const [text, setText] = useState("Can you complete the puzzle?");
     
     const set = () => {
         setText("Well Done! How about you pick another picture or increase the number of peices");
