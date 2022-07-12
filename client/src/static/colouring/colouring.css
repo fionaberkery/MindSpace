@@ -37,7 +37,7 @@ path {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        background-image:url('/src/static/journal/7.jpg');
+        background-image:url('/src/static/colouring/pencils1.jpg');
         background-size:cover;
         background-attachment: fixed;
         background-repeat:no-repeat;
@@ -105,6 +105,7 @@ path {
         box-shadow: 2px 5px 7px 4px rgb(177, 172, 172);
         padding: 2em;
         margin-bottom: 15px;
+        background-color: rgb(247, 246, 246);
     }
 
     #colour-palette--inner {
