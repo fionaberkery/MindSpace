@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./jigsaw.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
-import Jigsaw1 from '/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw1.png'
-import Jigsaw2 from "/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw2.png"
-import Jigsaw3 from '/Users/andrewsmith/CodeClan_work/capstone/Wellbeing_FirstAidKit/client/src/images/jigsaw3.png'
+import Jigsaw1 from './jigsaw1.png'
+import Jigsaw2 from './jigsaw2.png'
+import Jigsaw3 from './jigsaw3.png'
 
 
 
