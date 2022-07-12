@@ -19,6 +19,7 @@ import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
 import BubbleGame from './components/BubbleGame/BubbleGame.js'
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -62,6 +63,8 @@ function App() {
 
   return (
     <>
+    <div id="page-content">
+    <div id="page-content-wrap">
 
       <Helmet>
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
@@ -151,6 +154,9 @@ function App() {
 
       </Router>
 
+      </div>
+      <Footer/>
+      </div>
     
 
     </>
