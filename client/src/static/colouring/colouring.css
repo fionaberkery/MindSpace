@@ -45,16 +45,36 @@ path {
         min-height: 100vw;
     }
 
+    .images-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        /* margin-left: 20px; */
+    
+        background-image:url('/src/static/colouring/pencils1.jpg');
+        background-size:cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        min-height: 100vw;
+    
+    }
+
     .colouring-svg {
         max-width: 75%;
     }
     .select-img {
         cursor: pointer;
         max-width: 30%;
+        min-height: 30%;
+        gap: 1rem;
         
     }
     .petal {
-        max-width: 35%;
+        max-width: 30%;
+        min-height: 30%;
         margin-bottom: 1rem;
     }
 
