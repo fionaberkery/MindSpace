@@ -5,7 +5,6 @@ import './containers/journalLogin.css'
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-import AudioPlayer from './containers/AudioPlayer';
 import ColouringBookContainer from './containers/ColouringBookContainer';
 import Breathe from './components/Breathe/Breathe';
 import UserProfileContainer from './containers/UserProfileContainer';
@@ -20,14 +19,27 @@ import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
 import BubbleGame from './components/BubbleGame/BubbleGame.js'
 import Footer from './components/footer/Footer';
+// Audio imports
+import { AudioService } from "./services/Services";
+import AudioList from '../src/components/audio_player_components/AudioList';
+import AudioControls from "../src/components/audio_player_components/AudioControls";
+import Modal from 'react-modal';
+
+
 
 function App() {
-
 
   const [savedUsers, setSavedUsers] = useState([])
   const [savedJournalEntries, setSavedJournalEntries] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
   const [currentUserJournalEntries, setCurrentUserJournalEntries] = useState([])
+  // Audio state
+  const [audioData, setAudioData] = useState([])
+  const [selected, setSelected] = useState(null)
+  // Audio controls state
+  const [audioIndex, setAudioIndex] = useState(0)
+  const [toggleModal, setToggleModal] = useState(false)
+
 
   useEffect(() => {
     UserService.getUsers()
@@ -61,6 +73,59 @@ function App() {
     setCurrentUserJournalEntries(user.journalEntries)
 }
 
+// >> Audio player code start <<
+
+  useEffect(() => {
+      AudioService.getAudios()
+      .then(audioData => setAudioData(audioData))
+  }, [])
+
+  const onAudioClick = (audio) => {
+      setSelected(audio)
+  }
+
+  const showModal = () => {
+    setToggleModal(true)
+  }
+
+  const closeModal = () => {
+    setToggleModal(false)
+  }
+
+  useEffect(() => {
+    if(selected !== null){
+    const audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
+  }})
+  console.log(audioIndex, " << this is selected audioIndex in audioData")
+
+
+  const onNextClick = () => {
+    if(selected !== null){
+      if (audioIndex < audioData.length - 1) {
+          setAudioIndex(audioIndex + 1)
+          setSelected(audioData.at(audioIndex + 1))
+      } else {
+          setAudioIndex(0)
+          setSelected(audioData.at(0))
+      }
+    }
+  }
+
+  const onPreviousClick = () => {
+    if(selected !== null){
+      if (audioIndex - 1 < 0) {
+          setAudioIndex(audioData.length - 1)
+          setSelected(audioData.at(audioIndex.length - 1))
+      } else {
+          setAudioIndex(audioIndex - 1)
+          setSelected(audioData.at(audioIndex - 1))
+      }
+    }
+  }
+
+// >> End audio player code <<
+
   return (
     <>
     <div id="page-content">
@@ -75,7 +140,33 @@ function App() {
     
       <Router>
         
-        <NavBar/>
+        <NavBar showModal={showModal}/>
+        
+        <div>
+          <Modal
+            isOpen={toggleModal}
+            ariaHideApp={false}
+            contentLabel="Audio Player"
+            overlayClassName="overlay"
+            className='modal-box'
+          >
+            <div className='modal-content'>
+              <div className='modal-audio-list'>
+                  <AudioList audioData={audioData} 
+                  onAudioClick={onAudioClick}/>
+              </div>
+              <div className='modal-audio-controls'>
+                  { selected ? <AudioControls 
+                  selected = {selected}
+                  audioIndex = {audioIndex}
+                  onNextClick={onNextClick}
+                  onPreviousClick={onPreviousClick}
+                  />
+                  : null }
+              </div>
+            </div>
+          </Modal>
+        </div>
         
         <Switch> 
 
@@ -89,10 +180,6 @@ function App() {
 
           <Route path="/colour">
             <ColouringBookContainer/>
-          </Route>
-
-          <Route path="/listen">
-            <AudioPlayer/>
           </Route>
 
           <Route path="/play">

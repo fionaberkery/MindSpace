@@ -1,9 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import ControlButtons from "./AudioButtons"
+import AudioButtons from "./AudioButtons"
 import "../audio_player_components/AudioControls.css"
 
-const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
-    const [audioIndex, setAudioIndex] = useState(0)
+const AudioControls = ({
+    selected,
+    audioIndex,
+    onNextClick, 
+    onPreviousClick
+    }) => {
+
     const [audioProgress, setAudioProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     
@@ -16,31 +21,23 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
     // Boolean value determines when particular actions are ready to be run.
     const isReady = useRef(false)
 
-    const { duration } = audioRef.current
+    const handleNextClick = () => {
+        onNextClick()
+    }
 
-    console.log(audioData)
+    const handlePreviousClick = () => {
+        onPreviousClick()
+    }
+
+    const handlePlayPauseClick = () => {
+        onPlayPauseClick()
+    }
 
     const onPlayPauseClick = () => {
         !isPlaying ? setIsPlaying(true) : setIsPlaying(false)
     }
 
-    console.log(audioIndex, " << this is selected audioIndex in audioData")
-
-    const nextAudio = () => {
-        if (audioIndex < audioData.length - 1) {
-            setAudioIndex(audioIndex + 1)
-        } else {
-            setAudioIndex(0);
-        }
-    }
-
-    const previousAudio = () => {
-        if (audioIndex - 1 < 0) {
-            setAudioIndex(audioData.length - 1);
-        } else {
-            setAudioIndex(audioIndex - 1);
-        }
-    }
+    const { duration } = audioRef.current
 
     const startTimer = () => {
         // Clears any timers running
@@ -48,7 +45,7 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
 
         intervalRef.current = setInterval(() => {
             if (audioRef.current.ended) {
-                nextAudio()
+                onNextClick()
             } else {
                 setAudioProgress(audioRef.current.currentTime);
             }
@@ -75,34 +72,34 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
 
      // Setup for when changing audio
     useEffect(() => {
-        audioRef.current.pause();
+        audioRef.current.pause()
     
-        audioRef.current = new Audio(SERVER_ADDRESS+selected.filePath);
-        setAudioProgress(audioRef.current.currentTime);
+        audioRef.current = new Audio(SERVER_ADDRESS+selected.filePath)
+        setAudioProgress(audioRef.current.currentTime)
     
         if (isReady.current) {
-            audioRef.current.play();
-            setIsPlaying(true);
-            startTimer();
+            audioRef.current.play()
+            setIsPlaying(true)
+            startTimer()
         } else {
         // Set the isReady ref as true for the next pass
-            isReady.current = true;
+            isReady.current = true
         }
-    }, [audioIndex]);
+    }, [audioIndex])
 
     //  Handles scrubbing (the progress bar)
     const onScrub = (value) => {
         clearInterval(intervalRef.current) // Clears any timers running
         audioRef.current.currentTime = value;
-        setAudioProgress(audioRef.current.currentTime);
+        setAudioProgress(audioRef.current.currentTime)
         console.log(value + " <<< this is value")
     }
     
     const onScrubEnd = () => {
         if (!isPlaying) {
-            setIsPlaying(true);
+            setIsPlaying(true)
         }
-            startTimer();
+            startTimer()
     }
 
     const currentPercentage = duration ? `${(audioProgress / duration) * 100}%` : '0%'
@@ -112,13 +109,12 @@ const AudioControls = ({selected, audioData, onNextClick, onPreviousClick}) => {
         <div className="audio-controls">
             <div className="audio-info">
                 <p>{selected.name}</p>
-                {/* <audio crossOrigin="anonymous" src={SERVER_ADDRESS + selected.filePath} controls autoPlay loop></audio> */}
             </div>
-            <ControlButtons 
+            <AudioButtons 
                 isPlaying={isPlaying}
-                onPreviousClick={previousAudio}
-                onNextClick={nextAudio}
-                onPlayPauseClick={setIsPlaying}
+                onPreviousClick={handlePreviousClick}
+                onNextClick={handleNextClick}
+                onPlayPauseClick={handlePlayPauseClick}
             />
             <input
                 type="range"

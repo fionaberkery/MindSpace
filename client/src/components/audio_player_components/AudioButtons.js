@@ -6,7 +6,7 @@ import { default as Previous } from "../../static/icons8-skip-to-start-100.png"
 import "../audio_player_components/AudioButtons.css"
 
 
-const ControlButtons = ({ isPlaying, onPlayPauseClick, onNextClick, onPreviousClick }) => (
+const AudioButtons = ({ isPlaying, onPlayPauseClick, onNextClick, onPreviousClick }) => (
 
     <div className="button-controls">
         <button
@@ -44,4 +44,4 @@ const ControlButtons = ({ isPlaying, onPlayPauseClick, onNextClick, onPreviousCl
 
 )
 
-export default ControlButtons
+export default AudioButtons
