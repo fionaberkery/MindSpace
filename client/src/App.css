@@ -13,20 +13,13 @@
     src: url("/src/static/MonkegRegular-rgKGA.ttf");
 }
 
-*
-{
-
+* {
     font-family: 'Poppins';
-}
-
-*
-{
     margin: 0;
 }
 
 
-#page-content 
-{
+#page-content {
     position: relative;
     min-height: 100vh;
 }
