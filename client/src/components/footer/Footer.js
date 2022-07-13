@@ -9,7 +9,7 @@ const Footer = () => {
 
         <div id="footer-top-layer">
             <div id="top-left">
-                <h2 id="footer-title-spacing"> App Name </h2>
+                <h2 id="footer-title-spacing"> MindSpace </h2>
             </div>
             <div id="top-right">
                 <p id="footer-icon-spacing"> 

@@ -11,6 +11,31 @@ const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
     const [textInput, setTextInput] = useState("")
     const [date, setDate] = useState("")
     const [buttonTextJournal, setButtonTextJournal] = useState("Save")
+    const [randomPrompt, setRandomPrompt] = useState("")
+
+    const journalPrompts = [
+        "Write about 5 things you are grateful for?",
+        "What's the best thing that happened today?",
+        "What are you most stressful about at the moment?",
+        "What is your favourite memory?",
+        "What do you wish you could tell your younger self?",
+        "What is the biggest lesson you have learnt this week?",
+        "What are 3 things that make you happy?"
+    ]
+
+    const getRandomIndex = (array) => {
+        return Math.floor(Math.random() * array.length)
+    }
+
+    
+    const getRandomString = () => {
+        setRandomPrompt(journalPrompts[getRandomIndex(journalPrompts)])
+    }
+
+    const handlePrompt = () => {
+        return getRandomString()
+}
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -46,12 +71,18 @@ const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
                 </title>
             </Helmet>
 
+
+            <nav className="return-button">
+                <Link className="return-link" to="/profile"> <p> &#8592; Return to profile </p> </Link> 
+            </nav>
+
         <div className="new-entry-page">
         <div className="sub-new-entry-page">
 
             <h2 className="my-journal-title" > New Journal Entry </h2>
 
             <div className="entry-form">
+
                 <div className="sub-entry-form">
                     <form onSubmit={handleSubmit}>
                         <br></br>
@@ -68,11 +99,19 @@ const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
                     </form>
                     <button onClick={handleDiscardClick} className="discard-button"> <img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png" height="20px"/> </button>
                     </div>
+
+                    <div className="random-prompt-container">
+                    <div className="prompt-button-container">
+                    <button className="prompt-button" onClick={handlePrompt} > prompt </button>
+                    </div>
+                    <p className="prompt-text" > {randomPrompt} </p>
                 </div>
 
-                <div className="flex-return-button">
-                    <button className="return-button" > <Link className="link" to="/profile"> Return to profile </Link> </button>
                 </div>
+
+           
+
+                
 
         </div>
         </div>

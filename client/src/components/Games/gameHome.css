@@ -1,11 +1,6 @@
 
 /* JIGSAW */
 
-.jigsaw-container 
-{
-    /* position: relative;
-    width: 50%; */
-}
 
 .jigsaw-image 
 {
@@ -44,18 +39,11 @@
     text-decoration: none;
     color: black;
     font-size: 16px;
-    padding: 16px 32px;
     font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 /* BUBBLES */
-
-.bubbles-container 
-{
-    /* position: relative;
-    width: 50%; */
-}
 
 .bubbles-image 
 {
@@ -94,7 +82,6 @@
     text-decoration: none;
     color: black;
     font-size: 16px;
-    padding: 16px 32px;
     font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

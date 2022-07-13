@@ -8,6 +8,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [buttonTextProfile, setButtonTextProfile] = useState("Save")
+    const [saveButton, setSaveButton] = useState("save-new-button")
     const [componentToShow, setComponentToShow] = useState(false)
 
     const handleNameChange = (event) => {
@@ -36,6 +37,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
         event.target.reset()
         onUserSelected(newUser)
         setButtonTextProfile("Profile Created!")
+        setSaveButton("saved-button")
         setComponentToShow(true)
     }
 
@@ -65,7 +67,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
                     <input className="label-size" type="text" placeholder="Create password" onChange={handlePasswordChange} required />
                     <br></br><br></br>
 
-                    <input className="save-new-button" type="submit" value={buttonTextProfile}/>
+                    <input className={saveButton} type="submit" value={buttonTextProfile}/>
                 </form>
             
 

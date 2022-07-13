@@ -11,9 +11,6 @@ import butterfliesImage from './butterflies.jpg';
 import sunsetImage from './sunset.jpg';
 import flowerImage from './flower.jpg';
 
-
-
-
 const Jigsaw = ()=>{
     const [columns, setColumns]= useState(4);
     const [rows, setRows]= useState(4);
@@ -25,24 +22,28 @@ const Jigsaw = ()=>{
         setText("Well Done, how about you pick another picture or increase the number of peices");
     };
 
-    const pic1= sunsetImage;
-    const pic2= butterfliesImage;
-    const pic3= flowerImage;
+    const pic1= {url : sunsetImage, name : "Sunset"}
+    const pic2= {url : butterfliesImage, name : "Butterfly" }
+    const pic3= {url : flowerImage, name : "Flower"}
 
     const pictureList = [pic1,pic2,pic3]
+    console.log(pictureList)
 
     const numberOfRows = [3,4,5,6,7,8,9,10]
     const numberOfColumns = [3,4,5,6,7,8,9,10]
 
 
     const handlePictureChange = function(event){
-        const chosenPicture = pictureList[event.target.value]
+        const chosenPicture = event.target.value
         onPictureSelected(chosenPicture)
     }
 
-    const pictureOptions = pictureList.map((pictureList, index) =>{
-        return<option value={index} key={index}>{pictureList}</option>
+    const pictureOptions = pictureList.map((pic, index) =>{
+        return (
+        <option value={pic.url} key={index} > {pic.name} </option>
+        )
     })
+    
 
     const onPictureSelected = function(picture){
         setPicture(picture)
@@ -83,9 +84,9 @@ return(
     </Helmet>
     
         <nav className="games-nav">
+        
             <Link to='/play' className="games-nav--link">
-                <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
-                Play Something Else
+                    <p > &#8592; Play Something Else </p>
             </Link>
         </nav>
 

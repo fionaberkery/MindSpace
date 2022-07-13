@@ -45,7 +45,7 @@ const Home = () => {
                                     <Link to='/journal' className="homepage-link">
                                           <img src={Journal} className="feature-img" alt="journal"/>
                                           <div className="content">
-                                                <p className="homepage-text">Your Journal</p> 
+                                                <p className="homepage-text">Journal</p> 
                                           </div>
                                     </Link>
                               </div>
