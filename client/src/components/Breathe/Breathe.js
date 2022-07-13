@@ -1,7 +1,4 @@
-
-import React,{useState, useEffect, createContext} from "react";
-import ReactSwitch from "react-switch";
-import Switch from "react-switch";
+import React,{useState, createContext} from "react";
 import './breathe.css'
 
 export const ThemeContext = createContext(null)
@@ -25,6 +22,7 @@ const Breathe = () => {
         <>
 
         <ThemeContext.Provider value={{theme, toggleTheme}}>
+
             <section className="breathe-container" id={theme}>
 
             <div className="toggle">
@@ -34,24 +32,25 @@ const Breathe = () => {
             <label className="switch">
                 <input onChange={toggleTheme} checked={theme === "light"} type="checkbox" />
                 <span className="slider round"></span>
-                </label>
+            </label>
+
             </div>
 
-                <div className="circle-container">
+            <div className="circle-container">
         
-                    <div className="circle"> 
-                        <div className="word-container">
-                            { currentWord ? <p className="word"> Breathe In </p> : <p className="word"> Breathe Out </p> }
-                        </div>
+                <div className="circle"> 
+                    <div className="word-container">
+                        { currentWord ? <p className="word"> Breathe In </p> : <p className="word"> Breathe Out </p> }
                     </div>
-
-                    <div className="pointer-container">
-                        <div className="pointer"></div>
-                    </div>
-                
-                    <div className="gradient-circle"></div>
                 </div>
-            </section>
+
+                <div className="pointer-container">
+                    <div className="pointer"></div>
+                </div>
+                
+                <div className="gradient-circle"></div>
+            </div>
+        </section>
         </ThemeContext.Provider>
 
         </>
@@ -60,7 +59,3 @@ const Breathe = () => {
 
 export default Breathe
 
-// const colours = [
-//     '#E6E8E6', 'RED', '#86BBD8', '#2C497F', '#629677', '#98A886', 'TEAL', '#BFFFBC', '#FDCA40', '#E18335', 'CORAL', '#C4A69D', '#634B66', 'FUCHSIA', '#E6D3A3', 'MAROON', '#121212'
-
-// ]

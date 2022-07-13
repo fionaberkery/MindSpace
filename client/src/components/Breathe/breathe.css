@@ -1,8 +1,3 @@
-/* * {
-    box-sizing: border-box;
-} */
-
-/* styling */
 
 body .breathe-container {
 
@@ -15,7 +10,7 @@ body .breathe-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin: 8em; */
+
 }
 
 .circle-container{
@@ -28,37 +23,6 @@ body .breathe-container {
     position:relative;
     animation: breathe 14000ms infinite;
 } 
-
-#light .gradient-circle{
-    background: conic-gradient(
-        #5a7f7c 10%,
-        #719290 20%,
-        #d6eefa 40%,
-        #fff 50%,
-        #3f5456 60%,
-        #425454 90%,
-        #5a7f7c 100%
-    );
-
-    height:320px;
-    width: 320px;
-    position: absolute;
-    top: - 10px;
-    left: -10px;
-    z-index: -2;
-    border-radius: 50%;
-}
-
-#light .circle {
-    /* background-color: #010f1c; */
-    background: linear-gradient(#afcad3, #7B9E89  );
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 50%;
-}
 
 .pointer-container{
     position: absolute;
@@ -108,6 +72,39 @@ body .breathe-container {
     background-repeat:no-repeat;
     background-position: center;
 }
+
+#light .gradient-circle{
+    background: conic-gradient(
+        #5a7f7c 10%,
+        #719290 20%,
+        #d6eefa 40%,
+        #fff 50%,
+        #3f5456 60%,
+        #425454 90%,
+        #5a7f7c 100%
+    );
+
+    height:320px;
+    width: 320px;
+    position: absolute;
+    top: - 10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+#light .circle {
+    /* background-color: #010f1c; */
+    background: linear-gradient(#afcad3, #7B9E89  );
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+
 
 #dark {
     background: url('/src/static/breathe/water2.jpg');
@@ -240,7 +237,7 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-  /* Rounded sliders */
+
 .slider.round {
     border-radius: 34px;
 }

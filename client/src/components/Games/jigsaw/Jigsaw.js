@@ -121,9 +121,7 @@ return(
         </div>
 
     </div>
-
     
-
     <section>
 
     <div className="set">
