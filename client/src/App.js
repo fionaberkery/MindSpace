@@ -24,7 +24,7 @@ import { AudioService } from "./services/Services";
 import AudioList from '../src/components/audio_player_components/AudioList';
 import AudioControls from "../src/components/audio_player_components/AudioControls";
 import Modal from 'react-modal';
-
+import closeModalButton from '../src/static/cross-free-icon-font.svg'
 
 
 function App() {
@@ -43,9 +43,9 @@ function App() {
 
   useEffect(() => {
     UserService.getUsers()
-    .then(users => setSavedUsers(users))
+      .then(users => setSavedUsers(users))
     JournalEntryService.getJournalEntries()
-    .then(journalEntries => setSavedJournalEntries(journalEntries))
+      .then(journalEntries => setSavedJournalEntries(journalEntries))
   }, [])
 
   const addNewUser = (newUser) => {
@@ -78,23 +78,27 @@ function App() {
 
   useEffect(() => {
       AudioService.getAudios()
-      .then(audioData => setAudioData(audioData))
+        .then(audioData => setAudioData(audioData))
   }, [])
 
   const onAudioClick = (audio) => {
       setSelected(audio)
       const audioObjects = audioData.map(audio => audio.id)
-    setAudioIndex(audioObjects.indexOf(selected.id))
+      setAudioIndex(audioObjects.indexOf(audio.id))
   }
+  
 
   const showModal = () => {
     setToggleModal(true)
   }
 
   const closeModal = () => {
+    setSelected(null)
     setToggleModal(false)
   }
-  
+
+  console.log(audioIndex, " << this is selected audioIndex in audioData")
+
   const onNextClick = () => {
     if(selected !== null){
       if (audioIndex < audioData.length - 1) {
@@ -135,7 +139,7 @@ function App() {
     
       <Router>
         
-        <NavBar/>
+        <NavBar showModal={showModal}/>
         
         <div>
           <Modal
@@ -159,6 +163,9 @@ function App() {
                   />
                   : null }
               </div>
+              <a className='close-modal-container'> 
+                <img src={closeModalButton} onClick={closeModal} className='close-modal-button' alt="close modal button"/>              
+              </a>
             </div>
           </Modal>
         </div>

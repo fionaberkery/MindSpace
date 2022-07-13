@@ -1,8 +1,9 @@
 .button-controls {
   display: flex;
   justify-content: space-between;
-  width:  75%;
-  margin: 0 auto 15px;
+  width:  65%;
+  max-height: 2vh;
+  margin: 0 auto 0.5em;
 }
 
 .button-controls > button {
@@ -11,19 +12,22 @@
   cursor: pointer;
 }
 
-/* .buttonControls .prev,
-.buttonControls .next {
-  max-width: 5%;
-  height: auto; 
-  } 
-
-.audio-controls .play svg, 
-.audio-controls .pause svg {
-  max-width: 40px;
+.play {
+  width: 2em;
   height: auto;
 }
-  */
-  
-/* .audio-controls path {
-    fill: var(--white);
-  } */
+
+.pause {
+  width: 2em;
+  height: auto;
+}
+
+.next {
+  width: 2em;
+  height: auto;
+}
+
+.prev {
+  width: 2em;
+  height: auto;
+}

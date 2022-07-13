@@ -1,5 +1,5 @@
 import React from 'react';
-
+import List from '@mui/material/List';
 import AudioListItem from './AudioListItem';
 
 const AudioList = ({audioData, onAudioClick}) => {
@@ -8,13 +8,31 @@ const AudioList = ({audioData, onAudioClick}) => {
         return  <AudioListItem 
         audio={audio} 
         key={audio.id} 
-        onAudioClick={onAudioClick}/>
+        onAudioClick={onAudioClick}
+        />
         })
 
     return(
         <>
-            <h3>AudioList</h3>
-            {audioList}
+    <List
+        sx={{
+            width: '100%',
+            maxWidth: 300,
+            // bgcolor: '#000000',
+            position: 'relative',
+            overflow: 'auto',
+            maxHeight: 60,
+            '& ul': { padding: 0 },
+        }}
+        subheader={<li />}
+    >
+        {
+        <ul>
+            {audioList} 
+        </ul>
+        }
+    </List>
+
         </>
     )
 }

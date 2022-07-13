@@ -1,8 +1,8 @@
 import React from "react";
-import { default as Play } from "../../static/icons8-play-100.png"
-import { default as Pause } from "../../static/icons8-pause-100.png"
-import { default as Next } from "../../static/icons8-end-100.png"
-import { default as Previous } from "../../static/icons8-skip-to-start-100.png"
+import { default as Play } from "../../static/play-free-icon-font.svg"
+import { default as Pause } from "../../static/pause-free-icon-font.svg"
+import { default as Next } from "../../static/forward-free-icon-font.svg"
+import { default as Previous } from "../../static/rewind-free-icon-font.svg"
 import "../audio_player_components/AudioButtons.css"
 
 
@@ -10,35 +10,33 @@ const AudioButtons = ({ isPlaying, onPlayPauseClick, onNextClick, onPreviousClic
 
     <div className="button-controls">
         <button
-            className="prev"
             id="buttons"
             onClick={onPreviousClick}
         >
-            <img src={Previous} />
+            <img src={Previous} className="prev"/>
         </button>
         {isPlaying ? (
             <button
-                className="pause"
+
                 id="buttons"
                 onClick={() => onPlayPauseClick(false)}
             >
-                <img src={Pause} />
+                <img src={Pause} className="pause"/>
             </button>
         ) : (
             <button
-                className="play"
                 id="buttons"
                 onClick={() => onPlayPauseClick(true)}
             >
-                <img src={Play} />
+                <img src={Play} className="play"/>
             </button>
         )}
         <button
-            className="next"
+
             id="buttons"
             onClick={onNextClick}
             >
-            <img src={Next}/>
+            <img src={Next} className="next"/>
         </button>
     </div>
 

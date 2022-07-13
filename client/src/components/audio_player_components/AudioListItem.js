@@ -1,4 +1,6 @@
 import React from "react";
+import ListItemText from '@mui/material/ListItemText';
+import { createTheme, ThemeProvider, Typography } from "@mui/material/";
 
 const AudioListItem = ({audio, onAudioClick}) => {
 
@@ -6,9 +8,20 @@ const AudioListItem = ({audio, onAudioClick}) => {
         onAudioClick(audio)
     }
 
-    return(
+    const listItemFont = createTheme({
+        typography: {
+            fontFamily: [
+                'Poppins',
+                'serif',
+            ].join(','),
+        },});
 
-            <li onClick={handleAudioClick}> {audio.name}</li>
+    return(
+        <ThemeProvider theme={listItemFont}>
+            <Typography>
+                <ListItemText primary={audio.name} onClick={handleAudioClick}/>
+            </Typography>
+        </ThemeProvider>
 
     )   
 }

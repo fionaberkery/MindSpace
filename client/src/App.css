@@ -103,21 +103,54 @@ footer
 .modal-box {
     position: absolute;
     border: hidden;
-    z-index: 100;
+    z-index: 90;
 }
 
 .modal-content {
     /* position: fixed; */
+    color: #f3f3f3;
+    background-color: blue;
+    width: 70vw;
+    max-height: 8vh;
+    border-radius: 15px;
+    padding: 0.2em 1.1em 1.1em 1.1em;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
+    z-index: 91;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
     grid-template-areas:
-    "soundlist controls"
+    "soundlist controls close"
 }
 
 .modal-audio-list {
     grid-area: "soundlist";
+    /* background-color: #161616; */
+    max-height: 0.7vh;
+    z-index: 92;
+    cursor: pointer;
 }
 
 .modal-audio-controls {
     grid-area: "controls";
+    margin-bottom: 10vh;
+    z-index: 93;
 }
+
+.close-modal-container {
+    z-index: 96;
+}
+
+.close-modal-button {
+    grid-area: "close";
+    width: 0.7em;
+    height: auto;
+    /* margin: 0.5em; */
+    margin-top: 0.1vh;
+    margin-left: -1vw;
+    cursor: pointer;
+
+}
+

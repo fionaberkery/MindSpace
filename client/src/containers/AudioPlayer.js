@@ -4,7 +4,7 @@
 // import AudioControls from "../components/audio_player_components/AudioControls";
 
 
-// const AudioPlayer = ({active}) => {
+// const AudioPlayer = () => {
 //     const [audioData, setAudioData] = useState([])
 //     const [selected, setSelected] = useState(null)
 
@@ -21,9 +21,6 @@
 //     const onNextClick = (selected) => {
 //         setSelected(selected)
 //     }
-
-//     if (!active) return null
-
     
 //     return(
 //         <>

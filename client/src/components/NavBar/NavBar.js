@@ -10,12 +10,9 @@ const NavBar = ({showModal}) => {
 
             <nav className="navBar">
 
-
             <div className="app-name-container">
             
-            
-                
-            </div>
+                </div>
 
                 <div className="navbar-links">
 
@@ -23,7 +20,7 @@ const NavBar = ({showModal}) => {
                     <Link className="nav-links" to="/"> Home </Link> 
                     <Link className="nav-links" to="/breathe"> Breathe </Link> 
                     <Link className="nav-links" to="/colour"> Colour </Link> 
-                    <Link className="nav-links" onClick={showModal}> Listen </Link> 
+                    <a className="nav-links" onClick={showModal}> Listen </a> 
                     <Link className="nav-links"to="/play"> Play </Link> 
                     <Link className="nav-links" to="/journal"> Journal </Link>
                     <h1 className="navbar-app-name">Name of App</h1>
