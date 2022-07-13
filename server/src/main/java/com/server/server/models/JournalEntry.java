@@ -17,7 +17,7 @@ public class JournalEntry {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "textInput", length=2)
+    @Column(name = "textInput", length=2000)
     private String textInput;
 
     @ManyToOne(optional = false)
