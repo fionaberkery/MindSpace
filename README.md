@@ -54,7 +54,11 @@ Now to install all the modules for the client, run this command:
 
 ## Deployment
 
-To begin, you'll need to start up the backend server. To do this, open the 'server' folder in IntelliJ IDEA. Give it some time to install the dependencies and setup the application when opening this project for the first time, as this can sometimes take a minute or two. Then, open src/main/java/com.server.server, right click on the file named ServerApplciation and click 'Run ServerApplication...main()'. You'll know it's running properly when the last line says "Started ServerApplication in ... seconds".
+To begin, you'll need to start up the backend server. To begin, open your terminal and type the following command:
+```bash
+  createdb mindspace
+```
+Next, open the 'server' folder in IntelliJ IDEA. Give it some time to install the dependencies and setup the application when opening this project for the first time, as this can sometimes take a minute or two. Then, open src/main/java/com.server.server, right click on the file named ServerApplciation and click 'Run ServerApplication...main()'. You'll know it's running properly when the last line says "Started ServerApplication in ... seconds".
 
 Once the server is running, it's time to start up the front end. To do this, open your terminal in the main project directory, and move into the 'client' directory:
 ```bash
