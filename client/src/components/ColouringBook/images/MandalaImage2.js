@@ -33,7 +33,7 @@ const MandalaImage2 = ({handleImageSelection, handleTouchImageSelection, exportA
 
                 <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
-                <button className='select-btn' onClick={()=> exportAsImage(exportRef.current, "PetalMandala")}>Capture Image</button>
+                <button className='select-btn' onClick={()=> exportAsImage(exportRef.current, "PetalMandala")}>Download Image</button>
 
 			</div>
         

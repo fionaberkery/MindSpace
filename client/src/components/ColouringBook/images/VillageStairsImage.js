@@ -31,7 +31,6 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection, ex
 			
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour}/>
 
-
 				<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
 				<button className='select-btn' onClick={()=> exportAsImage(exportRef.current, "Village")}>Download Image</button>
