@@ -1,4 +1,4 @@
-body {
+#home-page {
     height: 90vh;
     margin: 0;
     background-image: url('/src/static/breathe/splash.jpg');
@@ -7,46 +7,54 @@ body {
     font-family: "poppins";
 }
 
+.homepage-link {
+    font-family: lamarkie;
+    text-decoration: none;
+    color: black;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 90vh;
-    /* background-image: url('/src/static/breathe/splash.jpg'); */
+
 }
     
 
 .feature {
-    margin-top: 150px;
+    /* margin-top: 150px; */
     display: grid;
-    height: 90vh;
+    /* height: 90vh; */
     place-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     border-right: 1px solid rgba(225, 225, 225, 0.1);
     background-size: contain;
+    
+    
     /* opacity: 1; */
 }
 
-/* .feature:hover {
+.feature:hover {
     opacity: 1;
-} */
+}
 
 .feature .feature-img {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     opacity: 0;
     background-size: contain;
-    height: 30vw;
-    width: 50vw;
+    height: 100vh;
+    /* width: 100vw; */
 }
 
 
 .feature:hover .feature-img{
     opacity: 1;
-    /* transform: scale(1.2); */
-    transition: 0.3s;
+    transform: scale(1.1);
+    transition: 0.8s;
 }
 
 .content {
