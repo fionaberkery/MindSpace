@@ -54,7 +54,7 @@ Now to install all the modules for the client, run this command:
 
 ## Deployment
 
-To begin, you'll need to start up the backend server. To begin, open your terminal and type the following command:
+To begin, you'll need to start up the backend server. Open your terminal and type the following command:
 ```bash
   createdb mindspace
 ```
