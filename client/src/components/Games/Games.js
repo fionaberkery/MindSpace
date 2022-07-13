@@ -18,15 +18,20 @@ function Games() {
             </Helmet>
 
         <div id="play-title">
-        <h1> Play </h1>
+        <h1> Choose your game </h1>
         </div>
             
-            <div className="jigsaw-link">
-                <Link to="/jigsaw"> <img id="jigsaw-img" src={Jigsaw} height="600px" width="600px"/></Link>  
+            <div className="jigsaw-container">
+                <img className="jigsaw-image" src={Jigsaw} height="600px" width="600px"/>
+                <div className="jigsaw-middle">
+                    <Link to="/jigsaw" className="jigsaw_text"> JIGSAW </Link>
+                </div>  
             </div>
 
-            <div className="bubble-link">
-                <Link to="/bubbles"> <img id="bubble-img" src={B4} height="600px" width="600px"/></Link>
+            
+            <div className="bubble-container">
+                <img className="bubble-imgage" src={B4} height="600px" width="600px"/>
+                <Link to="/bubbles"> </Link>
             </div>
         </div>
     )

@@ -1,4 +1,102 @@
-.play-home
+
+/* JIGSAW */
+
+.jigsaw-container 
+{
+    position: relative;
+    width: 50%;
+}
+
+.jigsaw-image 
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.jigsaw-container:hover .jigsaw-image 
+{
+    opacity: 0.3;
+}
+
+.jigsaw-middle 
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.jigsaw-container:hover .jigsaw-middle 
+{
+    opacity: 1;
+}
+
+.jigsaw-text 
+{
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/* BUBBLES */
+
+
+.bubbles-container 
+{
+    position: relative;
+    width: 50%;
+}
+
+.bubbles-image 
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.bubbles-container:hover .bubbles-image 
+{
+    opacity: 0.3;
+}
+
+.bubbles-middle 
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.bubbles-container:hover .bubbles-middle 
+{
+    opacity: 1;
+}
+
+.bubbles-text 
+{
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+
+/*  */
+/* .play-home
 {
     margin-top: 50px;
     min-height: 100vw;
@@ -20,11 +118,37 @@
 #jigsaw-img
 {
     border-radius: 10px;
+    opacity: 0.6;
+}
+
+#jigsaw-img:hover
+{
+    opacity: 1;
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+#jigsaw_words
+{
+    opacity: 0.1;
+}
+
+#jigsaw-img:hover #jigsaw_words
+{
+    opacity: 1;
 }
 
 #bubble-img
 {
     border-radius: 10px;
+    opacity: 0.6;
+    
+}
+
+#bubble-img:hover{
+    opacity: 1;
+    transform: scale(1.02);
+    transition: 0.4s;
 }
 
 #play-title
@@ -51,5 +175,5 @@
 
 .games-nav--link:visited {
     color: #121212;
-}
+} */
 
