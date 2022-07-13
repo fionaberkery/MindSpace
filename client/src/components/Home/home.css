@@ -31,13 +31,11 @@ body {
     opacity: 1;
 } */
 
-<<<<<<< HEAD
 
 
-.feature-img {
-=======
+
 .feature .feature-img {
->>>>>>> 25a1202aa72dd1ee9f3f09d28b34669774618850
+
     position: absolute;
     top: 0;
     left: 0;
