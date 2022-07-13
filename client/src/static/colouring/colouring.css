@@ -42,7 +42,7 @@ path {
         background-attachment: fixed;
         background-repeat:no-repeat;
         background-position: center;
-        min-height: 100vw;
+        min-height: 100vh;
     }
 
     .images-container{
@@ -85,6 +85,12 @@ path {
         font-size: 14px; 
         background-color: #D4BEBE;
         cursor: pointer;
+    
+    }
+
+    .dowload-button-flex {
+        display:flex;
+        /* justify-content: flex-end; */
         
     }
 
@@ -143,6 +149,18 @@ path {
         width: 6rem;
         border-radius: 10px;
         border: none;
+    }
+
+    .colour-return-nav {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        cursor: pointer;
+    }
+
+    .colour-return{
+        margin-left: 20px;
     }
 }
 /************ Small screen sizes *************/

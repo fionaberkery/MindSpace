@@ -24,13 +24,21 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection, exportA
 	}
 
     return (
+
+        <>
+
+        <nav className='colour-return-nav'>
+			<p className='colour-return' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}> &#8592; Back to image selection</p>
+		</nav>
+
+
+
         <div className='colouring-page'>
 
             <div className='flex-palette'>
 			
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour} />
 
-                <button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchStart={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
 
                 <button className='select-btn' onClick={()=> exportAsImage(exportRef.current, "FlowerMandala")}>Download Image</button>
                 
@@ -216,6 +224,8 @@ const MandalaImage1 = ({handleImageSelection, handleTouchImageSelection, exportA
             </div>
 
         </div>
+
+        </>
     )
 }
 

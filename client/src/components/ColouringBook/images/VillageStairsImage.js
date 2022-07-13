@@ -25,15 +25,29 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection, ex
 	}
 
     return (
+
+		<>
+		
+		<nav className='colour-return-nav'>
+			<p className='colour-return' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}> &#8592; Back to image selection</p>
+		</nav>
+		
+		
+
 		<div className='colouring-page'>
+
 
 			<div className='flex-palette'>
 			
 				<Palette setCurrentColour={setCurrentColour} currentColour={currentColour}/>
 
-				<button className='select-btn' onClick={()=>{handleImageSelection('default')}} onTouchEnd={()=>{handleTouchImageSelection('default')}}>Back to image selection</button>
+				<div className='dowload-button-flex'>
 
 				<button className='select-btn' onClick={()=> exportAsImage(exportRef.current, "Village")}>Download Image</button>
+
+				</div>
+
+				
 
 			</div>
 
@@ -805,11 +819,17 @@ const VillageStairsImage = ({handleImageSelection, handleTouchImageSelection, ex
 						<path fill={fillColours[375]} onClick={paintColour} onTouchStart={touchPaintColour} id="375" d="M300.6,237.19c-1.5-2.42-1.06-4.5,1.16-5.2C301.37,233.75,302.69,235.78,300.6,237.19Z" transform="translate(-0.5 -0.5)" />
 					</g>
 				</svg>
+
+
 			</div>
 
 		</div>
 
+		
 
+		
+
+		</>
 
 	)
 }
