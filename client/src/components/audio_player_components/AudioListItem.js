@@ -9,22 +9,10 @@ const AudioListItem = ({audio, onAudioClick}) => {
         onAudioClick(audio)
     }
 
-    const theme = createTheme({
-        typography: {
-            fontFamily: [
-                "Nunito",
-                "Roboto",
-                "Helvetica Neue",
-                "Arial",
-                "sans-serif"
-            ].join(",")
-        }
-    });
-
     const listItemFont = createTheme({
         typography: {
             fontFamily: [
-                'Cormorant',
+                'Poppins',
                 'serif',
             ].join(','),
         },});
