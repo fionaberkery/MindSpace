@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import './userProfile.css'
+import { Helmet } from "react-helmet";
 
 
 
@@ -39,6 +40,12 @@ const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
     return (
 
         <>
+            <Helmet>
+                <title>
+                    Wellbeing - New Journal Entry
+                </title>
+            </Helmet>
+
         <div className="new-entry-page">
         <div className="sub-new-entry-page">
 

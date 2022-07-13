@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import './journalLogin.css'
+import { Helmet } from "react-helmet";
 
 const UserProfileContainer = ({onUserSelected, savedUsers}) => {
 
@@ -16,6 +17,11 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
     return (
 
         <>
+            <Helmet>
+                <title>
+                    Wellbeing - Journal
+                </title>
+            </Helmet>
 
         <div className="login-page">
             <div className="sub-login-page">

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const NewProfile = ({addNewUser, onUserSelected}) => {
 
@@ -42,6 +43,12 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
     return (
 
         <>
+            <Helmet>
+                <title>
+                    Wellbeing - New User
+                </title>
+            </Helmet>
+            
         <div className="new-profile">
         <div className="sub-new-profile">
 

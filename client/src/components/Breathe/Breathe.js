@@ -1,5 +1,6 @@
 import React,{useState, createContext} from "react";
 import './breathe.css'
+import { Helmet } from "react-helmet";
 
 export const ThemeContext = createContext(null)
 
@@ -20,6 +21,11 @@ const Breathe = () => {
 
     return(
         <>
+            <Helmet>
+                <title>
+                    Wellbeing - Breathe
+                </title>
+            </Helmet>
 
         <ThemeContext.Provider value={{theme, toggleTheme}}>
 

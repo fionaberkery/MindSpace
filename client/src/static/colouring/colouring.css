@@ -51,36 +51,31 @@ path {
         justify-content: center;
         align-items: center;
         gap:1rem;
-        /* margin-left: 20px; */
-    
         background-image:url('/src/static/colouring/pencils1.jpg');
         background-size:cover;
         background-attachment: fixed;
         background-repeat:no-repeat;
         background-position: center;
         min-height: 100vw;
-    
     }
 
     .colouring-svg {
-        max-width: 75%;
+        max-width: 100%;
     }
+
     .select-img {
         cursor: pointer;
         max-width: 30%;
         min-height: 30%;
         border-radius: 1%;
-
-        
     }
+
     .petal {
         max-width: 30%;
         min-height: 30%;
-        /* margin-bottom: 1rem; */
     }
 
-    .select-btn
-    {
+    .select-btn {
         align-items: center;
         margin-left: 10px; 
         margin-right: 80px; 
@@ -93,16 +88,14 @@ path {
         
     }
 
-    
-
-    .colouring-title{
+    .colouring-title {
         text-align: center;
         font-family: lamarkie, Verdana, Geneva, Tahoma, sans-serif;
         font-size: 2em;
         padding: 0.5em;
     }
 
-    #current-colour--box{
+    #current-colour--box {
         display:grid;
         grid-template-columns: 50% 50%;
         margin: 0.5em;
@@ -114,8 +107,8 @@ path {
         height: 4rem;
         width: 4rem;
         border-radius: 50%;
-        
     }
+
     #colour-palette {
         display:grid;
         grid-template-columns: 33% 33% 33%;
@@ -136,6 +129,7 @@ path {
         border-radius: 5px;
         border: #12121205 1px solid;
     }
+
     #custom-colour-input {
         cursor: pointer;
         height: 3rem;
@@ -165,7 +159,6 @@ path {
     }
 
     .nav-colouring {
-        /* font-size: 18px; */
         display: grid;
         grid-template-columns: 100vw;
     }
