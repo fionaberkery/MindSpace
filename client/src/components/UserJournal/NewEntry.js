@@ -67,7 +67,7 @@ const NewEntry = ({addNewJournalEntry, currentUser, setCurrentUser}) => {
         <>
             <Helmet>
                 <title>
-                    Wellbeing - New Journal Entry
+                    MindSpace - New Journal Entry
                 </title>
             </Helmet>
 

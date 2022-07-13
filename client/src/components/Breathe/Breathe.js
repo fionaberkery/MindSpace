@@ -23,7 +23,7 @@ const Breathe = () => {
         <>
             <Helmet>
                 <title>
-                    Wellbeing - Breathe
+                    MindSpace - Breathe
                 </title>
             </Helmet>
 

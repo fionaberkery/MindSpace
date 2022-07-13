@@ -58,7 +58,7 @@ const ColouringBookContainer = () => {
         <div>
 
             <Helmet>
-                <title>Wellbeing - Colour</title>
+                <title>MindSpace - Colour</title>
             </Helmet>
 
             <h2 className='colouring-title'>Colour Away</h2>

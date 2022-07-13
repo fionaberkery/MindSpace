@@ -80,7 +80,7 @@ return(
     <>
 
     <Helmet>
-        <title>Wellbeing - Jigsaw Puzzles</title>
+        <title>MindSpace - Jigsaw</title>
     </Helmet>
     
         <nav className="games-nav">

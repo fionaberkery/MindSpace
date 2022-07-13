@@ -47,7 +47,7 @@ const NewProfile = ({addNewUser, onUserSelected}) => {
         <>
             <Helmet>
                 <title>
-                    Wellbeing - New User
+                    MindSpace - New User
                 </title>
             </Helmet>
             
