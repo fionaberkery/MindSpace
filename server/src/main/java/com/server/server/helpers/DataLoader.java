@@ -105,48 +105,48 @@ public class DataLoader implements ApplicationRunner {
         JournalEntry entry20 = new JournalEntry("19-05-21", "Lorem ipsum dolor sit amet, coniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user5);
         journalEntryRepository.save(entry20);
 
-        JournalEntry entry21 = new JournalEntry("04-07-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user5);
-        journalEntryRepository.save(entry21);
-
-        JournalEntry entry22 = new JournalEntry("31-08-21", "Lorem ipsum dolor sit amet, consectetrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user5);
-        journalEntryRepository.save(entry22);
-
-        JournalEntry entry23 = new JournalEntry("30-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
-        journalEntryRepository.save(entry23);
-
-        JournalEntry entry24 = new JournalEntry("09-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
-        journalEntryRepository.save(entry24);
-
-        JournalEntry entry25 = new JournalEntry("16-04-21", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inclaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
-        journalEntryRepository.save(entry25);
-
-        JournalEntry entry26 = new JournalEntry("11-10-21", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
-        journalEntryRepository.save(entry26);
-
-        JournalEntry entry27 = new JournalEntry("01-04-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
-        journalEntryRepository.save(entry27);
-
-        JournalEntry entry28 = new JournalEntry("07-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
-        journalEntryRepository.save(entry28);
-
-        JournalEntry entry29 = new JournalEntry("09-11-21", "uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
-        journalEntryRepository.save(entry29);
-
-        JournalEntry entry30 = new JournalEntry("04-03-22", "eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user2);
-        journalEntryRepository.save(entry30);
+//        JournalEntry entry21 = new JournalEntry("04-07-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user5);
+//        journalEntryRepository.save(entry21);
+//
+//        JournalEntry entry22 = new JournalEntry("31-08-21", "Lorem ipsum dolor sit amet, consectetrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user5);
+//        journalEntryRepository.save(entry22);
+//
+//        JournalEntry entry23 = new JournalEntry("30-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
+//        journalEntryRepository.save(entry23);
+//
+//        JournalEntry entry24 = new JournalEntry("09-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
+//        journalEntryRepository.save(entry24);
+//
+//        JournalEntry entry25 = new JournalEntry("16-04-21", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inclaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
+//        journalEntryRepository.save(entry25);
+//
+//        JournalEntry entry26 = new JournalEntry("11-10-21", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user4);
+//        journalEntryRepository.save(entry26);
+//
+//        JournalEntry entry27 = new JournalEntry("01-04-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
+//        journalEntryRepository.save(entry27);
+//
+//        JournalEntry entry28 = new JournalEntry("07-05-22", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
+//        journalEntryRepository.save(entry28);
+//
+//        JournalEntry entry29 = new JournalEntry("09-11-21", "uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user1);
+//        journalEntryRepository.save(entry29);
+//
+//        JournalEntry entry30 = new JournalEntry("04-03-22", "eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", user2);
+//        journalEntryRepository.save(entry30);
 
 //        user1.addJournalEntry(entry1);
 //        userRepository.save(user1);
 
-        Audio audio1 = new Audio("Rain Sounds 1", "RainTest.mp3");
+        Audio audio1 = new Audio("Rain", "RainTest.mp3");
         audioRepository.save(audio1);
         Audio audio2 = new Audio("Heavy Rain", "507902__inuetc__heavy-rain-sound-inu-etc.mp3");
         audioRepository.save(audio2);
-        Audio audio3 = new Audio("Wood Fire", "Fire, Burning, Wood, Crispy, Medium Intensity SND8761.mp3");
+        Audio audio3 = new Audio("Crackling Fire", "Fire, Burning, Wood, Crispy, Medium Intensity SND8761.mp3");
         audioRepository.save(audio3);
         Audio audio4 = new Audio("Ambient Forest", "Ambience, Forest, Birds, Crow, Insects, Leaves SND1340.mp3");
         audioRepository.save(audio4);
-        Audio audio5 = new Audio("Forest Birds, Wind in the Trees", "Ambience, Forest, Birds Singing, Chirps, Light Wind In Trees, Leaf Forest 01 SND0568.mp3");
+        Audio audio5 = new Audio("Forest", "Ambience, Forest, Birds Singing, Chirps, Light Wind In Trees, Leaf Forest 01 SND0568.mp3");
         audioRepository.save(audio5);
 
 
