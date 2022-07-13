@@ -110,7 +110,8 @@ footer
     width: 75vw;
     max-height: 10vh;
     border-radius: 20px;
-    padding: 24px;
+    /* padding: 24px; */
+    padding: 1.1em;
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
@@ -147,11 +148,9 @@ footer
     grid-area: "close";
     width: 0.7em;
     height: auto;
-    margin: 0.5em;
-    margin-top: 1em;
-    margin-left: 1em;
+    /* margin: 0.5em; */
+    margin-top: 0.1vh;
+    margin-left: -1vw;
+    cursor: pointer;
 }
 
-/* #audio-list-item {
-
-} */

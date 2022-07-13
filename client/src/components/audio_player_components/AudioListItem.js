@@ -9,7 +9,7 @@ const AudioListItem = ({audio, onAudioClick}) => {
 
     return(
 
-            <ListItemText primary={`Item ${audio.name}`} onClick={handleAudioClick}/>
+            <ListItemText primary={audio.name} onClick={handleAudioClick}/>
 
 
     )   
