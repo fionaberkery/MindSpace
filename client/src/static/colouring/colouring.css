@@ -92,7 +92,14 @@ path {
         text-align: center;
         font-family: lamarkie, Verdana, Geneva, Tahoma, sans-serif;
         font-size: 2em;
-        padding: 0.5em;
+    }
+
+    .colouring-heading{
+        font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+
     }
 
     #current-colour--box {
