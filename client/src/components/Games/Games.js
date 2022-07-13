@@ -18,10 +18,14 @@ function Games() {
             </Helmet>
 
         <div id="play-title">
+
         <h1> Choose your game </h1>
+
         </div>
+        <div className="game-image-container">
             
             <div className="jigsaw-container">
+
                 <img className="jigsaw-image" src={Jigsaw} height="600px" width="600px"/>
                 <div className="jigsaw-middle">
                     <Link to="/jigsaw" className="jigsaw_text"> JIGSAW </Link>
@@ -32,7 +36,9 @@ function Games() {
             <div className="bubble-container">
                 <img className="bubble-imgage" src={B4} height="600px" width="600px"/>
                 <Link to="/bubbles"> </Link>
+
             </div>
+        </div>
         </div>
     )
 }
