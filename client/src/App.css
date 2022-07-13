@@ -107,9 +107,9 @@ footer
     /* position: fixed; */
     color: #f3f3f3;
     background-color: blue;
-    width: 75vw;
-    max-height: 10vh;
-    border-radius: 20px;
+    width: 70vw;
+    max-height: 8vh;
+    border-radius: 15px;
     /* padding: 24px; */
     padding: 1.1em;
     margin-left: auto;
