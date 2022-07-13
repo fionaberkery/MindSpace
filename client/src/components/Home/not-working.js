@@ -6,7 +6,7 @@
 // const Home2 = () => {
 
 //     return (
-
+// dfsfsd
 //         <>
 
 //         <ParallaxMouseMove id="outter" fullHeight={true}>
