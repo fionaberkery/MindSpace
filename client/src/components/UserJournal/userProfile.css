@@ -232,3 +232,18 @@
     background-color: #828282;
     transition: 0.7s;
 } 
+
+.saved-button
+{
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 10px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #828282;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+}
