@@ -1,5 +1,7 @@
 import React from "react";
 import ListItemText from '@mui/material/ListItemText';
+// import { ThemeProvider } from "styled-components";
+import { createTheme, ThemeProvider, Typography } from "@mui/material/";
 
 const AudioListItem = ({audio, onAudioClick}) => {
 
@@ -7,10 +9,32 @@ const AudioListItem = ({audio, onAudioClick}) => {
         onAudioClick(audio)
     }
 
+    const theme = createTheme({
+        typography: {
+            fontFamily: [
+                "Nunito",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif"
+            ].join(",")
+        }
+    });
+
+    const listItemFont = createTheme({
+        typography: {
+            fontFamily: [
+                'Cormorant',
+                'serif',
+            ].join(','),
+        },});
+
     return(
-
-            <ListItemText primary={audio.name} onClick={handleAudioClick}/>
-
+        <ThemeProvider theme={listItemFont}>
+            <Typography>
+                <ListItemText primary={audio.name} onClick={handleAudioClick}/>
+            </Typography>
+        </ThemeProvider>
 
     )   
 }

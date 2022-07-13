@@ -163,7 +163,7 @@ function App() {
                   />
                   : null }
               </div>
-              <a> 
+              <a className='close-modal-container'> 
                 <img src={closeModalButton} onClick={closeModal} className='close-modal-button' alt="close modal button"/>              
               </a>
             </div>

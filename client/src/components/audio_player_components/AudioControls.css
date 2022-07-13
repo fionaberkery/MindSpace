@@ -9,11 +9,11 @@
     /* margin: auto; */
     /* color: var(--white); */
     background-color: #161616;
+    z-index: 94;
     }
 
 .audio-controls > * {
     box-sizing: border-box;
-    
 }
 
 .audio-info {

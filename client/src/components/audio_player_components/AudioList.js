@@ -22,6 +22,7 @@ const AudioList = ({audioData, onAudioClick}) => {
             position: 'relative',
             overflow: 'auto',
             maxHeight: 60,
+            fontFamily: 'Courier New, Courier, monospace',
             '& ul': { padding: 0 },
         }}
         subheader={<li />}

@@ -1,7 +1,8 @@
 .button-controls {
   display: flex;
   justify-content: space-between;
-  width:  75%;
+  width:  65%;
+  max-height: 2vh;
   margin: 0 auto 0.5em;
 }
 
