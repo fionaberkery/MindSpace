@@ -84,6 +84,9 @@ footer
 {
     margin-left: 20px ;
     margin-top: 10px;
+    font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .8em;
+    color:#d4bebe;
 }
 
 #footer-icon-spacing

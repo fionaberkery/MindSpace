@@ -1,8 +1,7 @@
 #home-page {
     height: 90vh;
     margin: 0;
-    background-image: url('/src/static/breathe/splash.jpg');
-    background-size: cover;
+    background-size: contain;
     color: white;
     font-family: "poppins";
 }
@@ -35,11 +34,14 @@
     /* opacity: 1; */
 }
 
+
 .feature:hover {
     opacity: 1;
 }
 
+
 .feature .feature-img {
+
     position: absolute;
     top: 0;
     left: 0;
