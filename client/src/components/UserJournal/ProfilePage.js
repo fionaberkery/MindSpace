@@ -13,7 +13,7 @@ const ProfilePage = ({currentUserJournalEntries}) => {
         <>
             <Helmet>
                 <title>
-                    Wellbeing - Your Journal
+                    MindSpace - Your Journal
                 </title>
             </Helmet>
             

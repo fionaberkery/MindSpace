@@ -59,7 +59,7 @@ const BubbleGame = () => {
     return (
         <>
             <Helmet>
-                <title>Wellbeing - Bubbles</title>
+                <title>MindSpace - Bubbles</title>
             </Helmet>
 
             <nav className="games-nav">

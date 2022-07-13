@@ -13,7 +13,7 @@ function Games() {
         
         <Helmet>
             <title>
-                Wellbeing - Play
+                MindSpace - Play
             </title>
         </Helmet>
 

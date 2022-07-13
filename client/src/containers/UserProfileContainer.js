@@ -19,7 +19,7 @@ const UserProfileContainer = ({onUserSelected, savedUsers}) => {
         <>
             <Helmet>
                 <title>
-                    Wellbeing - Journal
+                    MindSpace - Journal
                 </title>
             </Helmet>
 
