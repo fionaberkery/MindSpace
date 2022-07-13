@@ -3,16 +3,16 @@
 
 .jigsaw-container 
 {
-    position: relative;
-    width: 50%;
+    /* position: relative;
+    width: 50%; */
 }
 
 .jigsaw-image 
 {
     opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
+    /* display: block; */
+    /* width: 100%;
+    height: auto; */
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -41,26 +41,28 @@
 
 .jigsaw-text 
 {
+    text-decoration: none;
     color: black;
     font-size: 16px;
     padding: 16px 32px;
 }
 
-/* BUBBLES */
 
+
+/* BUBBLES */
 
 .bubbles-container 
 {
-    position: relative;
-    width: 50%;
+    /* position: relative;
+    width: 50%; */
 }
 
 .bubbles-image 
 {
     opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
+    /* display: block; */
+    /* width: 100%;
+    height: auto; */
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -89,6 +91,7 @@
 
 .bubbles-text 
 {
+    text-decoration: none;
     color: black;
     font-size: 16px;
     padding: 16px 32px;
@@ -97,112 +100,38 @@
 .game-image-container
 {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.bubbles-text
+
+.play-container
 {
-    text-decoration: none;
-    color:black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  
 }
 
-
-.games-nav--link:visited {
-    color: #121212;
-} */
-
-.jigsaw-text
+.play-title
 {
-    text-decoration: none;
-    color:black; 
-    font-size: 16px;
-    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  
 }
 
-
-/* JIGSAW */
-
-.jigsaw-container
+#game-choose
 {
-    position: relative;
-    width: 50%;
-}
-
-.jigsaw-image 
-{
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    border-radius: 10px;
-}
-
-.jigsaw-container:hover .jigsaw-image 
-{
-    opacity: 0.3;
-}
-
-.jigsaw-middle 
-{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.jigsaw-container:hover .jigsaw-middle 
-{
-    opacity: 1;
+    color:#121212;
+    font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-/* BUBBLES */
 
-.bubbles-container 
-{
-    position: relative;
-    width: 50%;
-}
 
-.bubbles-image 
-{
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    border-radius: 10px;
-}
 
-.bubbles-middle 
-{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
 
-.bubbles-container:hover .bubbles-image {
-    opacity: 0.3;
-}
-
-.bubbles-container:hover .bubbles-middle 
-{
-    opacity: 1;
-}
-
-.bubbles-text 
-{
-    font-size: 16px;
-    padding: 16px 32px;
-}
 
 
