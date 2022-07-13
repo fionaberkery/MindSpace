@@ -107,6 +107,15 @@ footer
     /* position: fixed; */
     color: #f3f3f3;
     background-color: blue;
+    width: 75vw;
+    max-height: 10vh;
+    border-radius: 20px;
+    padding: 24px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+        /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
+    z-index: 100;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-areas:
@@ -117,20 +126,21 @@ footer
     grid-area: "soundlist";
     /* align-self: flex-end; */
     /* margin-left: 10em; */
-    width: 10vw;
+    /* width: 10vw;
     max-height: auto;
     border-radius: 20px;
-    padding: 24px;
+    padding: 24px; */
     /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
-    margin-left: auto;
+    /* margin-left: auto;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: auto; */
     background-color: #161616;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .modal-audio-controls {
     grid-area: "controls";
+    
 }
 
 .close-modal-button {
