@@ -104,25 +104,34 @@ footer
     position: absolute;
     border: hidden;
     z-index: 90;
+    margin-left: 13.75%;
+}
+
+.modal-flex
+{
+    display: flex;
+    justify-content: center;
 }
 
 .modal-content {
     /* position: fixed; */
-    color: #f3f3f3;
-    background-color: blue;
+    color: #121212;
+    background-color: #c9c9c9;
+    /* background-color: #c7b9b1; */
     width: 70vw;
     max-height: 8vh;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 0.2em 1.1em 1.1em 1.1em;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: auto; */
     box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
     z-index: 91;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-areas:
-    "soundlist controls close"
+    "soundlist controls close";
+   
 }
 
 .modal-audio-list {

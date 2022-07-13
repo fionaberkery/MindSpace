@@ -140,7 +140,9 @@ function App() {
       <Router>
         
         <NavBar showModal={showModal}/>
+
         
+        <div className="modal-flex">
         <div>
           <Modal
             isOpen={toggleModal}
@@ -168,6 +170,7 @@ function App() {
               </a>
             </div>
           </Modal>
+        </div>
         </div>
         
         <Switch> 

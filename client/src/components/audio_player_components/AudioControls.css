@@ -34,7 +34,7 @@ input[type=range] {
 	width: 100%;
 	margin-bottom: 1vh;
 	border-radius: 8px;
-	background: #3b7677;
+	background: black;
 	transition: background 0.2s ease;
 	cursor: pointer;
 }
