@@ -1,4 +1,5 @@
 import React from "react";
+import ListItemText from '@mui/material/ListItemText';
 
 const AudioListItem = ({audio, onAudioClick}) => {
 
@@ -16,7 +17,9 @@ const AudioListItem = ({audio, onAudioClick}) => {
 
     return(
 
-            <option id='audio-list-item' onClick={handleAudioClick}> {audio.name}</option>
+            // <ul onClick={handleAudioClick}> {audio.name}</ul>
+            <ListItemText primary={`Item ${audio.name}`} onClick={handleAudioClick}/>
+
 
     )   
 }

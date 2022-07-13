@@ -106,6 +106,7 @@ footer
 .modal-content {
     /* position: fixed; */
     color: #f3f3f3;
+    background-color: blue;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-areas:
