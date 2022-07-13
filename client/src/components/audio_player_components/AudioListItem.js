@@ -7,17 +7,8 @@ const AudioListItem = ({audio, onAudioClick}) => {
         onAudioClick(audio)
     }
 
-
-
-    // const handleAudioChange = (event) => {
-    //     onAudioChange(event.target.audio)
-    // }
-
-    // value={audio}
-
     return(
 
-            // <ul onClick={handleAudioClick}> {audio.name}</ul>
             <ListItemText primary={`Item ${audio.name}`} onClick={handleAudioClick}/>
 
 
