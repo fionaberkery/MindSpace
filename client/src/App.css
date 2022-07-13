@@ -110,11 +110,11 @@ footer
     width: 70vw;
     max-height: 8vh;
     border-radius: 15px;
-    padding: 1.1em;
+    padding: 0.2em 1.1em 1.1em 1.1em;
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
-        /* box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
     z-index: 91;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -124,12 +124,15 @@ footer
 
 .modal-audio-list {
     grid-area: "soundlist";
-    background-color: #161616;
+    /* background-color: #161616; */
+    max-height: 0.7vh;
     z-index: 92;
+    cursor: pointer;
 }
 
 .modal-audio-controls {
     grid-area: "controls";
+    margin-bottom: 10vh;
     z-index: 93;
 }
 

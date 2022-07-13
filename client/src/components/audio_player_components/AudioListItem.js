@@ -1,6 +1,5 @@
 import React from "react";
 import ListItemText from '@mui/material/ListItemText';
-// import { ThemeProvider } from "styled-components";
 import { createTheme, ThemeProvider, Typography } from "@mui/material/";
 
 const AudioListItem = ({audio, onAudioClick}) => {

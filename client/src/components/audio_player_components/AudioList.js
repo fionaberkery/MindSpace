@@ -18,11 +18,10 @@ const AudioList = ({audioData, onAudioClick}) => {
         sx={{
             width: '100%',
             maxWidth: 300,
-            bgcolor: '#000000',
+            // bgcolor: '#000000',
             position: 'relative',
             overflow: 'auto',
             maxHeight: 60,
-            fontFamily: 'Courier New, Courier, monospace',
             '& ul': { padding: 0 },
         }}
         subheader={<li />}
