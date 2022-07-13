@@ -21,7 +21,7 @@ const Home = () => {
                   <div className="feature">
                   <img src={Breath} className="feature-img" alt="breath"/>
                         <div className="content">
-                              <Link to="/breathe"> Breathe </Link> 
+                              <Link className="homepage-link" to="/breathe"> Breathe </Link> 
                         </div>
                   </div>
 
@@ -29,21 +29,21 @@ const Home = () => {
                   <div className="feature">
                   <img src={Colour} className="feature-img" alt="colour"/>
                         <div className="content">
-                              <Link to="/colour"> Colour </Link> 
+                              <Link className="homepage-link" to="/colour"> Colour </Link> 
                         </div>
                   </div>
 
                   <div className="feature">
                   <img src={Play} className="feature-img" alt="play"/>
                         <div className="content">
-                              <Link to="/play"> Play </Link> 
+                              <Link className="homepage-link" to="/play"> Play </Link> 
                         </div>
                   </div>
 
                   <div className="feature">
                   <img src={Journal} className="feature-img" alt="journal"/>
                         <div className="content">
-                              <Link to="/journal"> Your Journal </Link>
+                              <Link className="homepage-link" to="/journal"> Your Journal </Link>
                         </div>
                   </div>
 
