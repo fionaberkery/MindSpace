@@ -1,30 +1,24 @@
 import React, {useEffect, useState} from "react";
-import BubbleStage from "./BubbleStage"
+import BubbleStage from "./BubbleStage";
 import BubblePop from "./BubblePop";
-import './bubble.css'
+import './bubble.css';
+import {Link} from "react-router-dom";
+import {Helmet} from 'react-helmet';
 
-const BubbleGame =() =>{
+const BubbleGame = () => {
 
-    const [bubbleCount, setBubbleCount] = useState(150);
-    const [bubblesPopped, setBubblesPopped] = useState(0);
+    const [bubbleCount, setBubbleCount] = useState(200);
     const [ready, setReady] = useState(false);
 
     useEffect(()=>{
-        console.log("useEffect fire")
-        startGame();
-    }, [ready])
-
-    const startGame = () => {
-        console.log("start game --> render bubbles")
         renderBubbles();
-    }
+    }, [ready])
 
     const isReady= () =>{
         setReady(true);
     }
 
-    const renderBubbles=()=> {
-        console.log("rendering bubbs")
+    const renderBubbles = () => {
         const arr = [...Array(bubbleCount)].map((bubble, index) => (
             bubble = <BubblePop key={index} pop={popBubble} style={getBubbleStyle(index)}/>
         ));
@@ -39,7 +33,7 @@ const BubbleGame =() =>{
         return [randomX, randomY];
     }
 
-    const getBubbleStyle =(index)=> {
+    const getBubbleStyle = (index) => {
         const xy = getRandomPosition();
         const styles = {
             left: xy[1] + 10 + "vh",
@@ -51,27 +45,38 @@ const BubbleGame =() =>{
         return styles;
     }
 
-    const popBubble =(event)=> {
+    const popBubble = (event) => {
         event.preventDefault();
         const bubble = event.target;
         const audio = document.getElementById("pop");
         bubble.style.setProperty("animation", "popped .3s ease-out both");
         audio.play();
-        setBubblesPopped(bubblesPopped+1);
         setTimeout(function() {
             bubble.style.display = "none";
         }, 500);
     }
 
-    return(
-        <div className="stage">
-        {ready ? (
-            <BubbleStage bubblesPopped={bubblesPopped} renderBubbles={renderBubbles} />
-        ) : (
-            <button className="bubble-btn" onClick={isReady}>Ready</button>
-        )}
-        </div>
+    return (
+        <>
+            <Helmet>
+                <title>Wellbeing - Bubbles</title>
+            </Helmet>
 
+            <nav className="games-nav">
+                <Link to='/play' className="games-nav--link">
+                    <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
+                    Play Something Else
+                </Link>
+            </nav>
+
+            <div className="stage">
+            {ready ? (
+                <BubbleStage renderBubbles={renderBubbles} />
+            ) : (
+                <button className="bubble-btn" onClick={isReady}>Ready</button>
+            )}
+            </div>
+        </>
     )
 }
 

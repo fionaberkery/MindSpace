@@ -13,28 +13,20 @@
     src: url("/src/static/MonkegRegular-rgKGA.ttf");
 }
 
-*
-{
-
+* {
     font-family: 'Poppins';
-}
-
-*
-{
     margin: 0;
 }
 
 
-#page-content 
-{
+#page-content {
     position: relative;
     min-height: 100vh;
 }
 
 #page-content-wrap {
-    /* background-image: url("/src/static/journal/11.jpg");
     background-size: cover;
-    min-height: 100vh; */
+    min-height: 100vh;
     padding-bottom: 2.5rem;    /* Footer height */
 }
 

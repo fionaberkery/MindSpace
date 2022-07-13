@@ -12,12 +12,12 @@ import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
-import Home from './containers/Home';
+import Home from '../src/components/Home/Home.js'
 import {Helmet} from 'react-helmet';
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
-import BubbleGame from './components/BubbleGame/BubbleGame.js'
+import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
 import Footer from './components/footer/Footer';
 // Audio imports
 import { AudioService } from "./services/Services";
@@ -83,6 +83,8 @@ function App() {
 
   const onAudioClick = (audio) => {
       setSelected(audio)
+      const audioObjects = audioData.map(audio => audio.id)
+    setAudioIndex(audioObjects.indexOf(selected.id))
   }
 
   const showModal = () => {
@@ -92,15 +94,7 @@ function App() {
   const closeModal = () => {
     setToggleModal(false)
   }
-
-  useEffect(() => {
-    if(selected !== null){
-    const audioObjects = audioData.map(audio => audio.id)
-    setAudioIndex(audioObjects.indexOf(selected.id))
-  }})
-
-
-
+  
   const onNextClick = () => {
     if(selected !== null){
       if (audioIndex < audioData.length - 1) {

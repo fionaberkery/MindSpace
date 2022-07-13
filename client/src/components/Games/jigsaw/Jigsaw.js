@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import "./jigsaw.css";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
-import Jigsaw1 from './jigsaw1.png'
-import Jigsaw2 from './jigsaw2.png'
-import Jigsaw3 from './jigsaw3.png'
+import Jigsaw1 from './jigsaw1.png';
+import Jigsaw2 from './jigsaw2.png';
+import Jigsaw3 from './jigsaw3.png';
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import butterfliesImage from './butterflies.jpg';
+import sunsetImage from './sunset.jpg';
+import flowerImage from './flower.jpg';
 
 
 
@@ -14,18 +19,17 @@ const Jigsaw = ()=>{
     const [rows, setRows]= useState(4);
     const [picture, setPicture]= useState("https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg");
 
-    const [text, setText] = useState("Unpuzzle the pieces!!");
+    const [text, setText] = useState("Can you complete the puzzle?");
     
     const set = () => {
         setText("Well Done! How about you pick another picture or increase the number of peices");
     };
 
-    const pic1= "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-    const pic2= "https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg"
-    const pic3= "https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"
+    const pic1= sunsetImage;
+    const pic2= butterfliesImage;
+    const pic3= flowerImage;
 
     const pictureList = [pic1,pic2,pic3]
-    // const pictureList = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg","https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg","https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"]
 
     const numberOfRows = [3,4,5,6,7,8,9,10]
     const numberOfColumns = [3,4,5,6,7,8,9,10]
@@ -73,13 +77,21 @@ const Jigsaw = ()=>{
 
 return(
     <>
+
+    <Helmet>
+        <title>Wellbeing - Jigsaw Puzzles</title>
+    </Helmet>
     
     <div className="jigsaw-page">
 
-            <br></br><br></br><br></br>
+        <nav className="games-nav">
+            <Link to='/play' className="games-nav--link">
+                <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
+                Play Something Else
+            </Link>
+        </nav>
 
-            <div id="dropdown-menus-flex">
-
+        <div id="dropdown-menus-flex">
             <select defaultValue="" onChange={handlePictureChange} className="drop-down" >
                 <option value="" selected>Select Picture</option>
                 {pictureOptions}
@@ -93,54 +105,54 @@ return(
                 <option value="" selected>Number of Columns</option>
                 {columnOptions}
             </select>
+        </div>
 
-            </div>
+        <h2 className="title">{text}</h2>
 
-            <h2 className="title">{text}</h2>
-    
-            <JigsawPuzzle
-                imageSrc={picture}
-                rows={rows}
-                columns={columns}
-                onSolved={set}
-                className="jigsaw-puzzle"
-            />
+        <JigsawPuzzle
+            imageSrc={picture}
+            rows={rows}
+            columns={columns}
+            onSolved={set}
+            className="jigsaw-puzzle"
+        />
+
     </div>
 
     <section>
 
-  <div class="set">
-    <div><img src={Jigsaw1} height="40px" width="40px" /></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    
-  </div>
-  <div class="set set2">
-  <div><img src={Jigsaw1} height="40px" width="40px" /></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    
-  </div>
-  <div class="set set3">
-  <div><img src={Jigsaw1} height="40px" width="40px" /></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw3} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw1} height="40px" width="40px"/></div>
-    <div><img src={Jigsaw2} height="40px" width="40px"/></div>
-  </div>
+    <div className="set">
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+    </div>
+
+    <div className="set set2">
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div> 
+    </div>
+
+    <div className="set set3">
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw3} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw1} alt='Puzzle piece' height="40px" width="40px"/></div>
+        <div><img src={Jigsaw2} alt='Puzzle piece' height="40px" width="40px"/></div>
+    </div>
 </section>
 
 </>

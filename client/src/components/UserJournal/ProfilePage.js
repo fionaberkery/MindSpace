@@ -16,7 +16,6 @@ const ProfilePage = ({currentUserJournalEntries}) => {
 
         <div className="profile-page-header">
             <h1 className="my-journal-title">  My Journal </h1> 
-            
         </div>
 
         <div className="carousel-div"> 

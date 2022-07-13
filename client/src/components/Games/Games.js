@@ -3,14 +3,19 @@ import React from "react"
 import Jigsaw from './jigsaw.jpg'
 import B4 from './b4.jpg'
 import './gameHome.css'
+import {Helmet} from 'react-helmet';
 
+function Games() {
 
-function Games(){
-
-    
     return(
 
         <div className="play-home">
+        
+            <Helmet>
+                <title>
+                    Wellbeing - Play
+                </title>
+            </Helmet>
 
         <div id="play-title">
         <h1> Choose Your Game </h1>
@@ -22,6 +27,7 @@ function Games(){
                 <div className="jigsaw-middle">
                     <Link className="jigsaw-text" to="/jigsaw"> JIGSAW </Link>  
                 </div>
+
             </div>
 
             <div className="bubbles-container">
@@ -30,7 +36,6 @@ function Games(){
                     <Link className="bubbles-text" to="/bubbles"> BUBBLE-POP </Link>
                 </div>
             </div>
-
         </div>
         </div>
     )
