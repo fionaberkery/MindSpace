@@ -150,3 +150,11 @@ section .set div:nth-child(8){
     transform:translateX(-20px) rotate(225deg);
   }
 }
+
+.games-nav--link
+{
+  text-decoration: none;
+  color: black;
+    font-size: 16px;
+    font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

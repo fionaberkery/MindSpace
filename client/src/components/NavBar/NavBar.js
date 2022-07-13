@@ -17,14 +17,14 @@ const NavBar = ({showModal}) => {
                 <div className="navbar-links">
 
                     
-                    <Link className="nav-links" to="/"> Home </Link> 
+                  
                     <Link className="nav-links" to="/breathe"> Breathe </Link> 
                     <Link className="nav-links" to="/colour"> Colour </Link> 
                     <a className="nav-links" onClick={showModal}> Listen </a> 
-                    <Link className="nav-links"to="/play"> Play </Link> 
+                    <Link className="nav-links" to="/play"> Play </Link> 
                     <Link className="nav-links" to="/journal"> Journal </Link>
-                    <h1 className="navbar-app-name">Name of App</h1>
                     
+                    <Link className="navbar-app-name" to="/"> MindSpace  </Link> 
 
                 </div>
 
