@@ -7,9 +7,12 @@
 }
 
 .homepage-link {
-    font-family: lamarkie;
     text-decoration: none;
     color: black;
+}
+
+.homepage-text {
+    font-family: lamarkie;
 }
 
 .container {
@@ -21,17 +24,12 @@
     
 
 .feature {
-    /* margin-top: 150px; */
     display: grid;
-    /* height: 90vh; */
     place-items: center;
     overflow: hidden;
     position: relative;
     border-right: 1px solid rgba(225, 225, 225, 0.1);
     background-size: contain;
-    
-    
-    /* opacity: 1; */
 }
 
 
@@ -41,7 +39,6 @@
 
 
 .feature .feature-img {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -49,7 +46,6 @@
     opacity: 0;
     background-size: contain;
     height: 100vh;
-    /* width: 100vw; */
 }
 
 
