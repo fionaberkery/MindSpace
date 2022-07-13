@@ -86,7 +86,7 @@
     min-height: 100vh;
 }
 
-.return-button
+/* .return-button
 {
     align-items: center;
     margin-left: 10px;
@@ -102,7 +102,7 @@
 {
     background-color: #828282;
     transition: 0.7s;
-}
+} */
 
 .save-button
 {
@@ -155,11 +155,14 @@
     flex-direction: row;
 }
 
-.flex-return-button
+/* .return-button
 {
-    display: flex;
-    justify-content: center;
-}
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+} */
 
 .save-flex
 {
@@ -246,4 +249,68 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #fff;
+}
+
+.prompt-button-container
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.prompt-button
+{
+   
+    align-items: center;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 14px;
+    background-color: #d4bebe;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.prompt-button:hover
+{
+    background-color: #828282;
+    transition: 0.7s;
+} 
+
+.prompt-text
+{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+.random-prompt-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 6.5vw;
+    margin-left: 6vw;
+    font-style: italic;
+}
+
+.return-link
+{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.return-button
+{
+  margin-left: 20px;
 }
