@@ -17,6 +17,7 @@ const Footer = () => {
                     <img id="icons" src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"/> 
                     <img id="icons" src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"/> 
                     <img id="icons" src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png"/> 
+                    
                 </p>
             </div>
         </div>

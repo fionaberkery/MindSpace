@@ -1,0 +1,78 @@
+.bubble {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+  position: absolute;
+  background-image: url("/src/static/bubbles/bubble_small.png");
+  width: 75px;
+  height:75px;
+  background-color: none;
+}
+
+.bubble.popped {
+  animation: popped 0.3s ease-in-out both;
+  animation-duration: 0.3s !important;
+}
+
+.bubble.animating {
+  animation: float 12s linear infinite both;
+}
+
+.stage {
+  margin-top: 1.4%;
+  overflow: hidden;
+  background: url('/src/static/bubbles/moody-jellies.jpg') no-repeat 50% / cover;
+  position: relative;
+  height: 100vh;
+}
+
+.bubble-btn {
+  background-image: url("/src/static/bubbles/bubble_small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: lamarkie;
+  font-size: 30px;
+  color: white;
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  border-radius: 150px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@keyframes popped {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000%);
+  }
+}

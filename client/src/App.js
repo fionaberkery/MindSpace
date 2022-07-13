@@ -12,12 +12,12 @@ import NewEntry from './components/UserJournal/NewEntry';
 import { JournalEntryService , PostJournalEntry, PostNewUser, UserService } from './services/Services';
 import ProfilePage from './components/UserJournal/ProfilePage';
 import NewProfile from './components/UserJournal/NewProfile';
-import Home from './containers/Home';
+import Home from '../src/components/Home/Home.js'
 import {Helmet} from 'react-helmet';
 import WalkingGameContainer from './containers/WalkingGameContainer'
 import Games from './components/Games/Games';
 import Jigsaw from './components/Games/jigsaw/Jigsaw';
-import BubbleGame from './components/BubbleGame/BubbleGame.js'
+import BubbleGame from './components/Games/BubbleGame/BubbleGame.js'
 import Footer from './components/footer/Footer';
 // Audio imports
 import { AudioService } from "./services/Services";
@@ -56,10 +56,11 @@ function App() {
     })
   }
 
+
   const addNewJournalEntry = (newEntry) => {
     PostJournalEntry(newEntry)
     .then(entry => {
-      const newJournalEntriesList = [...savedJournalEntries, entry]
+      const newJournalEntriesList = [...currentUserJournalEntries, entry]
       setCurrentUserJournalEntries(newJournalEntriesList)
     })
   }
@@ -70,7 +71,7 @@ function App() {
 
   const onUserSelected = function(user){
     setCurrentUser(user)
-    setCurrentUserJournalEntries(user.journalEntries)
+    setCurrentUserJournalEntries(user.journalEntries || [])
 }
 
 // >> Audio player code start <<
@@ -80,9 +81,8 @@ function App() {
         .then(audioData => setAudioData(audioData))
   }, [])
 
-  const onAudioChange = (audio) => {
+  const onAudioClick = (audio) => {
       setSelected(audio)
-      console.log(audio)
       const audioObjects = audioData.map(audio => audio.id)
       setAudioIndex(audioObjects.indexOf(audio.id))
   }
@@ -93,12 +93,11 @@ function App() {
   }
 
   const closeModal = () => {
+    setSelected(null)
     setToggleModal(false)
   }
 
-
   console.log(audioIndex, " << this is selected audioIndex in audioData")
-
 
   const onNextClick = () => {
     if(selected !== null){
@@ -153,7 +152,7 @@ function App() {
             <div className='modal-content'>
               <div className='modal-audio-list'>
                   <AudioList audioData={audioData} 
-                  onAudioChange={onAudioChange}/>
+                  onAudioClick={onAudioClick}/>
               </div>
               <div className='modal-audio-controls'>
                   { selected ? <AudioControls 
@@ -165,7 +164,7 @@ function App() {
                   : null }
               </div>
               <a> 
-                <img src={closeModalButton} className='close-modal-button' alt="close modal button"/>              
+                <img src={closeModalButton} onClick={closeModal} className='close-modal-button' alt="close modal button"/>              
               </a>
             </div>
           </Modal>

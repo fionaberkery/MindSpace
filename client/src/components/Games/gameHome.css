@@ -1,0 +1,55 @@
+.play-home
+{
+    margin-top: 50px;
+    min-height: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble-link
+{
+    padding: 50px;
+    margin-right: 40px;
+}
+
+.jigsaw-link
+{
+    padding: 50px;
+}
+
+#jigsaw-img
+{
+    border-radius: 10px;
+}
+
+#bubble-img
+{
+    border-radius: 10px;
+}
+
+#play-title
+{
+    display: flex;
+    justify-content: center;
+}
+
+.games {
+    margin-top: 2%;
+}
+
+.games-nav {
+    margin-top: 2%;
+}
+
+.games-nav--link {
+    font-family: lamarkie;
+    font-size: 14px;
+    text-decoration: none;
+    color: #121212;
+    padding: 0.25rem;
+}
+
+.games-nav--link:visited {
+    color: #121212;
+}
+

@@ -2,28 +2,25 @@ import React from 'react';
 
 import AudioListItem from './AudioListItem';
 
-const AudioList = ({audioData, onAudioChange}) => {
+const AudioList = ({audioData, onAudioClick}) => {
 
     const audioList = audioData.map((audio) => {
         return  <AudioListItem 
         audio={audio} 
         key={audio.id} 
-        
+        onAudioClick={onAudioClick}
         />
         })
 
-    const handleAudioSelection = (audioList) => {
-        onAudioChange(target.audio)
-        console.log(e.target.audio)
-    }
-    
+
+
+    // onChange={handleAudioSelection}
 
     return(
         <>
             <h3>AudioList</h3>
-            <select name="audio" id="audio-select" onChange={handleAudioSelection}>
             <option value="">Select a Sound</option>{audioList}
-            </select>
+
         </>
     )
 }
