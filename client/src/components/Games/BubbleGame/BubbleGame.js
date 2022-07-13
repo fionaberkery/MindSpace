@@ -64,8 +64,7 @@ const BubbleGame = () => {
 
             <nav className="games-nav">
                 <Link to='/play' className="games-nav--link">
-                    <img src="https://img.icons8.com/material-outlined/24/1A1A1A/double-left.png"/>
-                    Play Something Else
+                    <p > &#8592; Play Something Else </p>
                 </Link>
             </nav>
 
