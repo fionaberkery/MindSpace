@@ -20,7 +20,7 @@
     /* flex: 1; */
     color:#121212;
     font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 0.5em;
+    font-size: 0.8em;
 }
 
 .app-name-container{
@@ -32,6 +32,6 @@
 
 .navbar-app-name{
     font-family: lamarkie, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: .5em;
+    font-size: .8em;
     color:#d4bebe;
 }
