@@ -12,7 +12,7 @@ const DefaultPage = ({handleImageSelection, handleTouchImageSelection}) => {
 
     return (
         <>
-            <h2 className='colouring-heading'>Choose a picture to colour in: </h2>
+            <h2 className='colouring-heading'>Choose a picture </h2>
 
             <section className='images-container'>
 
