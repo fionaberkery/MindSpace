@@ -1,10 +1,5 @@
 import React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-
-
 import AudioListItem from './AudioListItem';
 
 const AudioList = ({audioData, onAudioClick}) => {
@@ -17,16 +12,8 @@ const AudioList = ({audioData, onAudioClick}) => {
         />
         })
 
-
-    //     const handleAudioClick = () => {
-    //     onAudioClick(audio)
-    // }
-
-
     return(
         <>
-            {/* <h3>AudioList</h3>
-                {audioList} */}
     <List
         sx={{
             width: '100%',
@@ -40,17 +27,9 @@ const AudioList = ({audioData, onAudioClick}) => {
         subheader={<li />}
     >
         {
-            <ul>
-                {/* <ListSubheader>{`I'm sticky ${audio.name}`}</ListSubheader> */}
-                {/* {audioData.map((audio) => (
-                <ListItem key={`item-${audio.id}-${audio}`}>
-                    <ListItemText primary={`Item ${audio.name}`} onClick={() => onAudioClick(audio)}/>
-                </ListItem>
-                ))} */}
-                {audioList} 
-
-            </ul>
-
+        <ul>
+            {audioList} 
+        </ul>
         }
     </List>
 
