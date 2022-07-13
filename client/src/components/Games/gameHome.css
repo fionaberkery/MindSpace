@@ -1,35 +1,130 @@
+
+
 .play-home
 {
     margin-top: 50px;
     min-height: 100vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-.bubble-link
-{
-    padding: 50px;
-    margin-right: 40px;
-}
-
-.jigsaw-link
-{
-    padding: 50px;
-}
-
-#jigsaw-img
-{
-    border-radius: 10px;
-}
-
-#bubble-img
-{
-    border-radius: 10px;
-}
-
-#play-title
+.game-image-container
 {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.bubbles-text
+{
+    text-decoration: none;
+    color:black;
+}
+
+.jigsaw-text
+{
+    text-decoration: none;
+    color:black; 
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/* JIGSAW */
+
+.jigsaw-container
+{
+    position: relative;
+    width: 50%;
+}
+
+.jigsaw-image 
+{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.jigsaw-container:hover .jigsaw-image 
+{
+    opacity: 0.3;
+}
+
+.jigsaw-middle 
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.jigsaw-container:hover .jigsaw-middle 
+{
+    opacity: 1;
+}
+
+
+/* BUBBLES */
+
+.bubbles-container 
+{
+    position: relative;
+    width: 50%;
+}
+
+.bubbles-image 
+{
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.bubbles-middle 
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.bubbles-container:hover .bubbles-image {
+    opacity: 0.3;
+}
+
+.bubbles-container:hover .bubbles-middle 
+{
+    opacity: 1;
+}
+
+.bubbles-text 
+{
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
 
