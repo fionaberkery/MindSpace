@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 
-@Component // comment this out if you don't want dataloader to run with server run
+//@Component // comment this out if you don't want dataloader to run with server run
 public class DataLoader implements ApplicationRunner {
 
     @Autowired

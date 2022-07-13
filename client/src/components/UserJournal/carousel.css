@@ -1,7 +1,8 @@
 
 .carousel-entry {
-    min-height: 30rem;
+    max-height: 30rem;
     min-width: 20rem;
+    max-width: 20rem;
     padding: 20px;
     margin: 10px;
     width: 100%;
